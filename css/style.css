@@ -1,0 +1,342 @@
+#homePage .header {
+  background: url(../img/header-var2.png) repeat-x;
+  width: 100%; }
+  #homePage .header .headerTopPart .row ul li {
+    font-size: 13px;
+    color: #78d5f4;
+    display: inline-block;
+    float: right;
+    line-height: 1.1; }
+    #homePage .header .headerTopPart .row ul li a {
+      color: #484d58;
+      padding-left: 2px; }
+  #homePage .header .headerTopPart .row ul li:last-child {
+    border-right: 1px solid #dbebf5;
+    padding: 17px 15px 17px 0; }
+  #homePage .header .headerTopPart .row ul li:first-child {
+    padding: 17px 0 17px 15px; }
+  #homePage .header .headerBottomPart {
+    padding: 0; }
+    #homePage .header .headerBottomPart .logo {
+      padding: 27px 15px; }
+      #homePage .header .headerBottomPart .logo img {
+        vertical-align: middle; }
+    #homePage .header .headerBottomPart .navigation .navbar {
+      min-height: 0;
+      margin: 0; }
+    #homePage .header .headerBottomPart .navigation .navbar-default {
+      background-color: transparent;
+      border-color: transparent; }
+      #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid {
+        padding: 0; }
+        #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav li a {
+          color: #91a8ae;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 13px;
+          padding: 39px 19px 35px 20px; }
+          #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav li a:hover {
+            color: #000; }
+        #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop {
+          background: url(../img/drop.png) 88% 52% no-repeat;
+          vertical-align: middle; }
+          #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop a {
+            background: transparent; }
+          #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop .dropdown-menu {
+            background: #5dc5f6;
+            border-radius: 2px;
+            margin-top: 0;
+            top: 80%;
+            left: 25%;
+            border: none;
+            box-shadow: none; }
+            #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop .dropdown-menu .drop-down-bg {
+              background: url(../img/drop-hover-2.png) left top no-repeat;
+              width: 30px;
+              height: 11px;
+              position: absolute;
+              top: -11px; }
+            #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop .dropdown-menu li a {
+              color: #d8d8d8;
+              line-height: 28px;
+              padding: 3px 20px;
+              font-weight: 400;
+              font-size: 14px;
+              text-transform: none; }
+            #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop .dropdown-menu li:hover {
+              background: #4dbef4; }
+              #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop .dropdown-menu li:hover a {
+                color: white; }
+        #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop:first-child a {
+          color: #000; }
+        #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav li:nth-child(7) a {
+          padding-right: 0; }
+        #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav li:nth-child(8) a {
+          font-weight: 400;
+          color: white;
+          border: none;
+          background: url(../img/button.png) left top no-repeat;
+          padding: 10px 23px 10px 47px;
+          margin: 28px 0 0 36.8px; }
+          #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav li:nth-child(8) a:hover {
+            background: url(../img/button-h.png) left top no-repeat; }
+#homePage .content .banner {
+  position: relative; }
+  #homePage .content .banner .bannerPic {
+    width: 100%;
+    height: 660px; }
+    #homePage .content .banner .bannerPic img {
+      width: 100%;
+      height: 660px; }
+  #homePage .content .banner .magnet {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%; }
+    #homePage .content .banner .magnet h2 {
+      background: url(../img/under-line.png) bottom left no-repeat;
+      padding-bottom: 10px;
+      font-size: 15px;
+      font-family: "Raleway", sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 20px; }
+      #homePage .content .banner .magnet h2 span {
+        font-size: 24px;
+        font-weight: 800; }
+    #homePage .content .banner .magnet .row .makeAppointment {
+      background: #78d0ee;
+      min-height: 266px;
+      padding: 35px 15px 36px 15px; }
+      #homePage .content .banner .magnet .row .makeAppointment .maParts {
+        width: 49%;
+        float: left;
+        margin: 0 2px; }
+        #homePage .content .banner .magnet .row .makeAppointment .maParts form input {
+          border: none;
+          outline: none;
+          font-size: 13px;
+          height: auto;
+          padding: 9px 15px;
+          margin: 2px 0;
+          width: 100%;
+          color: #91a8ae; }
+          #homePage .content .banner .magnet .row .makeAppointment .maParts form input::placeholder {
+            color: #91a8ae; }
+        #homePage .content .banner .magnet .row .makeAppointment .maParts .maDate .form-group {
+          margin: 0; }
+          #homePage .content .banner .magnet .row .makeAppointment .maParts .maDate .form-group .input-group {
+            width: 100%; }
+            #homePage .content .banner .magnet .row .makeAppointment .maParts .maDate .form-group .input-group .input-group-addon {
+              top: -2px; }
+        #homePage .content .banner .magnet .row .makeAppointment .maParts .maComment {
+          position: relative;
+          width: 100%;
+          float: left; }
+          #homePage .content .banner .magnet .row .makeAppointment .maParts .maComment form textarea {
+            width: 100%;
+            height: 78px;
+            resize: none;
+            border: medium none;
+            outline: medium none;
+            color: #91a8ae;
+            float: left;
+            font-size: 13px;
+            margin: 2px 0;
+            padding: 9px 15px; }
+          #homePage .content .banner .magnet .row .makeAppointment .maParts .maComment button {
+            text-transform: uppercase;
+            background: #f6772c;
+            font-size: 13px;
+            font-weight: 700;
+            color: white;
+            outline: none;
+            border: none;
+            border-radius: 2px;
+            position: absolute;
+            bottom: 3px;
+            right: 1px; }
+        #homePage .content .banner .magnet .row .makeAppointment .maParts .maNotification {
+          color: white;
+          font-size: 12px;
+          text-transform: uppercase;
+          padding: 2px 15px;
+          margin-top: 5px;
+          position: absolute;
+          bottom: 11px;
+          right: 22px; }
+    #homePage .content .banner .magnet .row .workingTimes {
+      background: #f8da73;
+      padding: 35px 15px 10px 15px;
+      min-height: 266px; }
+      #homePage .content .banner .magnet .row .workingTimes .wtDetails {
+        width: 29%;
+        float: left;
+        background: url(../img/line.png) right top repeat-y;
+        min-height: 125px; }
+        #homePage .content .banner .magnet .row .workingTimes .wtDetails p {
+          font-size: 13px;
+          color: #685e3b;
+          line-height: 22px; }
+          #homePage .content .banner .magnet .row .workingTimes .wtDetails p span {
+            color: #383d48;
+            font-weight: bold; }
+      #homePage .content .banner .magnet .row .workingTimes .wtDescription {
+        float: left;
+        width: 67%;
+        padding-left: 28px; }
+        #homePage .content .banner .magnet .row .workingTimes .wtDescription p {
+          font-size: 13px;
+          color: #84784c;
+          line-height: 22px; }
+        #homePage .content .banner .magnet .row .workingTimes .wtDescription a {
+          font-size: 13px;
+          background: #f6772c url(../img/but-ar.png) 90% center no-repeat;
+          color: white;
+          font-weight: bold;
+          border: none;
+          border-radius: 2px;
+          width: 142px;
+          padding: 7px 17px 9px 17px;
+          text-align: left;
+          text-transform: uppercase;
+          margin: 24px 0;
+          float: left; }
+#homePage .content .quickService {
+  width: 100%;
+  background: white;
+  float: left;
+  padding: 63px 0; }
+  #homePage .content .quickService .container .row .col-sm-3:first-child, #homePage .content .quickService .container .row .col-sm-3:nth-child(2), #homePage .content .quickService .container .row .col-sm-3:nth-child(3) {
+    border-right: 1px solid #d8e7f0; }
+  #homePage .content .quickService .container .row .col-sm-3:nth-child(2) {
+    border-right: 1px solid transparent; }
+  #homePage .content .quickService .container .row .col-sm-3:first-child, #homePage .content .quickService .container .row .col-sm-3:nth-child(2) {
+    margin-bottom: 36px; }
+  #homePage .content .quickService .container .row .col-sm-3 img {
+    float: left;
+    padding-right: 20px; }
+  #homePage .content .quickService .container .row .col-sm-3 .qsText {
+    float: left; }
+    #homePage .content .quickService .container .row .col-sm-3 .qsText h2 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 13.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #383d48;
+      padding: 20px 0px 9px; }
+    #homePage .content .quickService .container .row .col-sm-3 .qsText p {
+      color: #6e868c;
+      font-size: 13px;
+      line-height: 24px; }
+  #homePage .content .quickService .container .row .col-sm-3 a {
+    border: none;
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 30px 0px 2px; }
+  #homePage .content .quickService .container .row .col-sm-3:first-child a, #homePage .content .quickService .container .row .col-sm-3:nth-child(3) a, #homePage .content .quickService .container .row .col-sm-3:nth-child(4) a {
+    background: url(../img/var2but.png) left top no-repeat; }
+    #homePage .content .quickService .container .row .col-sm-3:first-child a:hover, #homePage .content .quickService .container .row .col-sm-3:nth-child(3) a:hover, #homePage .content .quickService .container .row .col-sm-3:nth-child(4) a:hover {
+      background: url(../img/var2but-hover.png) left top no-repeat; }
+  #homePage .content .quickService .container .row .col-sm-3:nth-child(2) a {
+    background: url(../img/var2but-hover.png) left top no-repeat; }
+#homePage .content .updatesDoctors {
+  width: 100%;
+  float: left;
+  background: #f0f8ff;
+  padding: 63px 0; }
+  #homePage .content .updatesDoctors .container .row .newsSide {
+    position: relative; }
+    #homePage .content .updatesDoctors .container .row .newsSide h2 {
+      font-family: "Raleway", sans-serif;
+      font-weight: 800;
+      color: #383d48;
+      font-weight: 800;
+      line-height: 1;
+      text-transform: uppercase;
+      padding-bottom: 20px; }
+      #homePage .content .updatesDoctors .container .row .newsSide h2 span {
+        font-size: 18px;
+        font-weight: 400; }
+    #homePage .content .updatesDoctors .container .row .newsSide .news {
+      float: left; }
+      #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper {
+        max-width: 100%;
+        margin: 0 auto; }
+        #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .updatesViewport {
+          width: 100%;
+          position: relative;
+          overflow: hidden;
+          height: 363px; }
+          #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .updatesViewport .disast {
+            width: auto;
+            position: relative;
+            transform: translate3d(0px, -335px, 0px);
+            list-style: outside none none;
+            padding-left: 0; }
+            #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .updatesViewport .disast li {
+              float: none;
+              position: relative;
+              border-bottom: 1px dotted #cbdceb;
+              padding: 28px 0;
+              top: 0;
+              width: 100%; }
+              #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .updatesViewport .disast li .newsDate {
+                background: none;
+                border: 2px solid #000;
+                color: #000;
+                float: left;
+                font-size: 14px;
+                line-height: 1.1;
+                height: 68px;
+                width: 68px;
+                padding-top: 10px;
+                text-align: center; }
+                #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .updatesViewport .disast li .newsDate span {
+                  font-size: 30px;
+                  font-weight: 800; }
+              #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .updatesViewport .disast li .newsText {
+                padding-left: 100px; }
+                #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .updatesViewport .disast li .newsText h2 {
+                  font-family: 'Raleway', sans-serif;
+                  font-size: 13.5px;
+                  color: #383d48;
+                  text-transform: uppercase;
+                  font-weight: 800;
+                  padding-bottom: 12px; }
+                #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .updatesViewport .disast li .newsText p {
+                  color: #6e868c;
+                  padding: 0;
+                  font-size: 13.5px; }
+              #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .updatesViewport .disast li:first-child {
+                padding-top: 0; }
+        #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .newsDirections a {
+          height: 14px;
+          margin: 2px 0 0;
+          position: absolute;
+          top: 23px;
+          width: 8px; }
+          #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .newsDirections a:first-child {
+            background: url(../img/left-arrow.png) no-repeat;
+            right: 28px; }
+          #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .newsDirections a:last-child {
+            background: url(../img/right-arrow.png) no-repeat;
+            right: 14px; }
+  #homePage .content .updatesDoctors .container .row .ourDoctors {
+    position: relative; }
+    #homePage .content .updatesDoctors .container .row .ourDoctors h2 {
+      padding-left: 15px;
+      color: #383d48;
+      font-family: "Raleway",sans-serif;
+      font-weight: 800;
+      line-height: 1;
+      text-transform: uppercase;
+      padding-bottom: 20px; }
+      #homePage .content .updatesDoctors .container .row .ourDoctors h2 span {
+        font-size: 18px;
+        font-weight: 400; }
+
+/*# sourceMappingURL=style.css.map */

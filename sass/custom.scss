@@ -1,0 +1,69 @@
+body {
+  background: #e4f0fa;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px; }
+
+*{
+  transition: all .5s ease;
+}
+
+#homePage {
+  width: calc(100% - 60px);
+  margin: 30px auto;
+  background: #f0f8ff; }
+
+li{
+    list-style: none;
+}
+
+a{
+  padding: 0;
+  margin: 0;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+vertical-align: baseline;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.form-section textarea {
+	min-height: 93px;
+	resize: none;
+}
+.form-section .form-control, select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+	border-color: #cadfe4;
+	border-radius: 2px;
+	box-shadow: none;
+	color: #91a8ae;
+	font-size: 13px;
+	height: 42px;
+	text-shadow: none;
+}
+.form-section button {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.input-group .form-control, .input-group-addon, .input-group-btn{
+  display:block;
+	position:absolute;
+	top:5px;
+	right:22px;
+	border:none;
+	font-size:28px;
+	color:#d1dde7;
+  background: transparent;
+}
