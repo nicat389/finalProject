@@ -67,3 +67,28 @@ img{
 	color:#d1dde7;
   background: transparent;
 }
+
+.tittle{
+	color: #383d48;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  	span{
+  	display: block;
+  	font-size: 18px;
+  	font-weight: 400;
+  }
+}
+
+#panel1, #panel2, #panel3, #down1, #down2, #down3, #down4, #down5
+#down6, #down7, #down8, #down9{
+	padding: 28px 15px;
+	display: none;
+}
+
+#panel1, #flip, #flip2, #flip3, #panel2, #panel3{
+	border-top: solid 1px #dceaf6;
+	background: white;
+}

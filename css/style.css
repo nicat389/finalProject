@@ -211,7 +211,7 @@
   padding: 63px 0; }
   #homePage .content .quickService .container .row .col-sm-3:first-child, #homePage .content .quickService .container .row .col-sm-3:nth-child(2), #homePage .content .quickService .container .row .col-sm-3:nth-child(3) {
     border-right: 1px solid #d8e7f0; }
-  #homePage .content .quickService .container .row .col-sm-3:nth-child(2) {
+  #homePage .content .quickService .container .row .col-sm-3:nth-child(4) {
     border-right: 1px solid transparent; }
   #homePage .content .quickService .container .row .col-sm-3:first-child, #homePage .content .quickService .container .row .col-sm-3:nth-child(2) {
     margin-bottom: 36px; }
@@ -248,6 +248,18 @@
   float: left;
   background: #f0f8ff;
   padding: 63px 0; }
+  #homePage .content .updatesDoctors .container .row .newsDocDirections a {
+    height: 14px;
+    margin: 2px 0 0;
+    position: absolute;
+    top: 23px;
+    width: 8px; }
+    #homePage .content .updatesDoctors .container .row .newsDocDirections a:first-child {
+      background: url(../img/left-arrow.png) no-repeat;
+      right: 28px; }
+    #homePage .content .updatesDoctors .container .row .newsDocDirections a:last-child {
+      background: url(../img/right-arrow.png) no-repeat;
+      right: 14px; }
   #homePage .content .updatesDoctors .container .row .newsSide {
     position: relative; }
     #homePage .content .updatesDoctors .container .row .newsSide h2 {
@@ -282,7 +294,7 @@
               position: relative;
               border-bottom: 1px dotted #cbdceb;
               padding: 28px 0;
-              top: 0;
+              top: 360px;
               width: 100%; }
               #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .updatesViewport .disast li .newsDate {
                 background: none;
@@ -313,18 +325,6 @@
                   font-size: 13.5px; }
               #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .updatesViewport .disast li:first-child {
                 padding-top: 0; }
-        #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .newsDirections a {
-          height: 14px;
-          margin: 2px 0 0;
-          position: absolute;
-          top: 23px;
-          width: 8px; }
-          #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .newsDirections a:first-child {
-            background: url(../img/left-arrow.png) no-repeat;
-            right: 28px; }
-          #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .newsDirections a:last-child {
-            background: url(../img/right-arrow.png) no-repeat;
-            right: 14px; }
   #homePage .content .updatesDoctors .container .row .ourDoctors {
     position: relative; }
     #homePage .content .updatesDoctors .container .row .ourDoctors h2 {
@@ -338,5 +338,143 @@
       #homePage .content .updatesDoctors .container .row .ourDoctors h2 span {
         font-size: 18px;
         font-weight: 400; }
+    #homePage .content .updatesDoctors .container .row .ourDoctors .allDoctors .docWrapper {
+      max-width: 100%;
+      margin: 0 auto; }
+      #homePage .content .updatesDoctors .container .row .ourDoctors .allDoctors .docWrapper .docViewPort {
+        width: 100%;
+        height: 352px;
+        overflow: hidden;
+        position: relative; }
+        #homePage .content .updatesDoctors .container .row .ourDoctors .allDoctors .docWrapper .docViewPort .docSlide {
+          position: relative;
+          width: auto;
+          width: 415%; }
+          #homePage .content .updatesDoctors .container .row .ourDoctors .allDoctors .docWrapper .docViewPort .docSlide li {
+            width: 750px;
+            float: left;
+            position: relative;
+            left: 0; }
+            #homePage .content .updatesDoctors .container .row .ourDoctors .allDoctors .docWrapper .docViewPort .docSlide li .col-sm-6 {
+              padding-right: 0;
+              margin-bottom: 15px; }
+              #homePage .content .updatesDoctors .container .row .ourDoctors .allDoctors .docWrapper .docViewPort .docSlide li .col-sm-6 .whiteBox {
+                background: white;
+                border: 1px solid #dceaf6;
+                min-height: 161px;
+                position: relative; }
+                #homePage .content .updatesDoctors .container .row .ourDoctors .allDoctors .docWrapper .docViewPort .docSlide li .col-sm-6 .whiteBox .docPics {
+                  width: 153px;
+                  height: 159px;
+                  float: left; }
+                #homePage .content .updatesDoctors .container .row .ourDoctors .allDoctors .docWrapper .docViewPort .docSlide li .col-sm-6 .whiteBox .docName {
+                  float: left;
+                  width: 204px;
+                  padding: 45px 0px 53px 25px; }
+                  #homePage .content .updatesDoctors .container .row .ourDoctors .allDoctors .docWrapper .docViewPort .docSlide li .col-sm-6 .whiteBox .docName h2 {
+                    color: #383d48;
+                    font-size: 13.48px;
+                    font-weight: 800;
+                    font-family: 'Raleway', sans-serif;
+                    text-transform: none;
+                    display: block; }
+                    #homePage .content .updatesDoctors .container .row .ourDoctors .allDoctors .docWrapper .docViewPort .docSlide li .col-sm-6 .whiteBox .docName h2 span {
+                      color: #6e868c;
+                      font-size: 13px;
+                      line-height: 1.1; }
+                #homePage .content .updatesDoctors .container .row .ourDoctors .allDoctors .docWrapper .docViewPort .docSlide li .col-sm-6 .whiteBox .docSocialMedia {
+                  position: absolute;
+                  bottom: 0;
+                  right: 0;
+                  border-top: 1px solid #dceaf6;
+                  width: 204px;
+                  height: 29px;
+                  float: left; }
+                  #homePage .content .updatesDoctors .container .row .ourDoctors .allDoctors .docWrapper .docViewPort .docSlide li .col-sm-6 .whiteBox .docSocialMedia a {
+                    padding: 4px 10px 6px;
+                    border-right: 1px solid #dceaf6;
+                    font-size: 13.5px;
+                    color: #383d48; }
+                    #homePage .content .updatesDoctors .container .row .ourDoctors .allDoctors .docWrapper .docViewPort .docSlide li .col-sm-6 .whiteBox .docSocialMedia a:first-child {
+                      padding-left: 25px !important; }
+                    #homePage .content .updatesDoctors .container .row .ourDoctors .allDoctors .docWrapper .docViewPort .docSlide li .col-sm-6 .whiteBox .docSocialMedia a:last-child {
+                      border-color: transparent;
+                      background: url(../img/soci-ico.png) right center no-repeat; }
+#homePage .content .historyDepartments {
+  width: 100%;
+  background: white;
+  float: left;
+  padding: 63px 0; }
+  #homePage .content .historyDepartments .history h2 {
+    color: #383d48;
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+    padding-bottom: 20px; }
+    #homePage .content .historyDepartments .history h2 span {
+      display: block;
+      font-size: 18px;
+      font-weight: 400; }
+  #homePage .content .historyDepartments .history p {
+    color: #4c6880;
+    font-size: 13px;
+    line-height: 22px;
+    padding: 20px 0; }
+  #homePage .content .historyDepartments .history a {
+    background: url(../img/soci-ico.png) no-repeat;
+    background-position: right 16px;
+    color: #383d48;
+    font-size: 13.5px;
+    padding: 10px 10px 0 0; }
+  #homePage .content .historyDepartments .department .dept {
+    border: 1px solid #dceaf6;
+    float: left;
+    width: 100%; }
+    #homePage .content .historyDepartments .department .dept .depAccordion li {
+      width: 100%;
+      float: left; }
+      #homePage .content .historyDepartments .department .dept .depAccordion li:nth-child(2) {
+        border-top: solid 1px #dceaf6;
+        background: white; }
+      #homePage .content .historyDepartments .department .dept .depAccordion li .minus {
+        background: url(../img/flip-ico.png) 97% 49% no-repeat; }
+      #homePage .content .historyDepartments .department .dept .depAccordion li .plus {
+        background: url(../img/flip-ico+.png) 97% 49% no-repeat; }
+      #homePage .content .historyDepartments .department .dept .depAccordion li h3 {
+        font-size: 12.5px;
+        color: #383d48;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 9px 17px;
+        width: 100%;
+        cursor: pointer; }
+        #homePage .content .historyDepartments .department .dept .depAccordion li h3 img {
+          padding-right: 10px; }
+        #homePage .content .historyDepartments .department .dept .depAccordion li h3 span {
+          font-size: 12.5px;
+          color: #383d48;
+          font-weight: 700;
+          text-transform: uppercase; }
+      #homePage .content .historyDepartments .department .dept .depAccordion li #panel1, #homePage .content .historyDepartments .department .dept .depAccordion li #panel2 {
+        overflow: hidden;
+        display: block; }
+        #homePage .content .historyDepartments .department .dept .depAccordion li #panel1 img, #homePage .content .historyDepartments .department .dept .depAccordion li #panel2 img {
+          float: left;
+          padding-right: 10px; }
+        #homePage .content .historyDepartments .department .dept .depAccordion li #panel1 p, #homePage .content .historyDepartments .department .dept .depAccordion li #panel2 p {
+          color: #4c6880;
+          font-size: 13px;
+          padding-bottom: 10px; }
+        #homePage .content .historyDepartments .department .dept .depAccordion li #panel1 a, #homePage .content .historyDepartments .department .dept .depAccordion li #panel2 a {
+          font-size: 13.5px;
+          color: #383d48;
+          padding: 0 10px 0 0;
+          background: url(../img/soci-ico.png) right center no-repeat; }
+      #homePage .content .historyDepartments .department .dept .depAccordion li #panel2 {
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-color: transparent; }
 
 /*# sourceMappingURL=style.css.map */
