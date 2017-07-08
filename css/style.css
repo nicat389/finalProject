@@ -158,15 +158,6 @@
             position: absolute;
             bottom: 3px;
             right: 1px; }
-        #homePage .content .banner .magnet .row .makeAppointment .maParts .maNotification {
-          color: white;
-          font-size: 12px;
-          text-transform: uppercase;
-          padding: 2px 15px;
-          margin-top: 5px;
-          position: absolute;
-          bottom: 11px;
-          right: 22px; }
     #homePage .content .banner .magnet .row .workingTimes {
       background: #f8da73;
       padding: 35px 15px 10px 15px;
@@ -476,5 +467,104 @@
         padding-top: 0;
         padding-bottom: 0;
         border-color: transparent; }
+  #homePage .content .historyDepartments .department .bg {
+    display: inline-block;
+    margin-top: 33px;
+    font-size: 13.5px;
+    color: #383d48;
+    padding: 0 10px 0 0; }
+#homePage .services {
+  width: 100%;
+  float: left;
+  background: #f0f8ff; }
+  #homePage .services .col-md-3 .serviceBox {
+    border: 1px solid #e6ebf4;
+    margin: 15px 0;
+    min-height: 280px;
+    padding: 25px; }
+    #homePage .services .col-md-3 .serviceBox h2 {
+      margin-top: 20px;
+      margin-bottom: 9px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #383d48;
+      text-transform: uppercase; }
+    #homePage .services .col-md-3 .serviceBox p {
+      color: #6e868c;
+      font-size: 13.5px;
+      line-height: 24px;
+      margin-bottom: 50px; }
+    #homePage .services .col-md-3 .serviceBox a {
+      color: #6e868c;
+      font-size: 13.5px;
+      padding: 0 10px 0 0; }
+#homePage .footer {
+  background: #6acff0;
+  padding: 80px 0;
+  float: left;
+  width: 100%; }
+  #homePage .footer .col-sm-6 h2 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 13px; }
+  #homePage .footer .col-sm-6 p {
+    font-size: 13.5px;
+    color: #daf6ff;
+    padding: 0 0 10px 0;
+    line-height: 24px; }
+  #homePage .footer .col-sm-6 .footerAddress {
+    line-height: 24px; }
+    #homePage .footer .col-sm-6 .footerAddress span {
+      color: white; }
+  #homePage .footer .col-sm-6 .footerAddress, #homePage .footer .col-sm-6 .footerAddress a {
+    color: #daf6ff;
+    font-size: 13.5px; }
+  #homePage .footer .col-sm-6 .footernewsLetter {
+    width: 100%;
+    height: auto;
+    float: left;
+    position: relative; }
+    #homePage .footer .col-sm-6 .footernewsLetter form input[type="text"] {
+      width: 100%;
+      height: auto;
+      border: none;
+      border-radius: 0;
+      outline: none;
+      color: #a2b8be;
+      line-height: 0;
+      padding: 14px 15px;
+      font-size: 13px; }
+      #homePage .footer .col-sm-6 .footernewsLetter form input[type="text"]::placeholder {
+        color: #a2b8be; }
+    #homePage .footer .col-sm-6 .footernewsLetter form input[type="submit"] {
+      background: #ffe073;
+      text-transform: uppercase;
+      color: white;
+      font-size: 13.5px;
+      border: none;
+      outline: none;
+      padding: 13px 13px;
+      position: absolute;
+      top: 0;
+      right: 0; }
+  #homePage .footer .col-sm-6 .newsLetterNotification p {
+    color: white;
+    font-size: 12px;
+    padding: 0;
+    text-align: right;
+    text-transform: uppercase; }
+#homePage .copyright {
+  text-align: center;
+  width: 100%;
+  float: left;
+  padding: 20px 0;
+  background: #53b6d6; }
+  #homePage .copyright p {
+    color: white;
+    font-size: 13.5px; }
 
 /*# sourceMappingURL=style.css.map */

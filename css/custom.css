@@ -77,8 +77,31 @@ img {
   padding: 28px 15px;
   display: none; }
 
+.bg {
+  background: url(../img/soci-ico.png) right center no-repeat; }
+
 #panel1, #flip, #flip2, #flip3, #panel2, #panel3 {
   border-top: solid 1px #dceaf6;
   background: white; }
+
+.sections {
+  padding: 63px 0; }
+
+.list-styles ul li {
+  background: url(../img/lsat.png) left 8px no-repeat;
+  padding: 0 0 3px 20px; }
+  .list-styles ul li a {
+    color: #daf6ff;
+    font-size: 13.5px; }
+
+.maNotification {
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 2px 15px;
+  margin-top: 5px;
+  position: absolute;
+  bottom: 11px;
+  right: 22px; }
 
 /*# sourceMappingURL=custom.css.map */

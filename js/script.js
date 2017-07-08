@@ -135,9 +135,9 @@ var doctorSocialMediaIcons=[
 ];
 
 var accordionHeading=[
-"Dental Clinic",
-"Medicine Department",
-"Pregnancy Center"
+    "Dental Clinic",
+    "Medicine Department",
+    "Pregnancy Center"
 ];
 
 var accordionIcon=[
@@ -156,6 +156,39 @@ var accordionText=[
     "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
     "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
     "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries"
+];
+
+var serviceHeading=[
+    "Medical Service",
+    "24 hours Service",
+    "emergency departments",
+    "x-ray",
+    "cardiology",
+    "neurology",
+    "pregnancy",
+    "dental"
+];
+
+var servicePics=[
+    "img/icon-med-var2.png",
+    "img/icon-serv-var2.png",
+    "img/icon-emerg-var2.png",
+    "img/icon-xray-var2.png",
+    "img/icon-card-var2.png",
+    "img/icon-neur-var2.png",
+    "img/icon-preg-var2.png",
+    "img/icon-dent-var2.png"
+];
+
+var serviceText=[
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 ];
 
 
@@ -260,6 +293,8 @@ document.getElementsByClassName("activeNav")[0].style.background="url(img/nav-ho
 
     for(var i=0;i<accordionHeading.length;i++){
         accordion=document.createElement("li");
+        if(i>0)
+        accordion.setAttribute("id","flip2");
         document.getElementsByClassName("depAccordion")[0].appendChild(accordion);
         
         acHeading=document.createElement("h3");
@@ -297,7 +332,33 @@ document.getElementsByClassName("activeNav")[0].style.background="url(img/nav-ho
 
     }
 
+    for(var i=0;i<serviceHeading.length;i++){
+        serviceDiv=document.createElement("div");
+        serviceDiv.setAttribute("class","col-md-3 col-sm-6");
+        document.getElementsByClassName("services")[0].getElementsByClassName("container")[0].getElementsByClassName("row")[0].appendChild(serviceDiv);
 
+        serviceBox=document.createElement("div");
+        serviceBox.setAttribute("class","serviceBox");
+        serviceDiv.appendChild(serviceBox);
+
+        serviceImage=document.createElement("img");
+        serviceImage.setAttribute("src",servicePics[i]);
+        serviceBox.appendChild(serviceImage);
+        
+        servHeading=document.createElement("h2");
+        servHeading.innerHTML=serviceHeading[i];
+        serviceBox.appendChild(servHeading);
+
+        servText=document.createElement("p");
+        servText.innerHTML=serviceText[i];
+        serviceBox.appendChild(servText);
+
+        servLink=document.createElement("a");
+        servLink.setAttribute("href","#");
+        servLink.setAttribute("class","bg");
+        servLink.innerHTML="Read More";
+        serviceBox.appendChild(servLink);
+    }
 
     docSlideTimer=setInterval(function() {
         doctorsLeftFunction();
@@ -505,5 +566,36 @@ else if(k.getAttribute("class")=="plus"){
     
 }
 
+
+function sendNewsLetter() {
+  var emailInput=document.getElementsByClassName("footernewsLetter")[0].getElementsByTagName("form")[0].getElementsByTagName("input")[0];
+  var emailCheck=false;
+
+  if(emailInput.value.length>0){
+    for(var i=0;i<emailInput.value.length;i++){
+        if(emailInput.value[i]=='@'){
+            for(var j=i;j<emailInput.value.length;j++){
+                if(emailInput.value[j]=='.'){
+                    if(emailInput.value.length-j>2){
+                        emailCheck=true;
+                    }
+                }
+            }
+        }
+    }
+
+    if(emailCheck==true){
+      document.getElementsByClassName("newsLetterNotification")[0].getElementsByTagName("p")[0].innerHTML="news letter was sent";
+    }
+
+    else{
+    document.getElementsByClassName("newsLetterNotification")[0].getElementsByTagName("p")[0].innerHTML="Email is an invalid!";
+    }
+  }
+
+  else{
+      document.getElementsByClassName("newsLetterNotification")[0].getElementsByTagName("p")[0].innerHTML="please fill email field";
+  }
+};
 
 
