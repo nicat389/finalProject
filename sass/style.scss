@@ -1,156 +1,5 @@
 #homePage{
-    .header{
-        background: url(../img/header-var2.png) repeat-x;
-        width: 100%;
-        .headerTopPart{
-            .row{
-                ul{
-                    li{
-                        font-size: 13px;
-                        color: #78d5f4;
-                        display: inline-block;
-                        float: right;
-                        line-height: 1.1;
-                        a{
-                            color: #484d58;
-                            padding-left: 2px;
-                        }
-
-                    }
-
-                    li:last-child{
-                        border-right: 1px solid rgb(85.9%, 92.2%, 96.1%);
-                        padding: 17px 15px 17px 0;
-                    }
-
-                    li:first-child{
-                        padding: 17px 0 17px 15px;
-                    }
-                }
-            }
-        }
-
-        .headerBottomPart{
-            padding: 0;
-            
-            .logo{
-                padding: 27px 15px;
-                img{
-                    vertical-align: middle;
-                    }
-                }
-
-            .navigation{
-                .navbar{
-                    min-height: 0;
-                    margin: 0;
-                        }
-
-                .navbar-default{
-                    background-color: transparent;
-                    border-color: transparent;
-                    .container-fluid{
-                        padding: 0;
-                        .navbar-collapse{
-                            .nav{
-                                li{
-                                    a{
-                                        color: #91a8ae;
-                                        text-transform: uppercase;
-                                        font-weight: 700;
-                                        font-size: 13px;
-                                        padding: 39px 19px 35px 20px;
-                                        &:hover{
-                                            color: #000;
-                                            }
-                                        }
-                                    }
-                                    
-                                    .drop{
-                                        background: url(../img/drop.png) 88% 52% no-repeat;
-                                        vertical-align: middle;
-                                        a{
-                                            background: transparent;
-                                            }
-
-
-                                        .dropdown-menu{
-                                            background: #5dc5f6;
-                                            border-radius: 2px;
-                                            margin-top: 0;
-                                            top: 80%;
-                                            left: 25%;
-                                            border: none;
-                                            box-shadow: none;
-                                            .drop-down-bg{
-                                                background: url(../img/drop-hover-2.png) left top no-repeat;
-                                                width: 30px;
-                                                height: 11px;
-                                                position: absolute;
-                                                top: -11px;
-                                                }
-
-                                                li{
-                                                    a{
-                                                        color: #d8d8d8;
-                                                        line-height: 28px;
-                                                        padding: 3px 20px;
-                                                        font-weight: 400;
-                                                        font-size: 14px;
-                                                        text-transform: none;
-                                                        }
-                                                        &:hover{
-                                                            background: #4dbef4;
-                                                            a{
-                                                                color: white;
-                                                                }
-
-                                                            }
-                                                    }
-                                        }
-                                    }
-
-                                    .drop:first-child{
-                                        a{
-                                            color: #000;
-                                            }
-                                        }
-
-                                        li:nth-child(7){
-                                            a{
-                                                padding-right: 0;
-                                                }
-                                            }
-
-                                            li:nth-child(8){
-                                                a{
-                                                    font-weight: 400;
-                                                    color: white;
-                                                    border: none;
-                                                    background: url(../img/button.png) left top no-repeat;
-                                                    padding: 10px 23px 10px 47px;
-                                                    margin: 28px 0 0 36.8px;
-
-                                                    &:hover{
-                                                        background: url(../img/button-h.png) left top no-repeat;
-                                                        }
-                                                    }
-                                                }
-                                }
-                            }
-                        }
-                    }
-
-
-
-
-                }
-
-            }
-
-
-
-     }
+    
 
 
     .content{
@@ -319,79 +168,7 @@
                     }
                 }
 
-        .quickService{
-            width:100%;
-            background: white;
-            float: left;
-            padding: 63px 0;
 
-            .container{
-                .row{
-                    .col-sm-3:first-child, .col-sm-3:nth-child(2),.col-sm-3:nth-child(3){
-                        border-right: 1px solid #d8e7f0;
-                        }
-
-                        .col-sm-3:nth-child(4){
-                            border-right: 1px solid transparent;
-                        }
-                        
-                            .col-sm-3:first-child, .col-sm-3:nth-child(2){
-                                margin-bottom: 36px;
-                            }
-                            
-
-                            .col-sm-3{
-                                img{
-                                    float: left;
-                                    padding-right: 20px;
-                                    }
-
-                                    .qsText{
-                                        float: left;
-                                        h2{
-                                            font-family: 'Raleway', sans-serif;
-                                            font-size: 13.5px;
-                                            font-weight: 800;
-                                            text-transform: uppercase;
-                                            color: #383d48;
-                                            padding: 20px 0px 9px;
-                                            }
-
-                                            p{
-                                                color: #6e868c;
-                                                font-size: 13px;
-                                                line-height: 24px;
-                                                }
-                                        
-                                        }
-
-                                                a{
-                                                    border: none;
-                                                    width: 30px;
-                                                    height: 30px;
-                                                    float: left;
-                                                    margin: 30px 0px 2px;
-                                                    }
-                                        
-                                }
-
-                                .col-sm-3:first-child, .col-sm-3:nth-child(3), .col-sm-3:nth-child(4){
-                                a{
-                                    background: url(../img/var2but.png) left top no-repeat;
-                                    &:hover{
-                                        background: url(../img/var2but-hover.png) left top no-repeat;
-                                        }
-                                    }
-                                }
-
-                                    .col-sm-3:nth-child(2){
-                                    a{
-                                        background: url(../img/var2but-hover.png) left top no-repeat;
-                                        }
-                                    }
-                    }
-                }
-        }
 
         .updatesDoctors{
             width: 100%;
@@ -667,14 +444,7 @@
                                 background: white;
                                 }
 
-                                .minus{
-                                    background: url(../img/flip-ico.png) 97% 49% no-repeat; 
-                                    }
 
-                                .plus{
-                                    background: url(../img/flip-ico+.png) 97% 49% no-repeat; 
-                                    
-                                    }
 
                                 h3{
                                     font-size: 12.5px;
@@ -697,7 +467,7 @@
                                     }
 
                                     #panel1, #panel2{
-                                        overflow: hidden;
+                                        
                                         display: block;
                                         img{
                                             float: left;
@@ -742,7 +512,7 @@
         
         }
 
-        .services{
+        .services{ 
             width: 100%;
             float: left;
             background: #f0f8ff;
@@ -778,98 +548,110 @@
                 }
         }
 
-        .footer{
-            background: #6acff0;
-            padding: 80px 0;
-            float: left;
-            width: 100%;
-            .col-sm-6{
+    }
+
+    // /homePage
+
+    #aboutUs{
+        .history{
+            clear: both;
+            .col-sm-8{
                 h2{
-                    font-family: "Raleway", sans-serif;
-                    font-weight: 800;
-                    font-size: 22px;
-                    color: white;
-                    text-transform: uppercase;
-                    padding-bottom: 13px;
+                    font-size: 24px;
                     }
 
                     p{
-                        font-size: 13.5px;
-                        color: #daf6ff;
-                        padding: 0 0 10px 0;
-                        line-height: 24px;
+                        font-size: 13px;
+                        color: #4c6880;
+                        line-height: 22px;
                         }
-
-                    .footerAddress{
-
-                        line-height: 24px;
-                        span{
-                            color: white;
-                            }
-                        }
-
-                        .footerAddress, .footerAddress a{
-                        color: #daf6ff;
-                        font-size: 13.5px;
-                            }
-
-                    .footernewsLetter{
-                        width: 100%;
-                        height: auto;
-                        float: left;
-                        position: relative;
-                        form{
-                            input[type="text"]{
-                                width: 100%;
-                                height: auto;
-                                border: none;
-                                border-radius: 0;
-                                outline: none;
-                                color: #a2b8be;
-                                line-height: 0;
-                                padding: 14px 15px;
-                                font-size: 13px;
-                                &::placeholder{
-                                    color: #a2b8be;
-                                    }
-                                }
-
-                                input[type="submit"]{
-                                    background: #ffe073;
-                                    text-transform: uppercase;
-                                    color: white;
-                                    font-size: 13.5px;
-                                    border: none;
-                                    outline: none;
-                                    padding: 13px 13px;
-                                    position: absolute;
-                                    top: 0;
-                                    right: 0;
-                                    }
-                            }
-                        }
-                        
-                        .newsLetterNotification{
-                            p{
-                                color: white;
-                                font-size: 12px;                                
-                                padding: 0;
-                                text-align: right;
-                                text-transform: uppercase;
-                                }
-                            }
                 }
-        }
 
-        .copyright{
-            text-align: center;
-            width: 100%;
-            float: left;
-            padding: 20px 0;
-            background: #53b6d6;
-            p{
-                color: white;
-                font-size: 13.5px;
+                .col-sm-4{
+                    position: relative;
+                    div:first-child{
+                        img{
+                            float: right;
+                            }
+                        }
+
+                        div:nth-child(2){
+                            img{
+                                position: absolute;
+                                top:113px;
+                                }
+                            }
+                    }
             }
-        }
+
+        
+        
+        .departmentSection{
+            clear: both;
+            padding: 60px 0;
+            .container{
+                .row{
+                    .depAccordion{
+                        padding: 0;
+                        .col-sm-6{
+                            width: 50%;
+                            border: none;
+                            ul{
+                                li{
+                                    width: 100%;
+                                    float: left;
+                                    h3{
+                                        border: solid 1px #dceaf6;
+                                        border-bottom: none;
+                                        background-color: #f0f8ff !important;
+                                        cursor: pointer;
+                                        font-size: 12.5px;
+                                        color: #383d48;
+                                        font-weight: 700;
+                                        text-transform: uppercase;
+                                        padding: 9px 17px;
+                                        width: 100%;
+                                        }
+
+                                        #down1{
+                                            background-color: rgb(240, 248, 255);
+                                            padding: 28px 15px;
+                                            display: block;
+                                            border-top: 1px solid #dceaf6;
+                                            }
+
+                                            #down2{
+                                                display: block;
+                                                height: 0;
+                                                padding-top: 0;
+                                                padding-bottom: 0;
+                                                }
+
+                                                #down1,#down2{
+                                                    float: left;
+                                                    width: 100%;
+                                                    img{
+                                                        padding-right: 10px;
+                                                        float: left;
+                                                        }
+                                                        p{
+                                                            color: #4c6880;
+                                                            font-size: 13px;
+                                                            padding-bottom: 10px;
+                                                            }
+                                                }
+                                    }
+
+                                    li:last-child{
+                                        h3{
+                                            border-bottom:1px solid #dceaf6;
+                                            }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
     }

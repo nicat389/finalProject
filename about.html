@@ -15,8 +15,8 @@
 <body>
 
 
-<!--HomePage-->
-    <div id="homePage">
+<!--About Us-->
+    <div id="aboutUs">
 
 <!--header-->
         <div class="header">
@@ -63,7 +63,7 @@
                                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                                 <!--nav menu-->
                                                 <ul class="nav navbar-nav">
-                                                        <li class="dropdown active drop" onclick="navClick(this)"><a href="#" class="dropdown-toggle activeNav" data-toggle="dropdown" role="button" aria-expanded="false">Home</a>
+                                                        <li class="dropdown drop" onclick="navClick(this)"><a href="#" class="dropdown-toggle activeNav" data-toggle="dropdown" role="button" aria-expanded="false">Home</a>
                                                         <!--dropdown-menu menu daxilində li'lər daxilində olan alt menu-->
                                                         <ul class="dropdown-menu" role="menu">
                                                             <li class="drop-down-bg"></li>
@@ -112,126 +112,82 @@
 
 <!--content-->
     <div class="content">
-        <!--banner-->
-        <div class="banner">
-            <!--bannerPic-->
-            <div class="bannerPic">
-                    <img src="img/banner2.jpg" alt="Banner">
-                </div>
-                <!--/bannerPic-->
 
-                    <!--magnet-->
-                    <div class="magnet">
-                        <!--container-->
-                        <div class="container">
-                            <!--row-->
-                            <div class="row">
-
-                                <!--makeAppointment-->
-                                <div class="col-sm-6 makeAppointment">
-                                        <!--h2-->
-                                        <h2>
-                                            make an<br>
-                                            <span>Appointment</span>
-                                            </h2>
-                                            <!--/h2-->
-                                            
-                                            <!--makeAppointmentLeftPart-->
-                                            <div class="maParts">
-                                                <!--makeAppointmentForm-->
-                                                <form action="#">
-                                                    <!--makeAppointmentInputs-->
-                                                    <input type="text" class="maInput" placeholder="Your Name*" value="">
-                                                    <input type="text" class="maInput" placeholder="Phone Number*" value="">
-                                                    <input type="text" class="maInput" placeholder="Email Address*" value="">
-                                                    <!--/makeAppointmentInputs-->
-                                                    </form>
-                                                    <!--/makeAppointmentForm-->
-                                                </div>
-                                                <!--/makeAppointmentLeftPart-->
-
-                                                <!--makeAppointmentRightPart-->
-                                                <div class="maParts">
-
-                                                        <!--makeAppointmentDate-->
-                                                        <div class="maDate">
-                                                    
-                                                            <!--form-group-->
-                                                            <div class="form-group">
-                                                    
-                                                                <!--input-group-->
-                                                                <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                                                    <form action="#">
-                                                                        <input type="text" class="maInput"  placeholder="Appointment date*" value="" id="apdate">
-                                                                        </form>
-
-                                                                        <span class="input-group-addon">
-                                                                            <span class="glyphicon glyphicon-th"></span>
-                                                                        </span>
-                                                                    </div>
-                                                                    <!--/input-group-->
-                                                                </div>
-                                                                <!--/form-group-->
-                                                            </div>
-                                                            <!--/makeAppointmentDate-->
-
-                                                            <!--maComment-->
-                                                            <div class="maComment">
-                                                                <!--form-->
-                                                                <form action="#">
-                                                                    <textarea placeholder="Comment*" class="maTArea"></textarea>
-                                                                    </form>
-                                                                    <!--/form-->
-                                                                    <button type="button" onclick="sendContact()">Go</button>
-                                                                </div>
-                                                            <!--/maComment-->
-
-                                                            <!--maNotification-->
-                                                            <div class="maNotification">
-                                                                <p></p>
-                                                                </div>
-                                                                <!--/maNotification-->
-                                                    </div>
-                                                    <!--/makeAppointmentRightPart-->
-                                    </div>
-                                <!--/makeAppointment-->
-
-                                <!--workingTimes-->
-                                <div class="col-sm-6 workingTimes">
-                                    <!--h2-->
-                                        <h2>
-                                            Our<br>
-                                            <span>Working Times</span>
-                                            </h2>
-                                            <!--/h2-->
-
-                                            <!--Working Time Details-->
-                                            <div class="wtDetails">
-                                                <p>Monday-Friday : <br> <span>8 AM-17 pm</span></p>
-                                                <p>Saturday-Sunday : <br> <span>9 AM-15 pm</span></p>
-                                                </div>
-                                                <!--/Working Time Details-->
-
-
-                                                <!--Working Time Desciption-->
-                                                <div class="wtDescription">
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has industry's standard dummy text ever since the.</p>
-                                                    
-                                                    <a href="#"> Dr.Timetable</a>
-                                                    
-                                                    </div>
-                                                    <!--Working Time Description-->
-
-                                    </div>
-                                    <!--/workingTimes-->
-                                </div>
-                                <!--/row-->
-                            </div>
-                            <!--/container-->
+        <!--innerBanner-->
+            <div class="innerBanner">
+                <img src="img/about-us.jpg" alt="">
+                <!--container-->
+                <div class="container">
+                    <!--row-->
+                    <div class="row">
+                        <h2>about us</h2>
                         </div>
-                        <!--/magnet-->
-            </div>
-        <!--/banner-->
+                        <!--/row-->
+                    </div>
+                    <!--/container-->
+                </div>
+        <!--/innerBanner-->
+
+        <!--history-->
+            <div class="history sections firstSection">
+                <!--container-->
+                <div class="container">
+                    <!--row-->
+                    <div class="row">
+                        <!--col-sm-8 Left Part-->
+                        <div class="col-sm-8">
+                            <h2 class="tittle"><span>our</span>history</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <br>
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,</p>
+                            </div>
+                            <!--/col-sm-8 Left Part-->
+
+                            <!--col-sm-4 Right Part-->
+                            <div class="col-sm-4">
+                                <!--Big(Right) Picture-->
+                                <div>
+                                    <img src="img/big-im.jpg" alt="">
+                                    </div>
+                                    <!--/Big Picture-->
+
+                                    <!--Small(Left) Picture-->
+                                <div>
+                                    <img src="img/small-im.jpg" alt="">
+                                    </div>
+                                </div>
+                                <!--/Small Picture-->
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/container-->
+                </div>
+        <!--/history-->
+
+        <!--Department-->
+            <div class="departmentSection secondSection">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 department">
+                            <h2 class="tittle"><span>Our</span>department</h2>
+                            </div>
+                        <div class="col-sm-12 depAccordion">
+                            <div class="col-sm-6">
+                                <ul class="aboutAccordionList">
+                                    
+                                    </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="aboutAccordionList">
+
+                                    </ul>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <!--/Department-->
+            
 
         <!--quickService-->
         <div class="quickService">
@@ -314,151 +270,9 @@
                 <!--/container-->
             </div>
         <!--/quickService-->
-
-        <!--New Updates and Our Doctors-->
-        <div class="updatesDoctors">
-            <!--container-->
-            <div class="container">
-                <!--row-->
-                <div class="row">
-                    <!--newsSide-->
-                    <div class="col-sm-4 newsSide">
-                        <h2><span>New</span><br>Updates</h2>
-                            <!--news-->
-                            <div class="news">
-                                <!--updatesWrapper-->
-                                <div class="updatesWrapper">
-                                    <!--updatesViewPort-->
-                                    <div class="updatesViewport">
-                                        <!--disast-->
-                                        <ul class="disast">
-                                            
-                                            </ul>
-                                            <!--disast-->
-                                        </div>
-                                        <!--/updatesViewPort-->
-
-                                        <!--newsDocDirections-->
-                                        <div class="newsDocDirections">
-                                            <a href="javascript:void(0)" onclick="newsLeft()"></a>
-                                            <a href="javascript:void(0)" onclick="newsRight()"></a>
-                                            </div>
-                                            <!--/newsDocDirections-->
-                                    </div>
-                                    <!--/updatesWrapper-->
-                                </div>
-                                <!--/news-->
-                        </div>
-                        <!--/newsSide-->
-
-                        <!--ourDoctors-->
-                        <div class="col-sm-8 ourDoctors">
-                            <h2><span>Our</span><br> Doctors</h2>
-                                <!--allDoctors-->
-                                <div class="allDoctors">
-                                    <!--docWrapper-->
-                                    <div class="docWrapper">
-                                        <!--docViewPort-->
-                                        <div class="docViewPort">
-                                            <!--docSlide-->
-                                            <ul class="docSlide">
-                                                
-                                                </ul>
-                                                <!--/docSlide-->
-                                            </div>
-                                            <!--/docViewPort-->
-
-                                                <!--newsDocDirections-->
-                                                <div class="newsDocDirections">
-                                                    <a href="javascript:void(0)" id="pa" onclick="doctorsSlideLeft()"></a>
-                                                    <a href="javascript:void(0)" onclick="doctorsSlideRight()"></a>
-                                                    </div>
-                                                <!--/newsDocDirections-->
-
-
-                                        </div>
-                                        <!--/docWrapper-->
-                                    </div>
-                                    <!--/allDoctors-->
-                            </div>
-                            <!--ourDoctors-->
-                    </div>
-                    <!--/row-->
-                </div>
-                <!--/container-->
-            </div>
-        <!--/New Updates and Our Doctors-->
-
-
-        <!--History and Departments-->
-        <div class="historyDepartments">
-            <!--container-->
-            <div class="container">
-                <!--row-->
-                <div class="row">
-                    <!--history-->
-                    <div class="col-sm-4 history">
-                        <h2>
-                            <span>Our</span>
-                            History
-                            </h2>
-
-                            <img src="img/history2.jpg" alt="History">
-                            
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, </p>
-                            <a href="#">Read more</a>
-                        </div>
-                    <!--/history-->
-
-                    <!--department-->
-                    <div class="col-sm-8 department">
-                        <h2 class="tittle"><span>our</span>
-                        Department
-                        </h2>
-
-                        <!--dept-->
-                        <div class="dept">
-                            <ul class="depAccordion">
-                               
-                                </ul>
-                            </div>
-                            <!--/dept-->
-
-                            <a href="#" class="bg">View all</a>
-
-
-                    <!--/department-->
-                        </div>
-                    </div>
-                    <!--/row-->
-                </div>
-                <!--/container-->
-            </div>
-        <!--/History and Departments-->
-
         
-        <!--Our Services-->
-            <div class="services sections">
-                <!--container-->
-                <div class="container">
-                    <!--row-->
-                    <div class="row">
-                        <!--col-sm-12-->
-                        <div class="col-sm-12">
-                            <!--tittle-->
-                            <h2 class="tittle">
-                                <span>Our</span>
-                                Services
-                            </h2>
-                            <!--/tittle-->
-                            </div>
-                            <!--/col-sm-12-->
-                        </div>
-                        <!--/row-->
-                    </div>
-                    <!--container-->
-                </div>
-        <!--/Our Services-->
+
+
 
         </div>
 <!--/content-->
@@ -561,7 +375,7 @@
 <!--/copyright-->
 
     </div>
-<!--/HomePage-->
+<!--/About Us-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

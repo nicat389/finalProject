@@ -1,85 +1,3 @@
-#homePage .header {
-  background: url(../img/header-var2.png) repeat-x;
-  width: 100%; }
-  #homePage .header .headerTopPart .row ul li {
-    font-size: 13px;
-    color: #78d5f4;
-    display: inline-block;
-    float: right;
-    line-height: 1.1; }
-    #homePage .header .headerTopPart .row ul li a {
-      color: #484d58;
-      padding-left: 2px; }
-  #homePage .header .headerTopPart .row ul li:last-child {
-    border-right: 1px solid #dbebf5;
-    padding: 17px 15px 17px 0; }
-  #homePage .header .headerTopPart .row ul li:first-child {
-    padding: 17px 0 17px 15px; }
-  #homePage .header .headerBottomPart {
-    padding: 0; }
-    #homePage .header .headerBottomPart .logo {
-      padding: 27px 15px; }
-      #homePage .header .headerBottomPart .logo img {
-        vertical-align: middle; }
-    #homePage .header .headerBottomPart .navigation .navbar {
-      min-height: 0;
-      margin: 0; }
-    #homePage .header .headerBottomPart .navigation .navbar-default {
-      background-color: transparent;
-      border-color: transparent; }
-      #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid {
-        padding: 0; }
-        #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav li a {
-          color: #91a8ae;
-          text-transform: uppercase;
-          font-weight: 700;
-          font-size: 13px;
-          padding: 39px 19px 35px 20px; }
-          #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav li a:hover {
-            color: #000; }
-        #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop {
-          background: url(../img/drop.png) 88% 52% no-repeat;
-          vertical-align: middle; }
-          #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop a {
-            background: transparent; }
-          #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop .dropdown-menu {
-            background: #5dc5f6;
-            border-radius: 2px;
-            margin-top: 0;
-            top: 80%;
-            left: 25%;
-            border: none;
-            box-shadow: none; }
-            #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop .dropdown-menu .drop-down-bg {
-              background: url(../img/drop-hover-2.png) left top no-repeat;
-              width: 30px;
-              height: 11px;
-              position: absolute;
-              top: -11px; }
-            #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop .dropdown-menu li a {
-              color: #d8d8d8;
-              line-height: 28px;
-              padding: 3px 20px;
-              font-weight: 400;
-              font-size: 14px;
-              text-transform: none; }
-            #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop .dropdown-menu li:hover {
-              background: #4dbef4; }
-              #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop .dropdown-menu li:hover a {
-                color: white; }
-        #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop:first-child a {
-          color: #000; }
-        #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav li:nth-child(7) a {
-          padding-right: 0; }
-        #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav li:nth-child(8) a {
-          font-weight: 400;
-          color: white;
-          border: none;
-          background: url(../img/button.png) left top no-repeat;
-          padding: 10px 23px 10px 47px;
-          margin: 28px 0 0 36.8px; }
-          #homePage .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav li:nth-child(8) a:hover {
-            background: url(../img/button-h.png) left top no-repeat; }
 #homePage .content .banner {
   position: relative; }
   #homePage .content .banner .bannerPic {
@@ -195,45 +113,6 @@
           text-transform: uppercase;
           margin: 24px 0;
           float: left; }
-#homePage .content .quickService {
-  width: 100%;
-  background: white;
-  float: left;
-  padding: 63px 0; }
-  #homePage .content .quickService .container .row .col-sm-3:first-child, #homePage .content .quickService .container .row .col-sm-3:nth-child(2), #homePage .content .quickService .container .row .col-sm-3:nth-child(3) {
-    border-right: 1px solid #d8e7f0; }
-  #homePage .content .quickService .container .row .col-sm-3:nth-child(4) {
-    border-right: 1px solid transparent; }
-  #homePage .content .quickService .container .row .col-sm-3:first-child, #homePage .content .quickService .container .row .col-sm-3:nth-child(2) {
-    margin-bottom: 36px; }
-  #homePage .content .quickService .container .row .col-sm-3 img {
-    float: left;
-    padding-right: 20px; }
-  #homePage .content .quickService .container .row .col-sm-3 .qsText {
-    float: left; }
-    #homePage .content .quickService .container .row .col-sm-3 .qsText h2 {
-      font-family: 'Raleway', sans-serif;
-      font-size: 13.5px;
-      font-weight: 800;
-      text-transform: uppercase;
-      color: #383d48;
-      padding: 20px 0px 9px; }
-    #homePage .content .quickService .container .row .col-sm-3 .qsText p {
-      color: #6e868c;
-      font-size: 13px;
-      line-height: 24px; }
-  #homePage .content .quickService .container .row .col-sm-3 a {
-    border: none;
-    width: 30px;
-    height: 30px;
-    float: left;
-    margin: 30px 0px 2px; }
-  #homePage .content .quickService .container .row .col-sm-3:first-child a, #homePage .content .quickService .container .row .col-sm-3:nth-child(3) a, #homePage .content .quickService .container .row .col-sm-3:nth-child(4) a {
-    background: url(../img/var2but.png) left top no-repeat; }
-    #homePage .content .quickService .container .row .col-sm-3:first-child a:hover, #homePage .content .quickService .container .row .col-sm-3:nth-child(3) a:hover, #homePage .content .quickService .container .row .col-sm-3:nth-child(4) a:hover {
-      background: url(../img/var2but-hover.png) left top no-repeat; }
-  #homePage .content .quickService .container .row .col-sm-3:nth-child(2) a {
-    background: url(../img/var2but-hover.png) left top no-repeat; }
 #homePage .content .updatesDoctors {
   width: 100%;
   float: left;
@@ -428,10 +307,6 @@
       #homePage .content .historyDepartments .department .dept .depAccordion li:nth-child(2) {
         border-top: solid 1px #dceaf6;
         background: white; }
-      #homePage .content .historyDepartments .department .dept .depAccordion li .minus {
-        background: url(../img/flip-ico.png) 97% 49% no-repeat; }
-      #homePage .content .historyDepartments .department .dept .depAccordion li .plus {
-        background: url(../img/flip-ico+.png) 97% 49% no-repeat; }
       #homePage .content .historyDepartments .department .dept .depAccordion li h3 {
         font-size: 12.5px;
         color: #383d48;
@@ -448,7 +323,6 @@
           font-weight: 700;
           text-transform: uppercase; }
       #homePage .content .historyDepartments .department .dept .depAccordion li #panel1, #homePage .content .historyDepartments .department .dept .depAccordion li #panel2 {
-        overflow: hidden;
         display: block; }
         #homePage .content .historyDepartments .department .dept .depAccordion li #panel1 img, #homePage .content .historyDepartments .department .dept .depAccordion li #panel2 img {
           float: left;
@@ -499,72 +373,65 @@
       color: #6e868c;
       font-size: 13.5px;
       padding: 0 10px 0 0; }
-#homePage .footer {
-  background: #6acff0;
-  padding: 80px 0;
-  float: left;
-  width: 100%; }
-  #homePage .footer .col-sm-6 h2 {
-    font-family: "Raleway", sans-serif;
-    font-weight: 800;
-    font-size: 22px;
-    color: white;
-    text-transform: uppercase;
-    padding-bottom: 13px; }
-  #homePage .footer .col-sm-6 p {
-    font-size: 13.5px;
-    color: #daf6ff;
-    padding: 0 0 10px 0;
-    line-height: 24px; }
-  #homePage .footer .col-sm-6 .footerAddress {
-    line-height: 24px; }
-    #homePage .footer .col-sm-6 .footerAddress span {
-      color: white; }
-  #homePage .footer .col-sm-6 .footerAddress, #homePage .footer .col-sm-6 .footerAddress a {
-    color: #daf6ff;
-    font-size: 13.5px; }
-  #homePage .footer .col-sm-6 .footernewsLetter {
-    width: 100%;
-    height: auto;
-    float: left;
+
+#aboutUs .history {
+  clear: both; }
+  #aboutUs .history .col-sm-8 h2 {
+    font-size: 24px; }
+  #aboutUs .history .col-sm-8 p {
+    font-size: 13px;
+    color: #4c6880;
+    line-height: 22px; }
+  #aboutUs .history .col-sm-4 {
     position: relative; }
-    #homePage .footer .col-sm-6 .footernewsLetter form input[type="text"] {
-      width: 100%;
-      height: auto;
-      border: none;
-      border-radius: 0;
-      outline: none;
-      color: #a2b8be;
-      line-height: 0;
-      padding: 14px 15px;
-      font-size: 13px; }
-      #homePage .footer .col-sm-6 .footernewsLetter form input[type="text"]::placeholder {
-        color: #a2b8be; }
-    #homePage .footer .col-sm-6 .footernewsLetter form input[type="submit"] {
-      background: #ffe073;
-      text-transform: uppercase;
-      color: white;
-      font-size: 13.5px;
-      border: none;
-      outline: none;
-      padding: 13px 13px;
+    #aboutUs .history .col-sm-4 div:first-child img {
+      float: right; }
+    #aboutUs .history .col-sm-4 div:nth-child(2) img {
       position: absolute;
-      top: 0;
-      right: 0; }
-  #homePage .footer .col-sm-6 .newsLetterNotification p {
-    color: white;
-    font-size: 12px;
-    padding: 0;
-    text-align: right;
-    text-transform: uppercase; }
-#homePage .copyright {
-  text-align: center;
-  width: 100%;
-  float: left;
-  padding: 20px 0;
-  background: #53b6d6; }
-  #homePage .copyright p {
-    color: white;
-    font-size: 13.5px; }
+      top: 113px; }
+#aboutUs .departmentSection {
+  clear: both;
+  padding: 60px 0; }
+  #aboutUs .departmentSection .container .row .depAccordion {
+    padding: 0; }
+    #aboutUs .departmentSection .container .row .depAccordion .col-sm-6 {
+      width: 50%;
+      border: none; }
+      #aboutUs .departmentSection .container .row .depAccordion .col-sm-6 ul li {
+        width: 100%;
+        float: left; }
+        #aboutUs .departmentSection .container .row .depAccordion .col-sm-6 ul li h3 {
+          border: solid 1px #dceaf6;
+          border-bottom: none;
+          background-color: #f0f8ff !important;
+          cursor: pointer;
+          font-size: 12.5px;
+          color: #383d48;
+          font-weight: 700;
+          text-transform: uppercase;
+          padding: 9px 17px;
+          width: 100%; }
+        #aboutUs .departmentSection .container .row .depAccordion .col-sm-6 ul li #down1 {
+          background-color: aliceblue;
+          padding: 28px 15px;
+          display: block;
+          border-top: 1px solid #dceaf6; }
+        #aboutUs .departmentSection .container .row .depAccordion .col-sm-6 ul li #down2 {
+          display: block;
+          height: 0;
+          padding-top: 0;
+          padding-bottom: 0; }
+        #aboutUs .departmentSection .container .row .depAccordion .col-sm-6 ul li #down1, #aboutUs .departmentSection .container .row .depAccordion .col-sm-6 ul li #down2 {
+          float: left;
+          width: 100%; }
+          #aboutUs .departmentSection .container .row .depAccordion .col-sm-6 ul li #down1 img, #aboutUs .departmentSection .container .row .depAccordion .col-sm-6 ul li #down2 img {
+            padding-right: 10px;
+            float: left; }
+          #aboutUs .departmentSection .container .row .depAccordion .col-sm-6 ul li #down1 p, #aboutUs .departmentSection .container .row .depAccordion .col-sm-6 ul li #down2 p {
+            color: #4c6880;
+            font-size: 13px;
+            padding-bottom: 10px; }
+      #aboutUs .departmentSection .container .row .depAccordion .col-sm-6 ul li:last-child h3 {
+        border-bottom: 1px solid #dceaf6; }
 
 /*# sourceMappingURL=style.css.map */

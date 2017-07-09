@@ -1,4 +1,5 @@
 var menuTarget;
+
 var newsDay=[
     "02",
     "03",
@@ -191,6 +192,50 @@ var serviceText=[
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 ];
 
+var aboutAccordionHeading=[
+    "dental clinic",
+    "x-ray",
+    "cardiology",
+    "neurology",
+    "pregnancy",
+    "microbiology",
+    "family medicine",
+    "surgary"
+];
+
+var aboutAccordionIcons=[
+    "img/dent-ab.png",
+    "img/serc-ab.png",
+    "img/hear-ab.png",
+    "img/brai-ab.png",
+    "img/pre-ab.png",
+    "img/micro-ab.png",
+    "img/tab-ab.png",
+    "img/surg-ab.png"
+];
+
+var aboutAccordionPics=[
+    "img/accordian2.jpg",
+    "img/accordian2.jpg",
+    "img/accordian2.jpg",
+    "img/accordian2.jpg",
+    "img/accordian2.jpg",
+    "img/accordian2.jpg",
+    "img/accordian2.jpg",
+    "img/accordian2.jpg"
+];
+
+var aboutAccordionText=[
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries"
+];
+
 
 newsTop=360; //newsTop dəyişəni news bölməsində slider istifadə olunarsa aşağı-yuxarı hərəkət üçün dəyişən
 newsSlideNumber=0;   //newsSlideNumber dəyişəni slider istifadə olunduğu zaman xəbərləri üç-üç qruplaşdırmaqla onların sayını bildirir
@@ -198,10 +243,15 @@ docLeft=0;
 docSlideNumber=0;
 
 (function mainFunc(){
-var li, newsDateDiv,span,newsDayMonth,newsTextDiv,heading,text, doctorsLi,doctors,whiteBox,doctorImage,docNameDiv,docName,docProfession,docSocialMedia,docMedia,mediaIcons;
-var a=0;
+
 
 document.getElementsByClassName("activeNav")[0].style.background="url(img/nav-hover-var1.png) 19px 27px no-repeat";
+
+
+if(location.pathname.substring(47)=="index.html"){
+    var li, newsDateDiv,span,newsDayMonth,newsTextDiv,heading,text, doctorsLi,doctors,whiteBox,doctorImage,docNameDiv,docName,docProfession,docSocialMedia,docMedia,mediaIcons;
+    var a=0;
+
 
     for(var i=0;i<newsDay.length;i++){
         li=document.createElement("li");
@@ -225,7 +275,7 @@ document.getElementsByClassName("activeNav")[0].style.background="url(img/nav-ho
         text=document.createElement("p");
         text.innerHTML=newsText[i];
 
-        document.getElementsByClassName("disast")[0].appendChild(li);
+        document.getElementById("homePage").getElementsByClassName("disast")[0].appendChild(li);
         li.appendChild(newsDateDiv);
         li.appendChild(newsTextDiv);
 
@@ -239,7 +289,7 @@ document.getElementsByClassName("activeNav")[0].style.background="url(img/nav-ho
 
     for(var i=0;i<doctorNames.length/4;i++){
         doctorsLi=document.createElement("li");
-        document.getElementsByClassName("docSlide")[0].appendChild(doctorsLi);
+        document.getElementById("homePage").getElementsByClassName("docSlide")[0].appendChild(doctorsLi);
 
         for(var j=0;j<4;j++){
             doctors=document.createElement("div");
@@ -295,8 +345,8 @@ document.getElementsByClassName("activeNav")[0].style.background="url(img/nav-ho
         accordion=document.createElement("li");
         if(i>0)
         accordion.setAttribute("id","flip2");
-        document.getElementsByClassName("depAccordion")[0].appendChild(accordion);
-        
+        document.getElementById("homePage").getElementsByClassName("depAccordion")[0].appendChild(accordion);
+
         acHeading=document.createElement("h3");
         acHeading.onclick=accordionFunction;
         
@@ -335,7 +385,7 @@ document.getElementsByClassName("activeNav")[0].style.background="url(img/nav-ho
     for(var i=0;i<serviceHeading.length;i++){
         serviceDiv=document.createElement("div");
         serviceDiv.setAttribute("class","col-md-3 col-sm-6");
-        document.getElementsByClassName("services")[0].getElementsByClassName("container")[0].getElementsByClassName("row")[0].appendChild(serviceDiv);
+        document.getElementById("homePage").getElementsByClassName("services")[0].getElementsByClassName("container")[0].getElementsByClassName("row")[0].appendChild(serviceDiv);
 
         serviceBox=document.createElement("div");
         serviceBox.setAttribute("class","serviceBox");
@@ -365,7 +415,52 @@ document.getElementsByClassName("activeNav")[0].style.background="url(img/nav-ho
     }, 3000);
 
 
-    
+}
+
+    if(location.pathname.substring(47)=="about.html"){
+    for(var i=0;i<aboutAccordionHeading.length;i++){
+        accordion=document.createElement("li");
+        if(i<4)
+        document.getElementById("aboutUs").getElementsByClassName("aboutAccordionList")[0].appendChild(accordion);
+        else
+        document.getElementById("aboutUs").getElementsByClassName("aboutAccordionList")[1].appendChild(accordion);
+        
+
+        acHeading=document.createElement("h3");
+        acHeading.onclick=aboutaccordionFunction;
+        
+        acIcon=document.createElement("img");
+        acIcon.setAttribute("src",aboutAccordionIcons[i]);
+        
+        acHeadingText=document.createElement("span");
+        acHeadingText.innerHTML=aboutAccordionHeading[i];
+
+        acHeading.appendChild(acIcon);
+        acHeading.appendChild(acHeadingText);
+        accordion.appendChild(acHeading);
+
+        acContent=document.createElement("div");
+        accordion.appendChild(acContent);
+
+        if(i==0){
+            acHeading.setAttribute("class","minus");
+            acContent.setAttribute("id","down1");
+        }
+        else{
+            acHeading.setAttribute("class","plus");
+            acContent.setAttribute("id","down2");
+        }
+
+        acImage=document.createElement("img");
+        acImage.setAttribute("src",aboutAccordionPics[i]);
+        acContent.appendChild(acImage);
+
+        acText=document.createElement("p");
+        acText.innerHTML=aboutAccordionText[i];
+        acContent.appendChild(acText);
+
+    }
+    }
 
 }());
 
@@ -564,6 +659,52 @@ else if(k.getAttribute("class")=="plus"){
 }
 
     
+}
+
+function aboutaccordionFunction(){
+    var k=this;
+    l=k.parentNode.getElementsByTagName("div")[0].style;
+
+    var array=[
+        k.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.getElementsByTagName("ul")[0].getElementsByTagName("li"),
+        k.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.getElementsByTagName("ul")[1].getElementsByTagName("li")
+    ];
+
+    if(k.getAttribute("class")=="minus"){
+    l.height=0;
+    l.paddingTop=0;
+    l.paddingBottom=0;
+    l.borderColor="transparent";
+    k.classList.remove("minus");
+    k.classList.add("plus");
+}
+
+else if(k.getAttribute("class")=="plus"){
+    for(var i=0;i<array.length;i++){
+
+        for(var j=0;j<aboutAccordionHeading.length/2;j++){
+            array[i][j].getElementsByTagName("div")[0].style.height=0;
+            array[i][j].getElementsByTagName("div")[0].style.paddingTop=0;
+            array[i][j].getElementsByTagName("div")[0].style.paddingBottom=0;
+            array[i][j].getElementsByTagName("div")[0].style.borderColor="transparent";
+            console.log(array[i][j]);
+            if(array[i][j].getElementsByTagName("h3")[0].classList.contains("minus")){
+                array[i][j].getElementsByTagName("h3")[0].classList.remove("minus");
+                array[i][j].getElementsByTagName("h3")[0].classList.add("plus");
+            }
+        }
+
+}
+
+    l.height="161px";
+    l.paddingTop="28px";
+    l.paddingBottom="28px";
+    l.border="1px solid #dceaf6";
+    k.classList.remove("plus");
+    k.classList.add("minus");
+}
+
+
 }
 
 
