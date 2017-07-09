@@ -198,20 +198,6 @@
 
                     .newsSide{
                         position: relative;
-                        h2{
-                            font-family: "Raleway", sans-serif;
-                            font-weight: 800;
-                            color: #383d48;
-                            font-weight: 800;
-                            line-height: 1;
-                            text-transform: uppercase;
-                            padding-bottom: 20px;
-                            span{
-                                font-size: 18px;
-                                font-weight: 400;
-                                }
-                            }
-
                             .news{
                                 float: left;
                                 .updatesWrapper{
@@ -286,16 +272,6 @@
                             position: relative;
                             h2{
                                 padding-left: 15px;
-                                color: #383d48;
-                                font-family: "Raleway",sans-serif;
-                                font-weight: 800;
-                                line-height: 1;
-                                text-transform: uppercase;
-                                padding-bottom: 20px;
-                                span{
-                                    font-size: 18px;
-                                    font-weight: 400;
-                                    }
                                 }
 
                                 .allDoctors{
@@ -372,7 +348,6 @@
 
                                                                             &:last-child{
                                                                                 border-color: transparent;
-                                                                                background: url(../img/soci-ico.png) right center no-repeat;
 
                                                                                 }
                                                                             }
@@ -396,20 +371,6 @@
             padding: 63px 0;
 
             .history{
-                h2{
-                    color: #383d48;
-                    font-family: "Raleway", sans-serif;
-                    font-weight: 800;
-                    line-height: 1;
-                    text-transform: uppercase;
-                    padding-bottom: 20px;
-
-                    span{
-                        display: block;
-                        font-size: 18px;
-                        font-weight: 400;
-                        }
-                    }
 
                     p{
                         color: #4c6880;
@@ -419,7 +380,6 @@
                         }
 
                         a{
-                            background: url(../img/soci-ico.png) no-repeat;
                             background-position: right 16px;
                             color: #383d48;
                             font-size: 13.5px;
@@ -484,7 +444,7 @@
                                                     font-size: 13.5px;
                                                     color: #383d48;
                                                     padding: 0 10px 0 0;
-                                                    background: url(../img/soci-ico.png) right center no-repeat;
+                                                    margin: 0;
                                                     }
                                         }
 

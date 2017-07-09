@@ -132,17 +132,6 @@
       right: 14px; }
   #homePage .content .updatesDoctors .container .row .newsSide {
     position: relative; }
-    #homePage .content .updatesDoctors .container .row .newsSide h2 {
-      font-family: "Raleway", sans-serif;
-      font-weight: 800;
-      color: #383d48;
-      font-weight: 800;
-      line-height: 1;
-      text-transform: uppercase;
-      padding-bottom: 20px; }
-      #homePage .content .updatesDoctors .container .row .newsSide h2 span {
-        font-size: 18px;
-        font-weight: 400; }
     #homePage .content .updatesDoctors .container .row .newsSide .news {
       float: left; }
       #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper {
@@ -198,16 +187,7 @@
   #homePage .content .updatesDoctors .container .row .ourDoctors {
     position: relative; }
     #homePage .content .updatesDoctors .container .row .ourDoctors h2 {
-      padding-left: 15px;
-      color: #383d48;
-      font-family: "Raleway",sans-serif;
-      font-weight: 800;
-      line-height: 1;
-      text-transform: uppercase;
-      padding-bottom: 20px; }
-      #homePage .content .updatesDoctors .container .row .ourDoctors h2 span {
-        font-size: 18px;
-        font-weight: 400; }
+      padding-left: 15px; }
     #homePage .content .updatesDoctors .container .row .ourDoctors .allDoctors .docWrapper {
       max-width: 100%;
       margin: 0 auto; }
@@ -268,31 +248,18 @@
                     #homePage .content .updatesDoctors .container .row .ourDoctors .allDoctors .docWrapper .docViewPort .docSlide li .col-sm-6 .whiteBox .docSocialMedia a:first-child {
                       padding-left: 25px !important; }
                     #homePage .content .updatesDoctors .container .row .ourDoctors .allDoctors .docWrapper .docViewPort .docSlide li .col-sm-6 .whiteBox .docSocialMedia a:last-child {
-                      border-color: transparent;
-                      background: url(../img/soci-ico.png) right center no-repeat; }
+                      border-color: transparent; }
 #homePage .content .historyDepartments {
   width: 100%;
   background: white;
   float: left;
   padding: 63px 0; }
-  #homePage .content .historyDepartments .history h2 {
-    color: #383d48;
-    font-family: "Raleway", sans-serif;
-    font-weight: 800;
-    line-height: 1;
-    text-transform: uppercase;
-    padding-bottom: 20px; }
-    #homePage .content .historyDepartments .history h2 span {
-      display: block;
-      font-size: 18px;
-      font-weight: 400; }
   #homePage .content .historyDepartments .history p {
     color: #4c6880;
     font-size: 13px;
     line-height: 22px;
     padding: 20px 0; }
   #homePage .content .historyDepartments .history a {
-    background: url(../img/soci-ico.png) no-repeat;
     background-position: right 16px;
     color: #383d48;
     font-size: 13.5px;
@@ -335,7 +302,7 @@
           font-size: 13.5px;
           color: #383d48;
           padding: 0 10px 0 0;
-          background: url(../img/soci-ico.png) right center no-repeat; }
+          margin: 0; }
       #homePage .content .historyDepartments .department .dept .depAccordion li #panel2 {
         height: 0;
         padding-top: 0;

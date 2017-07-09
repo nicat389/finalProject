@@ -63,7 +63,7 @@
                                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                                 <!--nav menu-->
                                                 <ul class="nav navbar-nav">
-                                                        <li class="dropdown active drop" onclick="navClick(this)"><a href="#" class="dropdown-toggle activeNav" data-toggle="dropdown" role="button" aria-expanded="false">Home</a>
+                                                        <li class="menuList dropdown active drop" onclick="navClick(this)"><a href="#" class="dropdown-toggle activeNav" data-toggle="dropdown" role="button" aria-expanded="false">Home</a>
                                                         <!--dropdown-menu menu daxilində li'lər daxilində olan alt menu-->
                                                         <ul class="dropdown-menu" role="menu">
                                                             <li class="drop-down-bg"></li>
@@ -73,11 +73,11 @@
                                                             </ul>
                                                             <!--/dropdown-->
                                                         </li>
-                                                        <li><a href="#">About Us</a></li>
-                                                        <li><a href="#">Doctors</a></li>
-                                                        <li><a href="#">Services</a></li>
-                                                        <li><a href="#">News</a></li>
-                                                        <li class="dropdown drop" onclick="navClick(this)"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">pages</a>
+                                                        <li class="menuList"><a href="about.html">About Us</a></li>
+                                                        <li class="menuList"><a href="#">Doctors</a></li>
+                                                        <li class="menuList"><a href="#">Services</a></li>
+                                                        <li class="menuList"><a href="#">News</a></li>
+                                                        <li class="menuList dropdown drop" onclick="navClick(this)"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">pages</a>
                                                         <!--dropdown-menu menu daxilində li'lər daxilində olan alt menu-->
                                                             <ul class="dropdown-menu" role="menu">
                                                                 <li class="drop-down-bg"></li>
@@ -89,7 +89,7 @@
                                                                 </ul>
                                                                 <!--/dropdown-->
                                                         </li>
-                                                        <li><a href="#">Contact Us</a></li>
+                                                        <li class="menuList"><a href="#">Contact Us</a></li>
                                                         <li class="lst-head"><a href="#">Appointment</a></li>
                                                     </ul>
                                                     <!--/nav-->
@@ -130,7 +130,7 @@
                                 <!--makeAppointment-->
                                 <div class="col-sm-6 makeAppointment">
                                         <!--h2-->
-                                        <h2>
+                                        <h2 class>
                                             make an<br>
                                             <span>Appointment</span>
                                             </h2>
@@ -323,7 +323,7 @@
                 <div class="row">
                     <!--newsSide-->
                     <div class="col-sm-4 newsSide">
-                        <h2><span>New</span><br>Updates</h2>
+                        <h2 class="tittle"><span>New</span>Updates</h2>
                             <!--news-->
                             <div class="news">
                                 <!--updatesWrapper-->
@@ -353,7 +353,7 @@
 
                         <!--ourDoctors-->
                         <div class="col-sm-8 ourDoctors">
-                            <h2><span>Our</span><br> Doctors</h2>
+                            <h2 class="tittle"><span>Our</span>Doctors</h2>
                                 <!--allDoctors-->
                                 <div class="allDoctors">
                                     <!--docWrapper-->
@@ -398,7 +398,7 @@
                 <div class="row">
                     <!--history-->
                     <div class="col-sm-4 history">
-                        <h2>
+                        <h2 class="tittle">
                             <span>Our</span>
                             History
                             </h2>
@@ -406,7 +406,7 @@
                             <img src="img/history2.jpg" alt="History">
                             
                             <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, </p>
-                            <a href="#">Read more</a>
+                            <a href="#" class="bg">Read more</a>
                         </div>
                     <!--/history-->
 

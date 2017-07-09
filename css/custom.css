@@ -80,8 +80,6 @@ body {
               background: #4dbef4; }
               .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop .dropdown-menu li:hover a {
                 color: white; }
-        .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav .drop:first-child a {
-          color: #000; }
         .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav li:nth-child(7) a {
           padding-right: 0; }
         .header .headerBottomPart .navigation .navbar-default .container-fluid .navbar-collapse .nav li:nth-child(8) a {
@@ -273,6 +271,10 @@ img {
   font-size: 28px;
   color: #d1dde7;
   background: transparent; }
+
+.activeNav {
+  color: #000 !important;
+  background: url(../img/nav-hover-var1.png) 19px 27px no-repeat !important; }
 
 .tittle {
   color: #383d48;

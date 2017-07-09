@@ -245,9 +245,6 @@ docSlideNumber=0;
 (function mainFunc(){
 
 
-document.getElementsByClassName("activeNav")[0].style.background="url(img/nav-hover-var1.png) 19px 27px no-repeat";
-
-
 if(location.pathname.substring(47)=="index.html"){
     var li, newsDateDiv,span,newsDayMonth,newsTextDiv,heading,text, doctorsLi,doctors,whiteBox,doctorImage,docNameDiv,docName,docProfession,docSocialMedia,docMedia,mediaIcons;
     var a=0;
@@ -333,6 +330,7 @@ if(location.pathname.substring(47)=="index.html"){
                     else{
                         docMedia.setAttribute("href","#");
                         docMedia.innerHTML="More";
+                        docMedia.setAttribute("class","bg");
                     }
                 }
 
@@ -378,7 +376,14 @@ if(location.pathname.substring(47)=="index.html"){
 
         acText=document.createElement("p");
         acText.innerHTML=accordionText[i];
+
+        acDetails=document.createElement("a");
+        acDetails.setAttribute("class","bg");
+        acDetails.setAttribute("href","#");
+        acDetails.innerHTML="Details";
+
         acContent.appendChild(acText);
+        acContent.appendChild(acDetails);
 
     }
 
@@ -464,15 +469,22 @@ if(location.pathname.substring(47)=="index.html"){
 
 }());
 
-// window.onclick=function(event) {
-//     if(event.target!=menuTarget){
-//        menuTarget.getElementsByTagName("a")[0].style.color="#91a8ae"
-//     }
-// }
+window.onclick=function(event) {
+    if(event.target!=menuTarget && menuTarget.getElementsByTagName("a")[0].style.color=="black"){
+       menuTarget.getElementsByTagName("a")[0].style.color="#91a8ae"
+    }
+
+
+}
 
 function navClick(k){
     menuTarget=k;
-    menuTarget.getElementsByTagName("a")[0].style.color="#000";
+    for(var i=0;i<7;i++){
+        if(!document.getElementsByClassName("menuList")[i].getElementsByTagName("a")[0].classList.contains("activeNav")){
+            document.getElementsByClassName("menuList")[i].getElementsByTagName("a")[0].style.color="#91a8ae";
+        }
+    }
+    menuTarget.getElementsByTagName("a")[0].style.color="black";
 }
 
 

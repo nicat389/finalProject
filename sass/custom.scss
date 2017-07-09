@@ -124,11 +124,6 @@ body {
                                         }
                                     }
 
-                                    .drop:first-child{
-                                        a{
-                                            color: #000;
-                                            }
-                                        }
 
                                         li:nth-child(7){
                                             a{
@@ -428,8 +423,13 @@ img{
   background: transparent;
 }
 
+.activeNav{
+        color: #000 !important;
+        background: url(../img/nav-hover-var1.png) 19px 27px no-repeat !important;
+}
+
 .tittle{
-	color: #383d48;
+  color: #383d48;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   line-height: 1;
