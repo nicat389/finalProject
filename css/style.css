@@ -401,4 +401,75 @@
       #aboutUs .departmentSection .container .row .depAccordion .col-sm-6 ul li:last-child h3 {
         border-bottom: 1px solid #dceaf6; }
 
+#blog .content {
+  clear: both; }
+  #blog .content .leftSection ul li:nth-child(n+4) {
+    display: none; }
+  #blog .content .leftSection .pagerSection {
+    float: right;
+    margin-top: 25px; }
+    #blog .content .leftSection .pagerSection a {
+      width: 33px;
+      height: 33px;
+      border: 1px solid #dce8f1;
+      float: left;
+      padding-top: 5.5px;
+      text-align: center;
+      font-size: 13.5px;
+      color: #383d48;
+      margin-right: 10px;
+      cursor: pointer; }
+    #blog .content .leftSection .pagerSection .pLeft {
+      background: url(../img/p-left.png) left top no-repeat;
+      border: 1px solid #6acff0 !important; }
+    #blog .content .leftSection .pagerSection .pRight {
+      background: url(../img/p-right.png) left top no-repeat;
+      border: 1px solid #6acff0 !important; }
+  #blog .content .rightSection .blogAccordion ul li {
+    list-style: none;
+    outline: none;
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #dce8f1;
+    padding: 12px 0; }
+    #blog .content .rightSection .blogAccordion ul li a {
+      font-size: 13.5px;
+      color: #6e868c;
+      background: #fff url(../img/li-right.png) 97% 49% no-repeat;
+      cursor: pointer;
+      width: 100%;
+      float: left;
+      text-transform: capitalize; }
+    #blog .content .rightSection .blogAccordion ul li:nth-child(5) {
+      border: none; }
+  #blog .content .rightSection .featuredBox ul li {
+    list-style: none;
+    float: left;
+    padding: 5px 0 20px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dce8f1; }
+    #blog .content .rightSection .featuredBox ul li img {
+      float: left;
+      padding-right: 23px; }
+    #blog .content .rightSection .featuredBox ul li h2 {
+      font-size: 13px;
+      color: #383d48;
+      font-weight: 800;
+      padding: 5px 0; }
+    #blog .content .rightSection .featuredBox ul li p {
+      font-size: 13px;
+      color: #6e868c;
+      font-weight: normal;
+      line-height: 24px; }
+    #blog .content .rightSection .featuredBox ul li:last-child {
+      border: none; }
+  #blog .content .rightSection .tags a {
+    font-size: 13.5px;
+    color: #6e868c;
+    border: 1px solid #dce8f1;
+    float: left;
+    padding: 8px 22px;
+    margin-right: 14px;
+    margin-bottom: 14px; }
+
 /*# sourceMappingURL=style.css.map */

@@ -7,7 +7,7 @@ body {
   transition: all .5s ease;
 }
 
-#homePage, #aboutUs {
+#homePage, #aboutUs,#contact,#services {
   width: calc(100% - 60px);
   margin: 30px auto;
   background: #f0f8ff; }
@@ -75,7 +75,7 @@ body {
                                         font-size: 13px;
                                         padding: 39px 19px 35px 20px;
                                         &:hover{
-                                            color: #000;
+                                            color: #000 !important;
                                             }
                                         }
                                     }
@@ -367,6 +367,49 @@ body {
 
 
 
+.service-box {
+	border: 1px solid #e6ebf4;
+	margin: 15px 0;
+	min-height: 280px;
+	padding: 25px;
+}
+.service-box h2 {
+	margin-top: 20px;
+	margin-bottom: 9px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 13.5px;
+	color: #383d48;
+	text-transform: uppercase;
+	font-weight: 800;
+}
+.service-box p {
+	margin-bottom: 50px;
+	font-size: 13.5px;
+	color: #6e868c;
+	line-height:24px;
+}
+.service-box .readmore {
+	color: #383d48;
+	text-decoration: none;
+	font-size: 13.5px;
+}
+.service-box .readmore:hover {
+	color: #22252b;
+}
+.service-box .readmore i {
+	color: #a39abd;
+	position: relative;
+	top: 0;
+	transition: transform 0.3s ease 0s;
+}
+.service-box .readmore:hover i {
+	padding-left: 5px;
+	transition: transform 0.3s ease 0s;
+	transition: all ease 0.5s;
+}
+
+
+
 li{
     list-style: none;
 }
@@ -442,15 +485,25 @@ img{
   }
 }
 
+.jst-cov{
+    float: left;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
 #panel1, #panel2, #panel3, #down1, #down2, #down3, #down4, #down5
 #down6, #down7, #down8, #down9{
 	padding: 28px 15px;
 	display: none;
 }
 
+
+
 .bg{
 background: url(../img/soci-ico.png) right center no-repeat;	
 }
+
+
 
 #panel1, #flip, #flip2, #flip3, #panel2, #panel3{
     overflow: hidden;
@@ -474,7 +527,132 @@ background: url(../img/soci-ico.png) right center no-repeat;
 	float: left;
 }
 
+.leftSection{
+    .imBlog{
+        position: relative;
+        float: left;
+        width: 100%;
+        img{
+            float: right;
+        }
 
+        h2{
+            color: #383d48;
+            background: #ffe073;
+            font-size: 18px;
+            font-weight: 800;
+            padding: 15px 28px;
+            position: absolute;
+            left: 0;
+            top: 132px;
+        }
+    }
+
+    .stepRight{
+        float: right;
+        margin: 28px 0;
+        h2{
+            font-size: 16px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #383d48;
+            span{
+                display: block;
+                font-size: 13px;
+                font-weight: 400;
+                color: #868b97;
+                text-transform: capitalize;
+                line-height: 27px;
+                a{
+                    color: #868b97;
+                    padding: 0 4px 0 18px;
+                }
+            }
+        }
+
+        p{
+            font-size: 13.5px;
+            color: #6e868c;
+            line-height: 24px;
+            padding: 15px 0;
+        }
+
+        a{
+            color: #383d48;
+            font-size: 13.5px;
+            padding-right: 9px;
+        }
+
+        .bord{
+            width: 100%;
+            float: left;
+            border-top: 1px solid #e3eaef;
+            border-bottom: 1px solid #e3eaef;
+            margin-top: 21px;
+
+            .bordInner{
+                width: 141px;
+                float: right;
+                padding: 5px 0;
+                span{
+                    font-size: 13.5px;
+                    color: #383d48;
+
+                }
+
+                a{
+                    padding: 0 5px;
+
+                }
+            }
+        }
+    }
+}
+
+            .rightSection{
+                padding-left: 50px;
+                input{
+                outline: none;
+                color: #99abba;
+                font-size: 13px;
+                padding: 15px;
+                border: 1px solid #dce8f1;
+                width: 69%;    
+                }
+
+                button{
+                    float: right;
+                    outline: none;
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-size: 13px;
+                    font-weight: 700;
+                    background: #6acff0;
+                    padding: 10px 18px;
+                    border: 1px solid #6acff0;
+                }
+                
+                h2{
+                    font-size: 24px;
+                    color: #383d48;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    padding: 45px 0 15px 0;
+                }
+            }
+
+.bk{
+    display: inline-block !important;
+    padding: 0 5px;
+}
+
+.admin{
+    background: url(../img/admin.png) left 2px no-repeat;;
+}
+
+.health{
+    background: url(../img/health.png) left 3px no-repeat;
+}
 
 .list-styles{
 	ul{
@@ -517,6 +695,18 @@ background: url(../img/soci-ico.png) right center no-repeat;
         background: url(../img/flip-ico+.png) 97% 49% no-repeat; 
 
         }
+
+        .location{
+            background: url(../img/location-var2.png) left 5px no-repeat;;
+        }
+
+        .message{
+            background: url(../img/message-var2.png) left 5px no-repeat;
+        }
+
+        .phone{
+            background: url(../img/phone-var2.png) left 5px no-repeat;
+}
 
 
 @media only screen and (max-width: 1200px){

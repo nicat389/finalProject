@@ -236,6 +236,93 @@ var aboutAccordionText=[
     "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries"
 ];
 
+var blogFeaturedHeading=[
+    "Heading",
+    "Heading",
+    "Heading"
+];
+
+var blogFeaturedPic=[
+    "img/future1.jpg",
+    "img/future2.jpg",
+    "img/future3.jpg"
+];
+
+var blogFeaturedText=[
+    "printing and typesetting industry. Lorem Ipsum has been the industry.",
+    "printing and typesetting industry. Lorem Ipsum has been the industry.",
+    "printing and typesetting industry. Lorem Ipsum has been the industry."
+]
+
+var blogTags=[
+    "Health",
+    "Medical",
+    "UI",
+    "Treatment",
+    "Dental",
+    "X-Ray"
+];
+
+var blogNewsHeading=[
+    "Blog Heading here One line",
+    "Blog Heading here One line",
+    "Blog Heading here One line",
+    "Blog Heading here One line",
+    "Blog Heading here One line",
+    "Blog Heading here One line"
+]
+
+var blogNewsPics=[
+    "img/post.jpg",
+    "img/post2.jpg",
+    "img/post3.jpg",
+    "img/post2.jpg",
+    "img/post3.jpg",
+    "img/post.jpg"
+];
+
+var blogNewsText=[
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+];
+
+var blogNewsDate=[
+    "3-07-15",
+    "3-07-15",
+    "3-07-15",
+    "3-07-15",
+    "3-07-15",
+    "3-07-15"
+];
+
+var blogNewsAuthor=[
+    "admin",
+    "admin",
+    "admin",
+    "admin",
+    "admin",
+    "admin"
+];
+
+var blogNewsTags=[
+    "Health, Medical, Hospitality",
+    "Health, Medical, Hospitality",
+    "Health, Medical, Hospitality",
+    "Health, Medical, Hospitality",
+    "Health, Medical, Hospitality",
+    "Health, Medical, Hospitality"
+];
+
+var blogNewsSMIcons=[
+    "img/facevar.png",
+    "img/twittvar.png",
+    "img/googvar.png"
+];
+
 
 newsTop=360; //newsTop dəyişəni news bölməsində slider istifadə olunarsa aşağı-yuxarı hərəkət üçün dəyişən
 newsSlideNumber=0;   //newsSlideNumber dəyişəni slider istifadə olunduğu zaman xəbərləri üç-üç qruplaşdırmaqla onların sayını bildirir
@@ -465,17 +552,143 @@ if(location.pathname.substring(47)=="index.html"){
         acContent.appendChild(acText);
 
     }
+}
+
+
+    if(location.pathname.substring(47)=="blog.html"){
+        for(var i=0;i<blogFeaturedHeading.length;i++){
+           var li=document.createElement("li");
+            document.getElementsByClassName("featuredBox")[0].getElementsByTagName("ul")[0].appendChild(li);
+
+           var img=document.createElement("img");
+            img.setAttribute("src",blogFeaturedPic[i]);
+            li.appendChild(img);
+
+           var h2=document.createElement("h2");
+            h2.innerHTML=blogFeaturedHeading[i];
+
+           var p=document.createElement("p");
+           p.innerHTML=blogFeaturedText[i];
+
+           li.appendChild(h2);
+           li.appendChild(p);
+        }
+
+        for(var i=0;i<blogTags.length;i++){
+            var tags=document.createElement("a");
+            tags.setAttribute("href","#");
+            tags.innerHTML=blogTags[i];
+            document.getElementsByClassName("tags")[0].appendChild(tags);
+        }
+
+        for(var i=0;i<blogNewsHeading.length;i++){
+            var li=document.createElement("li");
+            document.getElementsByClassName("leftSection")[0].getElementsByTagName("ul")[0].appendChild(li);
+            
+            var imBlog=document.createElement("div");
+            imBlog.setAttribute("class","imBlog");
+            li.appendChild(imBlog);
+
+            var img=document.createElement("img");
+            img.setAttribute("src",blogNewsPics[i]);
+            imBlog.appendChild(img);
+
+            var date=document.createElement("h2");
+            date.innerHTML=blogNewsDate[i];
+            imBlog.appendChild(date);
+
+            var stepRight=document.createElement("div");
+            stepRight.setAttribute("class","col-sm-11 stepRight");
+            li.appendChild(stepRight);
+
+            var heading=document.createElement("h2");
+            heading.innerHTML=blogNewsHeading[i];
+            stepRight.appendChild(heading);
+
+            var span=document.createElement("span");
+            heading.appendChild(span);
+
+            var author=document.createElement("a");
+            author.innerHTML=blogNewsAuthor[i];
+            if(blogNewsAuthor[i]=="admin")
+            author.setAttribute("class","admin");
+
+            author.setAttribute("href","#");
+            span.appendChild(author);
+
+            var bk=document.createElement("span");
+            bk.innerHTML="|";
+            bk.setAttribute("class","bk");
+            span.appendChild(bk)
+
+            var tag=document.createElement("a");
+            tag.setAttribute("href","#");
+            tag.setAttribute("class","health");
+            tag.innerHTML=blogNewsTags[i];
+            span.appendChild(tag);
+
+            var text=document.createElement("p");
+            text.innerHTML=blogNewsText[i];
+            stepRight.appendChild(text);
+
+            var more=document.createElement("a");
+            more.setAttribute("href","#");
+            more.setAttribute("class","bg");
+            more.innerHTML="Read More";
+            stepRight.appendChild(more)
+
+            var bord=document.createElement("div");
+            bord.setAttribute("class","bord");
+            stepRight.appendChild(bord);
+
+            var bordInner=document.createElement("div");
+            bordInner.setAttribute("class","bordInner");
+            bord.appendChild(bordInner);
+
+            var shareSpan=document.createElement("span");
+            shareSpan.innerHTML="Share :";
+            bordInner.appendChild(shareSpan);
+
+            for(var j=0;j<blogNewsSMIcons.length;j++){
+                var sm=document.createElement("a");
+                sm.setAttribute("href","#");
+                bordInner.appendChild(sm);
+
+                var smIcons=document.createElement("img");
+                smIcons.setAttribute("src",blogNewsSMIcons[j]);
+                sm.appendChild(smIcons);
+            }
+
+        }
+
+        for(var i=0;i<blogNewsHeading.length/3;i++){
+            var li=document.createElement("li");
+            document.getElementsByClassName("pagerSection")[0].getElementsByTagName("ul")[0].appendChild(li);
+
+            var page=document.createElement("a");
+            page.innerHTML=i+1;
+            page.onclick=pageClick
+            li.appendChild(page);
+                
+        }
+
+        
     }
 
 }());
 
-window.onclick=function(event) {
-    if(event.target!=menuTarget && menuTarget.getElementsByTagName("a")[0].style.color=="black"){
-       menuTarget.getElementsByTagName("a")[0].style.color="#91a8ae"
+function pageClick(){
+    for(var i=0;i<blogNewsHeading.length;i++){
+        document.getElementsByClassName("leftSection")[0].getElementsByTagName("ul")[0].getElementsByTagName("li")[i].style.display="none";
     }
 
+    for(var i=(this.innerHTML-1)*3;i<this.innerHTML*3;i++){
+        document.getElementsByClassName("leftSection")[0].getElementsByTagName("ul")[0].getElementsByTagName("li")[i].style.display="block";
+    }
 
 }
+
+
 
 function navClick(k){
     menuTarget=k;
@@ -485,6 +698,15 @@ function navClick(k){
         }
     }
     menuTarget.getElementsByTagName("a")[0].style.color="black";
+}
+
+
+window.onclick=function(event) {
+    if(event.target!=menuTarget && menuTarget.getElementsByTagName("a")[0].style.color=="black"){
+       menuTarget.getElementsByTagName("a")[0].style.color="#91a8ae"
+    }
+
+
 }
 
 
