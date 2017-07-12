@@ -425,51 +425,123 @@
     #blog .content .leftSection .pagerSection .pRight {
       background: url(../img/p-right.png) left top no-repeat;
       border: 1px solid #6acff0 !important; }
-  #blog .content .rightSection .blogAccordion ul li {
-    list-style: none;
-    outline: none;
-    float: left;
-    width: 100%;
-    border-bottom: 1px solid #dce8f1;
-    padding: 12px 0; }
-    #blog .content .rightSection .blogAccordion ul li a {
-      font-size: 13.5px;
-      color: #6e868c;
-      background: #fff url(../img/li-right.png) 97% 49% no-repeat;
-      cursor: pointer;
-      width: 100%;
-      float: left;
-      text-transform: capitalize; }
-    #blog .content .rightSection .blogAccordion ul li:nth-child(5) {
-      border: none; }
-  #blog .content .rightSection .featuredBox ul li {
-    list-style: none;
-    float: left;
-    padding: 5px 0 20px 0;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #dce8f1; }
-    #blog .content .rightSection .featuredBox ul li img {
-      float: left;
-      padding-right: 23px; }
-    #blog .content .rightSection .featuredBox ul li h2 {
-      font-size: 13px;
-      color: #383d48;
-      font-weight: 800;
-      padding: 5px 0; }
-    #blog .content .rightSection .featuredBox ul li p {
-      font-size: 13px;
-      color: #6e868c;
-      font-weight: normal;
-      line-height: 24px; }
-    #blog .content .rightSection .featuredBox ul li:last-child {
-      border: none; }
-  #blog .content .rightSection .tags a {
+
+#blog .rightSection .blogAccordion ul li, #blogDetail .rightSection .blogAccordion ul li {
+  list-style: none;
+  outline: none;
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #dce8f1;
+  padding: 12px 0; }
+  #blog .rightSection .blogAccordion ul li a, #blogDetail .rightSection .blogAccordion ul li a {
     font-size: 13.5px;
     color: #6e868c;
-    border: 1px solid #dce8f1;
+    background: #fff url(../img/li-right.png) 97% 49% no-repeat;
+    cursor: pointer;
+    width: 100%;
     float: left;
-    padding: 8px 22px;
-    margin-right: 14px;
-    margin-bottom: 14px; }
+    text-transform: capitalize; }
+  #blog .rightSection .blogAccordion ul li:nth-child(5), #blogDetail .rightSection .blogAccordion ul li:nth-child(5) {
+    border: none; }
+#blog .rightSection .featuredBox ul li, #blogDetail .rightSection .featuredBox ul li {
+  list-style: none;
+  float: left;
+  padding: 5px 0 20px 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #dce8f1; }
+  #blog .rightSection .featuredBox ul li img, #blogDetail .rightSection .featuredBox ul li img {
+    float: left;
+    padding-right: 23px; }
+  #blog .rightSection .featuredBox ul li h2, #blogDetail .rightSection .featuredBox ul li h2 {
+    font-size: 13px;
+    color: #383d48;
+    font-weight: 800;
+    padding: 5px 0; }
+  #blog .rightSection .featuredBox ul li p, #blogDetail .rightSection .featuredBox ul li p {
+    font-size: 13px;
+    color: #6e868c;
+    font-weight: normal;
+    line-height: 24px; }
+  #blog .rightSection .featuredBox ul li:last-child, #blogDetail .rightSection .featuredBox ul li:last-child {
+    border: none; }
+#blog .rightSection .tags a, #blogDetail .rightSection .tags a {
+  font-size: 13.5px;
+  color: #6e868c;
+  border: 1px solid #dce8f1;
+  float: left;
+  padding: 8px 22px;
+  margin-right: 14px;
+  margin-bottom: 14px; }
+
+#blogDetail .leftSection .quote p {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #383d48;
+  padding-left: 127px;
+  background: url(../img/quote-circle.png) 6% 40% no-repeat; }
+#blogDetail .leftSection .comments {
+  margin: 40px 0;
+  width: 100%;
+  float: left; }
+  #blogDetail .leftSection .comments h2 {
+    font-size: 24px;
+    color: #383d48;
+    font-weight: 800;
+    text-transform: uppercase; }
+  #blogDetail .leftSection .comments ul li {
+    padding: 35px 0;
+    float: left;
+    border-bottom: 1px solid #dce8f1; }
+    #blogDetail .leftSection .comments ul li h3 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase; }
+      #blogDetail .leftSection .comments ul li h3 span {
+        float: right;
+        color: #383d48; }
+    #blogDetail .leftSection .comments ul li p {
+      line-height: 19px;
+      padding: 6px 0 0 0; }
+    #blogDetail .leftSection .comments ul li .bg {
+      background-position: 100% 8px; }
+    #blogDetail .leftSection .comments ul li a {
+      font-size: 13.5px;
+      color: #383d48;
+      padding-right: 10px;
+      float: left;
+      margin: 20px 0 0 0; }
+#blogDetail .commentLeave {
+  padding: 60px 0; }
+  #blogDetail .commentLeave .container .row .center {
+    float: none;
+    margin: 0 auto;
+    padding: 0; }
+    #blogDetail .commentLeave .container .row .center h2 {
+      font-size: 24px;
+      color: #383d48;
+      font-weight: 800;
+      text-transform: uppercase; }
+    #blogDetail .commentLeave .container .row .center .form-less {
+      padding: 25px 0 0; }
+      #blogDetail .commentLeave .container .row .center .form-less input {
+        border: 1px solid #e2ecf5;
+        width: 100%;
+        height: auto;
+        margin: 5px 0;
+        outline: medium none;
+        padding: 10px 15px;
+        color: #6e868c;
+        font-size: 13.5px; }
+    #blogDetail .commentLeave .container .row .center button {
+      border: none;
+      border-radius: 4px;
+      outline: none;
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+      background: #f6772c;
+      text-transform: uppercase;
+      padding: 8px 23px; }
 
 /*# sourceMappingURL=style.css.map */

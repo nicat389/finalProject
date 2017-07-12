@@ -675,9 +675,212 @@ if(location.pathname.substring(47)=="index.html"){
         
     }
 
+    if(location.pathname.substring(47)=="blog-detail.html"){
+
+        var blogDetailText=[
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            ];
+
+       
+        var blogDetailQuoteText="Roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia";
+
+        var blogDetailCommentName=[
+            "Akhil Designer",
+            "Jishnu Designer",
+            "Merina john",
+            "Shuba chandran"
+        ];
+
+        var blogDetailCommentPics=[
+            "img/akhil.jpg",
+            "img/jishnu.jpg",
+            "img/merina.jpg",
+            "img/subha.jpg"
+        ];
+
+        var blogDetailCommentText=[
+            "Industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "Industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "Industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "Industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        ];
+
+        var blogDetailCommentDate=[
+            "04 - 11 - 2015",
+            "04 - 11 - 2016",
+            "04 - 11 - 2017",
+            "04 - 11 - 2018"
+        ]
+
+
+            for(var i=0;i<blogFeaturedHeading.length;i++){
+           var li=document.createElement("li");
+            document.getElementsByClassName("featuredBox")[0].getElementsByTagName("ul")[0].appendChild(li);
+
+           var img=document.createElement("img");
+            img.setAttribute("src",blogFeaturedPic[i]);
+            li.appendChild(img);
+
+           var h2=document.createElement("h2");
+            h2.innerHTML=blogFeaturedHeading[i];
+
+           var p=document.createElement("p");
+           p.innerHTML=blogFeaturedText[i];
+
+           li.appendChild(h2);
+           li.appendChild(p);
+        }
+
+            for(var i=0;i<blogTags.length;i++){
+            var tags=document.createElement("a");
+            tags.setAttribute("href","#");
+            tags.innerHTML=blogTags[i];
+            document.getElementsByClassName("tags")[0].appendChild(tags);
+        }
+
+            var bdetailnews=document.createElement("div");
+            document.getElementsByClassName("leftSection")[0].appendChild(bdetailnews);
+
+            var imBlog=document.createElement("div");
+            imBlog.setAttribute("class","imBlog");
+            bdetailnews.appendChild(imBlog);
+
+            var img=document.createElement("img");
+            img.setAttribute("src",blogNewsPics[0]);
+            imBlog.appendChild(img);
+
+            var date=document.createElement("h2");
+            date.innerHTML=blogNewsDate[0];
+            imBlog.appendChild(date);
+
+            var stepRight=document.createElement("div");
+            stepRight.setAttribute("class","col-sm-11 stepRight");
+            bdetailnews.appendChild(stepRight);
+
+            var heading=document.createElement("h2");
+            heading.innerHTML=blogNewsHeading[0];
+            stepRight.appendChild(heading);
+
+            var span=document.createElement("span");
+            heading.appendChild(span);
+
+            var author=document.createElement("a");
+            author.innerHTML=blogNewsAuthor[0];
+            if(blogNewsAuthor[0]=="admin")
+            author.setAttribute("class","admin");
+
+            author.setAttribute("href","#");
+            span.appendChild(author);
+
+            var bk=document.createElement("span");
+            bk.innerHTML="|";
+            bk.setAttribute("class","bk");
+            span.appendChild(bk)
+
+            var tag=document.createElement("a");
+            tag.setAttribute("href","#");
+            tag.setAttribute("class","health");
+            tag.innerHTML=blogNewsTags[0];
+            span.appendChild(tag);
+
+            var firsttext=document.createElement("p");
+            firsttext.innerHTML=blogDetailText[0];
+            stepRight.appendChild(firsttext);
+
+            var quoteDiv=document.createElement("div");
+            quoteDiv.setAttribute("class","quote");
+            stepRight.appendChild(quoteDiv);
+
+            var quoteText=document.createElement("p");
+            quoteText.innerHTML=blogDetailQuoteText;
+            quoteDiv.appendChild(quoteText);
+
+            var secondText=document.createElement("p");
+            secondText.innerHTML=blogDetailText[1];
+            stepRight.appendChild(secondText);
+
+
+
+            var bord=document.createElement("div");
+            bord.setAttribute("class","bord");
+            stepRight.appendChild(bord);
+
+            var bordInner=document.createElement("div");
+            bordInner.setAttribute("class","bordInner");
+            bord.appendChild(bordInner);
+
+            var shareSpan=document.createElement("span");
+            shareSpan.innerHTML="Share :";
+            bordInner.appendChild(shareSpan);
+
+            for(var j=0;j<blogNewsSMIcons.length;j++){
+                var sm=document.createElement("a");
+                sm.setAttribute("href","#");
+                bordInner.appendChild(sm);
+
+                var smIcons=document.createElement("img");
+                smIcons.setAttribute("src",blogNewsSMIcons[j]);
+                sm.appendChild(smIcons);
+            }
+
+            var comments=document.createElement("div");
+            comments.setAttribute("class","comments");
+            stepRight.appendChild(comments);
+
+            var commentHeading=document.createElement("h2");
+            commentHeading.innerHTML="Comments";
+            comments.appendChild(commentHeading);
+
+            var commentUl=document.createElement("ul");
+            comments.appendChild(commentUl);
+
+            for(var i=0;i<blogDetailCommentName.length;i++){
+            var commentLi=document.createElement("li");
+            commentUl.appendChild(commentLi);
+
+            var commentPicDiv=document.createElement("div");
+            commentPicDiv.setAttribute("class","col-sm-1 pad0");
+            commentLi.appendChild(commentPicDiv);
+
+            var commentPic=document.createElement("img");
+            commentPic.setAttribute("src",blogDetailCommentPics[i]);
+            commentPicDiv.appendChild(commentPic);
+
+            var commentContent=document.createElement("div");
+            commentContent.setAttribute("class","col-sm-11");
+            commentLi.appendChild(commentContent);
+
+            var commentH3=document.createElement("h3");
+            commentH3.innerHTML=blogDetailCommentName[i];
+            commentContent.appendChild(commentH3);
+
+            var commentDate=document.createElement("span");
+            commentDate.innerHTML=blogDetailCommentDate[i];
+            commentH3.appendChild(commentDate);
+
+            var commentText=document.createElement("p");
+            commentText.innerHTML=blogDetailCommentText[i];
+            commentContent.appendChild(commentText);
+
+            var commentReply=document.createElement("a");
+            commentReply.setAttribute("class","bg");
+            commentReply.setAttribute("href","#");
+            commentReply.innerHTML="Reply";
+            commentContent.appendChild(commentReply);
+
+            }
+
+        
+
+
+    }
+
+
+
 }());
 
-function pageClick(){
+function pageClick(){ //blog
     for(var i=0;i<blogNewsHeading.length;i++){
         document.getElementsByClassName("leftSection")[0].getElementsByTagName("ul")[0].getElementsByTagName("li")[i].style.display="none";
     }

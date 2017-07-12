@@ -6,7 +6,7 @@ body {
 * {
   transition: all .5s ease; }
 
-#homePage, #aboutUs, #contact, #services {
+#homePage, #aboutUs, #contact, #services, #blog, #blogDetail, #news {
   width: calc(100% - 60px);
   margin: 30px auto;
   background: #f0f8ff; }
@@ -302,6 +302,23 @@ img {
   width: 100%;
   margin-top: 10px; }
 
+.text-area {
+  padding: 25px 15px 0 15px; }
+  .text-area textarea {
+    resize: none;
+    margin: 5px 0;
+    border: 1px solid #e2ecf5;
+    padding: 10px 15px;
+    color: #6e868c;
+    width: 100%;
+    font-size: 13.5px;
+    min-height: 143px; }
+
+.full {
+  width: 100%;
+  float: left;
+  margin: 15px 0 0 0; }
+
 .input-group .form-control, .input-group-addon, .input-group-btn {
   display: block;
   position: absolute;
@@ -416,6 +433,9 @@ img {
         color: #383d48; }
       .leftSection .stepRight .bord .bordInner a {
         padding: 0 5px; }
+
+.pad0 {
+  padding: 0; }
 
 .rightSection {
   padding-left: 50px; }
