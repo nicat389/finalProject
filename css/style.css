@@ -544,4 +544,96 @@
       text-transform: uppercase;
       padding: 8px 23px; }
 
+#news .content .filter button {
+  outline: none;
+  border: none;
+  background: #6acff0;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  width: 127px;
+  padding: 10px 0;
+  margin: 0 0 0 12px;
+  float: right; }
+#news .content .newsSection .newsCovering {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #e3eaef;
+  padding: 15px 0 35px 0; }
+  #news .content .newsSection .newsCovering:last-child {
+    border-bottom: transparent; }
+  #news .content .newsSection .newsCovering .imageSection {
+    padding-left: 0; }
+    #news .content .newsSection .newsCovering .imageSection img {
+      float: left;
+      width: 100%; }
+    #news .content .newsSection .newsCovering .imageSection h2 {
+      font-size: 13px;
+      color: #383d48;
+      background: #ffe073;
+      text-transform: uppercase;
+      font-weight: 700;
+      text-align: center;
+      padding: 10px 0;
+      clear: left; }
+  #news .content .newsSection .newsCovering .newsDetail h2 {
+    color: #383d48;
+    font-size: 13.5px;
+    font-weight: 800;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    padding: 10px 0; }
+    #news .content .newsSection .newsCovering .newsDetail h2 span {
+      display: block;
+      font-family: "Raleway", sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: #868b97;
+      padding-top: 5px;
+      padding-bottom: 11px;
+      background: url(../img/yellow-bg.png) left bottom no-repeat; }
+  #news .content .newsSection .newsCovering .newsDetail p {
+    font-size: 13.5px;
+    color: #6e868c;
+    line-height: 24px; }
+
+#appointment .firstSection .row .inputs .appointments input, #appointment .firstSection .row .inputs .appointments textarea {
+  width: 100%;
+  height: auto;
+  color: #6e868c;
+  border: 1px solid #e4edf6;
+  padding: 9px 15px;
+  margin: 7px 0;
+  font-size: 13.5px; }
+#appointment .firstSection .row .inputs .appointments textarea {
+  resize: none;
+  min-height: 180px; }
+#appointment .firstSection .row .inputs .appointments button {
+  background: none repeat scroll 0 0 #f6772c;
+  color: white;
+  border: medium none;
+  outline: medium none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+  padding: 6px 18px;
+  text-transform: uppercase; }
+#appointment .firstSection .row .inputs .appointments fieldset .form-group .input-group {
+  width: 100%; }
+#appointment .firstSection .row .inputs .appointments .nms {
+  float: left;
+  color: #6e868c;
+  font-size: 13.5px;
+  font-weight: normal;
+  padding-top: 4px; }
+#appointment .firstSection .row .inputs .appointments .maNotification {
+  position: initial;
+  color: black;
+  font-size: 16px;
+  padding: 0;
+  text-transform: capitalize; }
+
 /*# sourceMappingURL=style.css.map */

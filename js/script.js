@@ -876,7 +876,150 @@ if(location.pathname.substring(47)=="index.html"){
 
     }
 
+    if(location.pathname.substring(47)=="news.html"){
+        var newsHeading=[
+            "News Heading: contrary to popular.",
+            "News Heading: contrary to popular.",
+            "News Heading: contrary to popular.",
+            "News Heading: contrary to popular."
+        ];
 
+        var newsPics=[
+            "img/news-hd1.jpg",
+            "img/news-hd2.jpg",
+            "img/news-hd3.jpg",
+            "img/news-hd4.jpg",
+        ];
+
+        var newsDate=[
+            "April /05/ 2015",
+            "April /05/ 2015",
+            "April /05/ 2015",
+            "April /05/ 2015"
+        ];
+
+        var newsText=[
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+        ];
+
+        var newsAuthor=[
+            "admin",
+            "admin",
+            "admin",
+            "admin"
+        ];
+
+        var select=[
+            "Sort By Popularity",
+            "USA",
+            "Canada",
+            "France",
+            "Spain",
+            "Bulgaria",
+            "Greece"
+        ];
+
+        for(var i=0;i<newsHeading.length;i++){
+            var newsCovering=document.createElement("div");
+            newsCovering.setAttribute("class","col-sm-12 newsCovering");
+            document.getElementsByClassName("newsSection")[0].appendChild(newsCovering);
+
+            var imgSection=document.createElement("div");
+            imgSection.setAttribute("class","col-sm-2 imageSection");
+            newsCovering.appendChild(imgSection);
+
+            var img=document.createElement("img");
+            img.setAttribute("src",newsPics[i]);
+            imgSection.appendChild(img);
+            
+            var date=document.createElement("h2");
+            date.innerHTML=newsDate[i];
+            imgSection.appendChild(date);
+
+            var newsDetail=document.createElement("div");
+            newsDetail.setAttribute("class","col-sm-10 newsDetail");
+            newsCovering.appendChild(newsDetail);
+
+            var nhead=document.createElement("h2");
+            nhead.innerHTML=newsHeading[i];
+            newsDetail.appendChild(nhead);
+
+            var author=document.createElement("span");
+            author.innerHTML="by : "+newsAuthor[i];
+            nhead.appendChild(author);
+
+            var nText=document.createElement("p");
+            nText.innerHTML=newsText[i];
+            newsDetail.appendChild(nText);
+        }
+
+        // document.getElementsByClassName("select")[0].onclick=selectDownFunction;
+        // document.getElementsByClassName("sbSelect")[0].innerHTML=select[0];
+        
+
+        // for(var i=0;i<select.length;i++){
+        //     var li=document.createElement("li");
+        //     document.getElementsByClassName("selectOptions")[0].appendChild(li);
+
+        //     var a=document.createElement("a");
+        //     a.innerHTML=select[i];
+        //     a.onclick=selectFunction;
+        //     li.appendChild(a);
+        // }
+
+        // function selectDownFunction(){
+
+        // if(document.getElementsByClassName("selectOptions")[0].classList.contains("close")){
+        //         document.getElementsByClassName("selectOptions")[0].classList.remove("close");
+        //         document.getElementsByClassName("selectOptions")[0].classList.add("open");
+        // }
+        // else if(document.getElementsByClassName("selectOptions")[0].classList.contains("open")){
+        //         document.getElementsByClassName("selectOptions")[0].classList.remove("open");
+        //         document.getElementsByClassName("selectOptions")[0].classList.add("close");
+        // }
+
+
+        // }
+
+        // function selectFunction(){
+        //     for(var i=0;i<select.length;i++){
+        //         if(select[i]==this.innerHTML){
+        //             document.getElementsByClassName("sbSelect")[0].innerHTML=select[i];
+        //             break;
+        //         }
+        //     }
+
+            
+
+        // }
+
+        // window.onclick=function(event){
+
+        //     if(event.target!=document.getElementsByClassName("select")[0]){
+        //         if(document.getElementsByClassName("selectOptions")[0].classList.contains("open")){
+        //         document.getElementsByClassName("selectOptions")[0].classList.remove("open");
+        //         document.getElementsByClassName("selectOptions")[0].classList.add("close");
+        //         }
+        //     }
+
+
+        // }
+    }
+
+    if(location.pathname.substring(47)=="appointment.html"){
+        var select=[
+            "Select Department",
+            "USA",
+            "Canada",
+            "France",
+            "Spain",
+            "Italy"
+        ];
+        selectt(select);
+    }
 
 }());
 
@@ -904,13 +1047,13 @@ function navClick(k){
 }
 
 
-window.onclick=function(event) {
-    if(event.target!=menuTarget && menuTarget.getElementsByTagName("a")[0].style.color=="black"){
-       menuTarget.getElementsByTagName("a")[0].style.color="#91a8ae"
-    }
+// window.onclick=function(event) {
+//     if(event.target!=menuTarget && menuTarget.getElementsByTagName("a")[0].style.color=="black"){
+//        menuTarget.getElementsByTagName("a")[0].style.color="#91a8ae"
+//     }
 
 
-}
+// }
 
 
 function sendContact(){
@@ -988,6 +1131,105 @@ function sendContact(){
         }
         else if(phoneCheck==false){
             notification.innerHTML="you have entered an invalid phonenumber! It must be only numbers!" //input email üçün uyğun olmazsa bu əmr yerinə yetirilir
+        }
+        else if(emailCheck==false){
+            notification.innerHTML="you have entered an invalid email address!" //input email üçün uyğun olmazsa bu əmr yerinə yetirilir
+        }
+    }
+// 169-182-cü sətirlərdə nəticə ekrana çıxarılır
+}
+
+
+function sendContact(l_name,phone,f_name,email){
+    var maForm=[]; //Banner hissəsində Make An AppointMent bölməsindəki textarea və inputları özündə birləşdirən massiv 
+    var check=false; //Make An Appointment hissəsində inputlarda və textarea'ların boş olub olmamasını yoxlamaq üçün bool tipində dəyişən
+    var nameCheck=false;  //Make An Appointment hissəsində name inputunun ad üçün uyğun olub-olmamasını yoxlamaq üçün bool tipində dəyişən
+    var f_nameCheck=false;
+    var phoneCheck=false; //Make An Appointment hissəsində phone inputunun nömrə üçün uyğun olub-olmamasını yoxlamaq üçün bool tipində dəyişən
+    var emailCheck=false; //Make An Appointment hissəsində email inputunun email üçün uyğun olub-olmamasını yoxlamaq üçün bool tipində dəyişən
+    var notification=document.getElementsByClassName("maNotification")[0].getElementsByTagName("p")[0]; //Make An Appointment hissəsində "GO" buttonuna click etdikdə nəticə görmək üçün tag'a müraciət dəyişəni
+
+    for(var i=0;i<document.getElementsByClassName("maInput").length;i++)
+    maForm[i]=document.getElementsByClassName("maInput")[i];
+
+    // 111-114-cü sətirlərdə maForm massivinə inputlar və textarea mənimsədilir
+
+    for(var i=0;i<maForm.length;i++){
+        if(maForm[i].value.length==0){
+            check=true;
+        }
+    }
+
+// 118-122-ci sətirlərdə inputların  və textarea'nın boş olub olmaması yoxlanılır 
+
+    if(check==true && (document.getElementById("squaredOne").checked==false || document.getElementById("squaredtwo").checked==false || document.getElementById("squaredthree").checked==false) ){
+        notification.innerHTML="please fill all fields" //hər hansı input və ya textarea boş olarsa bu əmr yerinə yetirilir
+    }
+
+    else{
+        for(var i=0;i<l_name.value.length;i++){
+            nameCheck=false;
+            for(var j=65;j<=90;j++){
+                if(l_name.value[i]==String.fromCharCode(j) || l_name.value[i]==String.fromCharCode(j+32)){
+                    nameCheck=true; 
+                    break;
+                }
+            }
+
+            if(nameCheck==false)
+            break;
+        }
+
+        for(var i=0;i<f_name.value.length;i++){
+            f_nameCheck=false;
+            for(var j=65;j<=90;j++){
+                if(f_name.value[i]==String.fromCharCode(j) || f_name.value[i]==String.fromCharCode(j+32)){
+                    f_nameCheck=true; 
+                    break;
+                }
+            }
+
+            if(f_nameCheck==false)
+            break;
+        }
+
+        for(var i=0;i<phone.value.length;i++){
+            phoneCheck=false;
+            for(var j=48;j<=57;j++){
+                if(phone.value[i]==String.fromCharCode(j)){
+                    phoneCheck=true;
+                    break;
+                }
+            }
+            if(phoneCheck==false)
+            break;
+        }
+        
+        for(var i=0;i<email.value.length;i++){
+            if(email.value[i]=='@'){
+                for(var j=i;j<email.value.length;j++){
+                    if(email.value[j]=='.'){
+                        if(email.value.length-j>2){
+                            emailCheck=true;
+                        }
+                    }
+                }
+            }
+        }
+//126-166-ci sətirlərdə inputlar boş olmazsa(yəni dolu olarsa) name hissəsinin ad üçün, phone hissəsinin nömrə, email hissəsinin email üçüb düzgün olub-olmaması yoxlanılır.
+
+        if(nameCheck==true && f_nameCheck && phoneCheck==true && emailCheck==true){
+            notification.innerHTML="email sent"; //input email üçün uyğun olarsa bu əmr yerinə yetirilir 
+        }
+
+        else if(nameCheck==false){
+            notification.innerHTML="you have entered an invalid last name!" //input email üçün uyğun olmazsa bu əmr yerinə yetirilir
+        }
+        else if(f_nameCheck==false){
+            notification.innerHTML="you have entered an invalid fast name!" //input email üçün uyğun olmazsa bu əmr yerinə yetirilir
+        }
+        else if(phoneCheck==false){
+            notification.innerHTML="you have entered an invalid phone number! It must be only numbers!" //input email üçün uyğun olmazsa bu əmr yerinə yetirilir
         }
         else if(emailCheck==false){
             notification.innerHTML="you have entered an invalid email address!" //input email üçün uyğun olmazsa bu əmr yerinə yetirilir
@@ -1176,4 +1418,58 @@ function sendNewsLetter() {
   }
 };
 
+
+function selectt(select){
+            document.getElementsByClassName("select")[0].onclick=selectDownFunction;
+        document.getElementsByClassName("sbSelect")[0].innerHTML=select[0];
+        
+
+        for(var i=0;i<select.length;i++){
+            var li=document.createElement("li");
+            document.getElementsByClassName("selectOptions")[0].appendChild(li);
+
+            var a=document.createElement("a");
+            a.innerHTML=select[i];
+            a.onclick=selectFunction;
+            li.appendChild(a);
+        }
+
+        function selectDownFunction(){
+
+        if(document.getElementsByClassName("selectOptions")[0].classList.contains("close")){
+                document.getElementsByClassName("selectOptions")[0].classList.remove("close");
+                document.getElementsByClassName("selectOptions")[0].classList.add("open");
+        }
+        else if(document.getElementsByClassName("selectOptions")[0].classList.contains("open")){
+                document.getElementsByClassName("selectOptions")[0].classList.remove("open");
+                document.getElementsByClassName("selectOptions")[0].classList.add("close");
+        }
+
+
+        }
+
+        function selectFunction(){
+            for(var i=0;i<select.length;i++){
+                if(select[i]==this.innerHTML){
+                    document.getElementsByClassName("sbSelect")[0].innerHTML=select[i];
+                    break;
+                }
+            }
+
+            
+
+        }
+
+        window.onclick=function(event){
+
+            if(event.target!=document.getElementsByClassName("select")[0]){
+                if(document.getElementsByClassName("selectOptions")[0].classList.contains("open")){
+                document.getElementsByClassName("selectOptions")[0].classList.remove("open");
+                document.getElementsByClassName("selectOptions")[0].classList.add("close");
+                }
+            }
+
+
+        }
+}
 
