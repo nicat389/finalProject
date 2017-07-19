@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="http://www.lagomdigital.com/medical/css/jquery.selectbox.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resp.css">
     <title>The Best Medical Hospital</title>
 </head>
 <body>
@@ -19,136 +20,153 @@
     <div id="appointment">
 
         <!--header-->
-            <div class="header">
-                <!--container-->
-                <div class="container">
-                    <!--row-->
-                    <div class="row">
-                        <!--TopPart-->
-                        <div class="headerTopPart col-sm-12">
-                            <div class="row">
-                                <ul>
-                                        <li>Email :<a href="#">info@medicaltheme.com</a></li>
-                                        <li>Call :<a href="#"> 8876 7786 999</a></li>
-                                    </ul>
+        <div class="header">
+            <!--container-->
+            <div class="container">
+                <!--row-->
+                <div class="row">
+                    <!--TopPart-->
+                    <div class="headerTopPart col-sm-12">
+                            <ul>
+                                    <li>Email :<a href="#">info@medicaltheme.com</a></li>
+                                    <li>Call :<a href="#"> 8876 7786 999</a></li>
+                                </ul>
+                        </div>
+                    <!--/TopPart-->
+
+                    <!--BottomPart-->
+                    <div class="headerBottomPart">
+                            <!--logo-->
+                            <div class="col-sm-3 logo">
+                                <a href="#"><img src="img/logo-var2.png" alt="Medical Themes"></a>
                                 </div>
-                            </div>
-                        <!--/TopPart-->
+                            <!--/logo-->
 
-                        <!--BottomPart-->
-                        <div class="headerBottomPart">
-                            <div class="row">
-                                <!--logo-->
-                                <div class="col-sm-3 logo">
-                                    <a href="#"><img src="img/logo-var2.png" alt="Medical Themes"></a>
-                                    </div>
-                                <!--/logo-->
+                            <!--navigation-->
+                            <div class="col-sm-9 navigation">
+                                <div class="navbar navbar-default">
+                                    <div class="container-fluid">
+                                        <!--navbar-header responsive button-->
+                                        <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                                <span class="sr-only"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                </button>
+                                            </div>
+                                            <!--/navbar-header-->
 
-                                <!--navigation-->
-                                <div class="col-sm-9 navigation">
-                                    <div class="navbar navbar-default">
-                                        <div class="container-fluid">
-                                            <!--navbar-header responsive button-->
-                                            <div class="navbar-header">
-                                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                                    <span class="sr-only"></span>
-                                                    <span class="icon-bar"></span>
-                                                    <span class="icon-bar"></span>
-                                                    <span class="icon-bar"></span>
-                                                    </button>
-                                                </div>
-                                                <!--/navbar-header-->
-
-                                                <!--collapse menu-->
-                                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                                    <!--nav menu-->
-                                                    <ul class="nav navbar-nav">
-                                                            <li class="menuList dropdown active drop" onclick="navClick(this)"><a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Home</a>
-                                                            <!--dropdown-menu menu daxilində li'lər daxilində olan alt menu-->
+                                            <!--collapse menu-->
+                                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                                <!--nav menu-->
+                                                <ul class="nav navbar-nav">
+                                                        <li class="menuList dropdown active drop" onclick="navClick(this)"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Home</a>
+                                                        <!--dropdown-menu menu daxilində li'lər daxilində olan alt menu-->
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li class="drop-down-bg"></li>
+                                                            <li><a href="index.html">Homepage variation-1</a></li>
+                                                            <li><a href="#">Homepage variation-2</a></li>
+                                                            <li><a href="#">Homepage variation-3</a></li>
+                                                            </ul>
+                                                            <!--/dropdown-->
+                                                        </li>
+                                                        <li class="menuList"><a href="about.html">About Us</a></li>
+                                                        <li class="menuList"><a href="doctors.html">Doctors</a></li>
+                                                        <li class="menuList"><a href="services.html">Services</a></li>
+                                                        <li class="menuList"><a href="news.html">News</a></li>
+                                                        <li class="menuList dropdown drop" onclick="navClick(this)"><a href="#" class="dropdown-toggle activeNav" data-toggle="dropdown" role="button" aria-expanded="false">pages</a>
+                                                        <!--dropdown-menu menu daxilində li'lər daxilində olan alt menu-->
                                                             <ul class="dropdown-menu" role="menu">
                                                                 <li class="drop-down-bg"></li>
-                                                                <li><a href="index.html">Homepage variation-1</a></li>
-                                                                <li><a href="#">Homepage variation-2</a></li>
-                                                                <li><a href="#">Homepage variation-3</a></li>
+                                                                <li><a href="blog.html">Blog</a></li>
+                                                                <li><a href="blog-detail.html">Blog Details</a></li>
+                                                                <li><a href="timetable.html">Doctors' Timetable</a></li>
+                                                                <li><a href="error.html">404 ERROR</a></li>
+                                                                <li><a href="appointment.html">Appointment</a></li>
                                                                 </ul>
                                                                 <!--/dropdown-->
-                                                            </li>
-                                                            <li class="menuList"><a href="about.html">About Us</a></li>
-                                                            <li class="menuList"><a href="#">Doctors</a></li>
-                                                            <li class="menuList"><a href="#">Services</a></li>
-                                                            <li class="menuList"><a href="#" class="activeNav">News</a></li>
-                                                            <li class="menuList dropdown drop" onclick="navClick(this)"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">pages</a>
-                                                            <!--dropdown-menu menu daxilində li'lər daxilində olan alt menu-->
-                                                                <ul class="dropdown-menu" role="menu">
-                                                                    <li class="drop-down-bg"></li>
-                                                                    <li><a href="#">Blog</a></li>
-                                                                    <li><a href="#">Blog Details</a></li>
-                                                                    <li><a href="#">Doctors' Timetable</a></li>
-                                                                    <li><a href="#">404 ERROR</a></li>
-                                                                    <li><a href="#">Appointment</a></li>
-                                                                    </ul>
-                                                                    <!--/dropdown-->
-                                                            </li>
-                                                            <li class="menuList"><a href="#">Contact Us</a></li>
-                                                            <li class="lst-head"><a href="#">Appointment</a></li>
-                                                        </ul>
-                                                        <!--/nav-->
-                                                    </div>
-                                                    <!--/collapse-->
-                                            </div>
+                                                        </li>
+                                                        <li class="menuList"><a href="contact.html">Contact Us</a></li>
+                                                        <li class="lst-head"><a href="appointment.html">Appointment</a></li>
+                                                    </ul>
+                                                    <!--/nav-->
+                                                </div>
+                                                <!--/collapse-->
                                         </div>
                                     </div>
-                                <!--/navigation-->
                                 </div>
-                            </div>
-                        <!--/BottomPart-->
+                            <!--/navigation-->
                         </div>
-                        <!--/row-->
+                    <!--/BottomPart-->
                     </div>
-                    <!--container-->
+                    <!--/row-->
                 </div>
-        <!--/header-->
+                <!--container-->
+            </div>
+<!--/header-->
 
-
+        <!--innerBanner-->
         <div class="innerBanner">
             <img src="img/appointment.jpg" alt="">
+            <!--container-->
             <div class="container">
+                <!--row-->
                 <div class="row">
                     <h2>Appointments</h2>
                     </div>
+                    <!--/row-->
                 </div>
+                <!--/container-->
             </div>
+            <!--/innerBanner-->
 
 
-
+            <!--content-->
             <div class="content">
+                <!--firstSection-->
                 <div class="firstSection sections">
+                    <!--container-->
                     <div class="container">
+                        <!--row-->
                         <div class="row">
+                            <!--jstCover-->
                             <div class="col-sm-12 jstCover">
                                 <h2 class="tittle"><span>Make</span>Appointments</h2>
                                 </div>
-
+                                <!--/jstCover-->
+                            
+                            <!--inputs-->
                             <div class="col-sm-12 inputs">
+                                <!--appointments-->
                                 <div class="col-sm-6 appointments">
+                                    <!--form-->
                                     <form action="">
+                                    <!--select-->
                                     <div class="select">
                                         <a  class="selectDown"></a>
                                         <a  class="sbSelect"></a>
+                                        <!--ul-->
                                         <ul class="selectOptions close">
                                             
                                             </ul>
+                                            <!--/ul-->
                                         </div>
+                                        <!--/select-->
                                         <input type="text" placeholder="Last Name*" class="maInput">
                                         <input type="text" placeholder="Phone*" class="maInput">
                                         <input type="date" placeholder="Date of birth" class="maInput">
                                         </form>
                                     </div>
+                                    <!--/appointments-->
 
+                                <!--appointments-->
                                 <div class="col-sm-6 appointments">
+                                    <!--form-->
                                     <form action="">
                                         <input type="text" placeholder="Fast Name*" class="maInput">
-                                        <input type="text" placeholder="Email*" class="maInput"> 
+                                        <input type="text" placeholder="Email*" class="maInput">
+                                        <!--fieldset dateTimePicker üçün-->
                                         <fieldset>
                                             <div class="form-group">
                                                 <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
@@ -162,49 +180,68 @@
                                                 
                                                 </div>
                                             </fieldset>
+                                            <!--/fieldset-->
 
                                             <label class="nms">Sex :</label>
 
+                                            <!--squaredOne-->
                                             <div class="squaredOne">
                                             <input type="checkbox" value="Male" id="squaredOne" name="check">
                                             <label for="squaredOne"></label>
                                             </div>
+                                            <!--/squaredOne-->
 
                                             <label class="nms">Male</label>
 
+                                            <!--squaredtwo-->
                                             <div class="squaredtwo">
                                             <input type="checkbox" value="Female" id="squaredtwo" name="check">
                                             <label for="squaredtwo"></label>
                                             </div>
+                                            <!--/squaredtwo-->
 
                                             <label class="nms">Female</label>
 
+                                            <!--squadthree-->
                                             <div class="squaredthree">
                                             <input type="checkbox" value="child" id="squaredthree" name="check">
                                             <label for="squaredthree"></label>
                                             </div>
+                                            <!--/squadthree-->
 
                                             <label class="nms">Child</label>
                                         </form>
+                                        <!--/form-->
                                         
                                     </div>
+                                    <!--/appointments-->
 
+                                    <!--appointments-->
                                     <div class="col-sm-12 appointments">
+                                        <!--form-->
                                         <form action="">
                                             <textarea placeholder="Message*"></textarea>
+                                            <!--maNotification button'a click etdikdə ekrana bildiriş çıxarmaq üçün-->
                                             <div class="maNotification">
                                                 <p></p>
                                                 </div>
+                                                <!--/maNotification-->
                                             <button type="button" onclick="
                                             var a=document.getElementsByClassName('maInput');
                                             sendContact(a[0],a[1],a[3],a[4])">Submit</button>
                                             </form>
+                                            <!--/form-->
                                         </div>
                                 </div>
+                                <!--/inputs-->
                             </div>
+                            <!--/row-->
                         </div>
+                        <!--/container-->
                     </div>
+                    <!--/firstSection-->
                 </div>
+                <!--/content-->
 
 
     <!--footer-->

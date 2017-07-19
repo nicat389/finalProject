@@ -1,4 +1,5 @@
 #homePage .content .banner {
+  clear: both;
   position: relative; }
   #homePage .content .banner .bannerPic {
     width: 100%;
@@ -12,7 +13,8 @@
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 100%; }
+    width: 100%;
+    float: left; }
     #homePage .content .banner .magnet h2 {
       background: url(../img/under-line.png) bottom left no-repeat;
       padding-bottom: 10px;
@@ -90,6 +92,7 @@
           color: #685e3b;
           line-height: 22px; }
           #homePage .content .banner .magnet .row .workingTimes .wtDetails p span {
+            display: block;
             color: #383d48;
             font-weight: bold; }
       #homePage .content .banner .magnet .row .workingTimes .wtDescription {
@@ -154,7 +157,7 @@
               border-bottom: 1px dotted #cbdceb;
               padding: 28px 0;
               top: 360px;
-              width: 100%; }
+              width: 100% !important; }
               #homePage .content .updatesDoctors .container .row .newsSide .news .updatesWrapper .updatesViewport .disast li .newsDate {
                 background: none;
                 border: 2px solid #000;
@@ -401,6 +404,43 @@
       #aboutUs .departmentSection .container .row .depAccordion .col-sm-6 ul li:last-child h3 {
         border-bottom: 1px solid #dceaf6; }
 
+#appointment .firstSection .row .inputs .appointments input, #appointment .firstSection .row .inputs .appointments textarea {
+  width: 100%;
+  height: auto;
+  color: #6e868c;
+  border: 1px solid #e4edf6;
+  padding: 9px 15px;
+  margin: 7px 0;
+  font-size: 13.5px; }
+#appointment .firstSection .row .inputs .appointments textarea {
+  resize: none;
+  min-height: 180px; }
+#appointment .firstSection .row .inputs .appointments button {
+  background: none repeat scroll 0 0 #f6772c;
+  color: white;
+  border: medium none;
+  outline: medium none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+  padding: 6px 18px;
+  text-transform: uppercase; }
+#appointment .firstSection .row .inputs .appointments fieldset .form-group .input-group {
+  width: 100%; }
+#appointment .firstSection .row .inputs .appointments .nms {
+  float: left;
+  color: #6e868c;
+  font-size: 13.5px;
+  font-weight: normal;
+  padding-top: 4px; }
+#appointment .firstSection .row .inputs .appointments .maNotification {
+  position: initial;
+  color: black;
+  font-size: 16px;
+  padding: 0;
+  text-transform: capitalize; }
+
 #blog .content {
   clear: both; }
   #blog .content .leftSection ul li:nth-child(n+4) {
@@ -425,53 +465,6 @@
     #blog .content .leftSection .pagerSection .pRight {
       background: url(../img/p-right.png) left top no-repeat;
       border: 1px solid #6acff0 !important; }
-
-#blog .rightSection .blogAccordion ul li, #blogDetail .rightSection .blogAccordion ul li {
-  list-style: none;
-  outline: none;
-  float: left;
-  width: 100%;
-  border-bottom: 1px solid #dce8f1;
-  padding: 12px 0; }
-  #blog .rightSection .blogAccordion ul li a, #blogDetail .rightSection .blogAccordion ul li a {
-    font-size: 13.5px;
-    color: #6e868c;
-    background: #fff url(../img/li-right.png) 97% 49% no-repeat;
-    cursor: pointer;
-    width: 100%;
-    float: left;
-    text-transform: capitalize; }
-  #blog .rightSection .blogAccordion ul li:nth-child(5), #blogDetail .rightSection .blogAccordion ul li:nth-child(5) {
-    border: none; }
-#blog .rightSection .featuredBox ul li, #blogDetail .rightSection .featuredBox ul li {
-  list-style: none;
-  float: left;
-  padding: 5px 0 20px 0;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #dce8f1; }
-  #blog .rightSection .featuredBox ul li img, #blogDetail .rightSection .featuredBox ul li img {
-    float: left;
-    padding-right: 23px; }
-  #blog .rightSection .featuredBox ul li h2, #blogDetail .rightSection .featuredBox ul li h2 {
-    font-size: 13px;
-    color: #383d48;
-    font-weight: 800;
-    padding: 5px 0; }
-  #blog .rightSection .featuredBox ul li p, #blogDetail .rightSection .featuredBox ul li p {
-    font-size: 13px;
-    color: #6e868c;
-    font-weight: normal;
-    line-height: 24px; }
-  #blog .rightSection .featuredBox ul li:last-child, #blogDetail .rightSection .featuredBox ul li:last-child {
-    border: none; }
-#blog .rightSection .tags a, #blogDetail .rightSection .tags a {
-  font-size: 13.5px;
-  color: #6e868c;
-  border: 1px solid #dce8f1;
-  float: left;
-  padding: 8px 22px;
-  margin-right: 14px;
-  margin-bottom: 14px; }
 
 #blogDetail .leftSection .quote p {
   font-family: 'Lora', serif;
@@ -544,6 +537,153 @@
       text-transform: uppercase;
       padding: 8px 23px; }
 
+#contact .cover_photo {
+  height: 240px; }
+#contact .contact form input {
+  width: 100%;
+  padding: 9px 15px;
+  margin-top: 5px;
+  border: 1px solid  #e4edf6; }
+#contact .contact form textarea {
+  width: 100%;
+  border: 1px solid  #e4edf6;
+  margin-top: 5px;
+  resize: none;
+  min-height: 190px; }
+#contact .contact form button {
+  font-size: 14px;
+  padding: 6px 16px;
+  border-radius: 5px;
+  color: #fff;
+  outline: none;
+  margin-top: 10px;
+  background: #f6772c;
+  text-transform: uppercase;
+  border: none; }
+#contact .contact form .maNotification {
+  font-size: 16px;
+  color: #333333;
+  position: static;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize; }
+#contact .map .tittle {
+  font-size: 24px; }
+#contact .map .map-cov {
+  width: 100%;
+  float: left;
+  height: 199px;
+  overflow: hidden; }
+  #contact .map .map-cov .m5 {
+    margin-top: 5px; }
+#contact .map .ids {
+  margin-top: 31px;
+  padding-left: 0;
+  padding-right: 0; }
+  #contact .map .ids h2 {
+    font-size: 13.5px;
+    color: #6e868c;
+    line-height: 24px;
+    padding-left: 27px;
+    font-family: "Open Sans",sans-serif;
+    text-transform: none; }
+    #contact .map .ids h2 span {
+      display: block; }
+
+#doctors .jst-cov {
+  float: left;
+  padding-bottom: 15px;
+  width: 50%; }
+#doctors .filter button {
+  outline: none;
+  border: none;
+  background: #6acff0;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  width: 127px;
+  padding: 10px 0;
+  margin: 0 0 0 12px;
+  float: right; }
+#doctors .filter .select {
+  width: 67%; }
+#doctors .doc .doctor {
+  border-bottom: 2px solid #ffe073;
+  padding-bottom: 16px;
+  margin-bottom: 40px; }
+  #doctors .doc .doctor img {
+    float: left; }
+  #doctors .doc .doctor .social-net {
+    float: none;
+    text-align: center;
+    width: 64px;
+    height: 30px;
+    clear: both;
+    margin: 0 auto;
+    padding-top: 11px; }
+    #doctors .doc .doctor .social-net a {
+      padding: 14px 18px 5px 0;
+      float: left; }
+    #doctors .doc .doctor .social-net .face-d {
+      background: url(../img/face.png) left top no-repeat; }
+      #doctors .doc .doctor .social-net .face-d:hover {
+        background: url(../img/face-hov.png) left top no-repeat; }
+    #doctors .doc .doctor .social-net .twitt-d {
+      background: url(../img/twitt.png) left top no-repeat; }
+      #doctors .doc .doctor .social-net .twitt-d:hover {
+        background: url(../img/twitt-hov.png) left top no-repeat; }
+    #doctors .doc .doctor .social-net .google-d {
+      background: url(../img/google.png) left top no-repeat; }
+      #doctors .doc .doctor .social-net .google-d:hover {
+        background: url(../img/google-hov.png) left top no-repeat; }
+  #doctors .doc .doctor h2 {
+    color: #383d48;
+    font-weight: 800;
+    font-size: 13.5px;
+    text-align: center;
+    text-transform: uppercase; }
+    #doctors .doc .doctor h2 span {
+      display: block;
+      color: #4c6880;
+      font-size: 13px;
+      font-weight: normal;
+      padding-top: 5px; }
+#doctors .doc:hover .doctor {
+  border-bottom: 2px solid #6acff0; }
+
+#error404 .content .error-4 {
+  padding-top: 130px;
+  border-top: 1px solid #dbebf5;
+  padding-bottom: 140px; }
+  #error404 .content .error-4 h2 {
+    color: #383d48;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center; }
+    #error404 .content .error-4 h2 span {
+      color: #9dacb8;
+      font-size: 13px;
+      display: block;
+      text-align: center; }
+  #error404 .content .error-4 .e4 {
+    font-size: 200px;
+    text-align: center;
+    font-weight: 900;
+    width: 100%; }
+    #error404 .content .error-4 .e4 p {
+      display: inline-block;
+      text-align: center; }
+    #error404 .content .error-4 .e4 p:nth-child(n+2) {
+      margin-left: -55px; }
+    #error404 .content .error-4 .e4 .color-comb1 {
+      color: #FFE073; }
+    #error404 .content .error-4 .e4 .color-comb2 {
+      color: #CDDA9C; }
+    #error404 .content .error-4 .e4 .color-comb3 {
+      color: #9BD4C6; }
+
 #news .content .filter button {
   outline: none;
   border: none;
@@ -557,6 +697,8 @@
   padding: 10px 0;
   margin: 0 0 0 12px;
   float: right; }
+#news .content .filter .select {
+  width: 67%; }
 #news .content .newsSection .newsCovering {
   float: left;
   width: 100%;
@@ -599,41 +741,107 @@
     color: #6e868c;
     line-height: 24px; }
 
-#appointment .firstSection .row .inputs .appointments input, #appointment .firstSection .row .inputs .appointments textarea {
-  width: 100%;
-  height: auto;
-  color: #6e868c;
-  border: 1px solid #e4edf6;
-  padding: 9px 15px;
-  margin: 7px 0;
-  font-size: 13.5px; }
-#appointment .firstSection .row .inputs .appointments textarea {
-  resize: none;
-  min-height: 180px; }
-#appointment .firstSection .row .inputs .appointments button {
-  background: none repeat scroll 0 0 #f6772c;
-  color: white;
-  border: medium none;
-  outline: medium none;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 400;
-  margin-top: 10px;
-  padding: 6px 18px;
-  text-transform: uppercase; }
-#appointment .firstSection .row .inputs .appointments fieldset .form-group .input-group {
-  width: 100%; }
-#appointment .firstSection .row .inputs .appointments .nms {
+#services .content .firstSection .container .row .jst-cov {
   float: left;
-  color: #6e868c;
-  font-size: 13.5px;
+  width: 100%;
+  padding-bottom: 15px; }
+#services .content .firstSection .container .row .service .service-box {
+  float: left;
+  min-height: 0;
+  padding: 37px 25px; }
+  #services .content .firstSection .container .row .service .service-box img {
+    float: left;
+    padding-right: 28px; }
+  #services .content .firstSection .container .row .service .service-box .lib {
+    float: left;
+    width: 80%; }
+  #services .content .firstSection .container .row .service .service-box h2 {
+    margin-top: 2px; }
+  #services .content .firstSection .container .row .service .service-box p {
+    margin-bottom: 0;
+    line-height: 24px;
+    font-size: 13.5px; }
+#services .content .happyClients {
+  padding: 50px 0;
+  float: left;
+  background: #f0f8ff;
+  width: 100%; }
+  #services .content .happyClients .slider-cover {
+    width: 100%;
+    float: left;
+    position: relative; }
+    #services .content .happyClients .slider-cover .bx-wrapper {
+      max-width: 100%; }
+      #services .content .happyClients .slider-cover .bx-wrapper .bx-viewport {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        height: 165px; }
+        #services .content .happyClients .slider-cover .bx-wrapper .bx-viewport .happy {
+          width: 615%;
+          position: relative;
+          transition-duration: 0s; }
+          #services .content .happyClients .slider-cover .bx-wrapper .bx-viewport .happy li {
+            float: left;
+            list-style: none;
+            left: 0;
+            position: relative;
+            width: 1170px;
+            margin: 2px; }
+            #services .content .happyClients .slider-cover .bx-wrapper .bx-viewport .happy li .small-let p {
+              font-size: 15px;
+              color: #6e868c;
+              font-family: "Lora", serif;
+              font-style: italic;
+              padding: 37px 0 8px 0;
+              background: url(../img/quote-l.png) left top no-repeat, url(../img/quote-r.png) bottom right no-repeat; }
+            #services .content .happyClients .slider-cover .bx-wrapper .bx-viewport .happy li .small-let h2 {
+              font-size: 13.5px;
+              color: #6e868c;
+              font-weight: normal;
+              text-transform: uppercase;
+              line-height: 25px;
+              padding-top: 5px; }
+              #services .content .happyClients .slider-cover .bx-wrapper .bx-viewport .happy li .small-let h2 span {
+                font-size: 13.5px;
+                color: #6e868c;
+                font-weight: 600;
+                display: block; }
+      #services .content .happyClients .slider-cover .bx-wrapper .bx-controls .bx-pager {
+        position: absolute;
+        right: 0;
+        top: 0; }
+        #services .content .happyClients .slider-cover .bx-wrapper .bx-controls .bx-pager .bx-pager-item {
+          float: left;
+          height: 14px;
+          width: 14px;
+          background: #dce8f1;
+          border-radius: 50%;
+          margin: 0 2px;
+          text-indent: 0px;
+          overflow: hidden;
+          cursor: pointer; }
+          #services .content .happyClients .slider-cover .bx-wrapper .bx-controls .bx-pager .bx-pager-item .bx-pager-link, #services .content .happyClients .slider-cover .bx-wrapper .bx-controls .bx-pager .bx-pager-item .bx-pager-link:hover {
+            color: #dce8f1; }
+          #services .content .happyClients .slider-cover .bx-wrapper .bx-controls .bx-pager .bx-pager-item .active {
+            background: #ffe073;
+            color: #ffe073;
+            padding: 15px; }
+
+#timetable .doc h3 {
+  font-size: 13px;
+  color: #000;
   font-weight: normal;
-  padding-top: 4px; }
-#appointment .firstSection .row .inputs .appointments .maNotification {
-  position: initial;
-  color: black;
-  font-size: 16px;
-  padding: 0;
-  text-transform: capitalize; }
+  background: #ffe073;
+  text-align: center;
+  padding: 16px 0;
+  clear: left;
+  text-transform: uppercase; }
+#timetable .doc .h3active {
+  background: #6acff0;
+  color: white; }
+#timetable .doc:hover h3 {
+  background: #6acff0;
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,120 @@
 var menuTarget;
+var docNameLength=null;
+var acHeadingLength=null;
+var aboutAcHeadingLength=null;
 
-var newsDay=[
+
+var blogFeaturedHeading=[
+    "Heading",
+    "Heading",
+    "Heading"
+];
+
+var blogFeaturedPic=[
+    "img/future1.jpg",
+    "img/future2.jpg",
+    "img/future3.jpg"
+];
+
+var blogFeaturedText=[
+    "printing and typesetting industry. Lorem Ipsum has been the industry.",
+    "printing and typesetting industry. Lorem Ipsum has been the industry.",
+    "printing and typesetting industry. Lorem Ipsum has been the industry."
+]
+
+var blogTags=[
+    "Health",
+    "Medical",
+    "UI",
+    "Treatment",
+    "Dental",
+    "X-Ray"
+];
+
+var blogNewsHeading=[
+    "Blog Heading here One line",
+    "Blog Heading here One line",
+    "Blog Heading here One line",
+    "Blog Heading here One line",
+    "Blog Heading here One line",
+    "Blog Heading here One line"
+]
+
+var blogNewsPics=[
+    "img/post.jpg",
+    "img/post2.jpg",
+    "img/post3.jpg",
+    "img/post2.jpg",
+    "img/post3.jpg",
+    "img/post.jpg"
+];
+
+var blogNewsText=[
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+];
+
+var blogNewsDate=[
+    "3-07-15",
+    "3-07-15",
+    "3-07-15",
+    "3-07-15",
+    "3-07-15",
+    "3-07-15"
+];
+
+var blogNewsAuthor=[
+    "admin",
+    "admin",
+    "admin",
+    "admin",
+    "admin",
+    "admin"
+];
+
+var blogNewsTags=[
+    "Health, Medical, Hospitality",
+    "Health, Medical, Hospitality",
+    "Health, Medical, Hospitality",
+    "Health, Medical, Hospitality",
+    "Health, Medical, Hospitality",
+    "Health, Medical, Hospitality"
+];
+
+var blogNewsSMIcons=[
+    "img/facevar.png",
+    "img/twittvar.png",
+    "img/googvar.png"
+];
+
+doctorSelect=[
+    "Select Departments",
+    "USA",
+    "Canada",
+    "France",
+    "Spain",
+    "Bulgaria",
+    "Greece"
+];
+
+
+newsTop=360; //newsTop dəyişəni news bölməsində slider istifadə olunarsa aşağı-yuxarı hərəkət üçün dəyişən
+newsSlideNumber=0;   //newsSlideNumber dəyişəni slider istifadə olunduğu zaman xəbərləri üç-üç qruplaşdırmaqla onların sayını bildirir
+docLeft=0;
+docSlideNumber=0;
+
+(function mainFunc(){
+
+
+if(location.pathname.search("index.html")>-1){
+    var li, newsDateDiv,span,newsDayMonth,newsTextDiv,heading,text, doctorsLi,doctors,whiteBox,doctorImage,docNameDiv,docName,docProfession,docSocialMedia,docMedia,mediaIcons;
+    var a=0;
+
+    var newsDay=[
     "02",
     "03",
     "04",
@@ -90,44 +204,6 @@ var doctorPictures=[
     "img/doctor2-4.png"
 ];
 
-var doctorSocialMedia=[
-    "facebook.com/amathew",
-    "twitter.com/amathew",
-    "plus.google.com/+amathew",
-    "facebook.com/sholroyd",
-    "twitter.com/sholroyd",
-    "plus.google.com/+sholroyd",
-    "facebook.com/gBeller",
-    "twitter.com/gBeller",
-    "plus.google.com/+gBeller",
-    "facebook.com/jdimarco",
-    "twitter.com/jdimarco",
-    "plus.google.com/+jdimarco",
-    "facebook.com/maryvance",
-    "twitter.com/maryvance",
-    "plus.google.com/+maryvance",
-    "facebook.com/khullfish",
-    "twitter.com/khullfish",
-    "plus.google.com/+khullfish",
-    "facebook.com/pearson",
-    "twitter.com/pearson",
-    "plus.google.com/+pearson",
-    "facebook.com/adalkin",
-    "twitter.com/adalkin",
-    "plus.google.com/+adalkin",
-    "facebook.com/mjensen",
-    "twitter.com/mjensen",
-    "plus.google.com/+mjensen",
-    "facebook.com/cappleton",
-    "twitter.com/cappleton",
-    "plus.google.com/+cappleton",
-    "facebook.com/pdiamond",
-    "twitter.com/pdiamond",
-    "plus.google.com/+pdiamond",
-    "facebook.com/Muhammadlozi",
-    "twitter.com/Muhammadlozi",
-    "plus.google.com/+Muhammadlozi"
-];
 
 var doctorSocialMediaIcons=[
     "img/face.png",
@@ -192,150 +268,10 @@ var serviceText=[
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 ];
 
-var aboutAccordionHeading=[
-    "dental clinic",
-    "x-ray",
-    "cardiology",
-    "neurology",
-    "pregnancy",
-    "microbiology",
-    "family medicine",
-    "surgary"
-];
-
-var aboutAccordionIcons=[
-    "img/dent-ab.png",
-    "img/serc-ab.png",
-    "img/hear-ab.png",
-    "img/brai-ab.png",
-    "img/pre-ab.png",
-    "img/micro-ab.png",
-    "img/tab-ab.png",
-    "img/surg-ab.png"
-];
-
-var aboutAccordionPics=[
-    "img/accordian2.jpg",
-    "img/accordian2.jpg",
-    "img/accordian2.jpg",
-    "img/accordian2.jpg",
-    "img/accordian2.jpg",
-    "img/accordian2.jpg",
-    "img/accordian2.jpg",
-    "img/accordian2.jpg"
-];
-
-var aboutAccordionText=[
-    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries"
-];
-
-var blogFeaturedHeading=[
-    "Heading",
-    "Heading",
-    "Heading"
-];
-
-var blogFeaturedPic=[
-    "img/future1.jpg",
-    "img/future2.jpg",
-    "img/future3.jpg"
-];
-
-var blogFeaturedText=[
-    "printing and typesetting industry. Lorem Ipsum has been the industry.",
-    "printing and typesetting industry. Lorem Ipsum has been the industry.",
-    "printing and typesetting industry. Lorem Ipsum has been the industry."
-]
-
-var blogTags=[
-    "Health",
-    "Medical",
-    "UI",
-    "Treatment",
-    "Dental",
-    "X-Ray"
-];
-
-var blogNewsHeading=[
-    "Blog Heading here One line",
-    "Blog Heading here One line",
-    "Blog Heading here One line",
-    "Blog Heading here One line",
-    "Blog Heading here One line",
-    "Blog Heading here One line"
-]
-
-var blogNewsPics=[
-    "img/post.jpg",
-    "img/post2.jpg",
-    "img/post3.jpg",
-    "img/post2.jpg",
-    "img/post3.jpg",
-    "img/post.jpg"
-];
-
-var blogNewsText=[
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-];
-
-var blogNewsDate=[
-    "3-07-15",
-    "3-07-15",
-    "3-07-15",
-    "3-07-15",
-    "3-07-15",
-    "3-07-15"
-];
-
-var blogNewsAuthor=[
-    "admin",
-    "admin",
-    "admin",
-    "admin",
-    "admin",
-    "admin"
-];
-
-var blogNewsTags=[
-    "Health, Medical, Hospitality",
-    "Health, Medical, Hospitality",
-    "Health, Medical, Hospitality",
-    "Health, Medical, Hospitality",
-    "Health, Medical, Hospitality",
-    "Health, Medical, Hospitality"
-];
-
-var blogNewsSMIcons=[
-    "img/facevar.png",
-    "img/twittvar.png",
-    "img/googvar.png"
-];
 
 
-newsTop=360; //newsTop dəyişəni news bölməsində slider istifadə olunarsa aşağı-yuxarı hərəkət üçün dəyişən
-newsSlideNumber=0;   //newsSlideNumber dəyişəni slider istifadə olunduğu zaman xəbərləri üç-üç qruplaşdırmaqla onların sayını bildirir
-docLeft=0;
-docSlideNumber=0;
-
-(function mainFunc(){
-
-
-if(location.pathname.substring(47)=="index.html"){
-    var li, newsDateDiv,span,newsDayMonth,newsTextDiv,heading,text, doctorsLi,doctors,whiteBox,doctorImage,docNameDiv,docName,docProfession,docSocialMedia,docMedia,mediaIcons;
-    var a=0;
-
+docNameLength=doctorNames.length;
+acHeadingLength=accordionHeading.length;
 
     for(var i=0;i<newsDay.length;i++){
         li=document.createElement("li");
@@ -502,14 +438,186 @@ if(location.pathname.substring(47)=="index.html"){
         serviceBox.appendChild(servLink);
     }
 
+    function newsSize() {
+        nLeft=null;
+        if(window.innerWidth>=1200){
+            document.getElementsByClassName("updatesViewport")[0].style.height="363px";
+            document.getElementsByClassName("docViewPort")[0].style.height="352px";
+            for(var i=0; i<newsHeading.length;i++){
+                document.getElementsByClassName("disast")[0].getElementsByTagName("li")[i].style.width="360px";
+            }
+        }
+
+        else if(window.innerWidth>992 && window.innerWidth<1200){
+            document.getElementsByClassName("updatesViewport")[0].style.height="420px";
+            document.getElementsByClassName("docViewPort")[0].style.height="292px";
+            
+            for(var i=0; i<newsHeading.length;i++){
+                document.getElementsByClassName("disast")[0].getElementsByTagName("li")[i].style.width="293px";
+            }
+
+            for(var i=0;i<docNameLength/4;i++){
+            document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[i].style.width="617px";
+            }
+            
+        }
+
+        else if(window.innerWidth>800 && window.innerWidth<=992){
+            document.getElementsByClassName("updatesViewport")[0].style.height="534px";
+            document.getElementsByClassName("docViewPort")[0].style.height="246px";
+            
+            for(var i=0; i<newsHeading.length;i++){
+                document.getElementsByClassName("disast")[0].getElementsByTagName("li")[i].style.width="220px";
+            }
+
+            for(var i=0;i<docNameLength/4;i++){
+            document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[i].style.width="470px";
+            }
+        }
+
+        else if(window.innerWidth>=619 && window.innerWidth<=800){
+            document.getElementsByClassName("updatesViewport")[0].style.height="306px";
+            document.getElementsByClassName("docViewPort")[0].style.height="246px";
+            for(var i=0; i<newsHeading.length;i++){
+                document.getElementsByClassName("disast")[0].getElementsByTagName("li")[i].style.width="574px";
+            }
+
+            if(window.innerWidth>=768 && window.innerWidth<=800){
+                for(var i=0;i<docNameLength/4;i++){
+            document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[i].style.width="720px";
+            }
+
+            
+        }
+        
+        else if(window.innerWidth<768){
+                document.getElementsByClassName("docViewPort")[0].style.height="210px";
+                for(var i=0;i<docNameLength/4;i++){
+            document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[i].style.width="720px";
+            }
+            }
+        }
+
+
+       
+
+        else if(window.innerWidth<=619 && window.innerWidth>385){
+            document.getElementsByClassName("updatesViewport")[0].style.height="363px";
+            for(var i=0; i<newsHeading.length;i++){
+                document.getElementsByClassName("disast")[0].getElementsByTagName("li")[i].style.width="572px";
+            }
+        }
+
+        else if(window.innerWidth<=385 && window.innerWidth>319){
+            document.getElementsByClassName("updatesViewport")[0].style.height="420px";
+            
+        }
+        else if(window.innerWidth<=319){
+            document.getElementsByClassName("updatesViewport")[0].style.height="612px";
+        }
+
+        if(window.innerWidth<=738 && window.innerWidth>667){
+            document.getElementsByClassName("docViewPort")[0].style.height="224px";
+        }
+
+        else if(window.innerWidth<=667 && window.innerWidth>640){
+            document.getElementsByClassName("docViewPort")[0].style.height="596px";
+        }
+        else if(window.innerWidth<=640 && window.innerWidth>590){
+            document.getElementsByClassName("docViewPort")[0].style.height="620px";
+        }
+
+        else if(window.innerWidth<590 && window.innerWidth>480){
+            document.getElementsByClassName("docViewPort")[0].style.height="570px";
+        }
+
+        else if(window.innerWidth<=480){
+            document.getElementsByClassName("docViewPort")[0].style.height="580px";
+        }
+        
+
+
+    if(window.innerWidth<768){
+            for(var i=0;i<doctorNames.length/4;i++){
+                for(var j=0;j<4;j++){
+                document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[i].getElementsByClassName("col-sm-6")[j].style.width="50%";
+                }
+            }
+
+
+        }
+        
+        
+    }
+
     docSlideTimer=setInterval(function() {
         doctorsLeftFunction();
     }, 3000);
 
+    $(document).ready(function(){
+
+    $(window).resize(function(){
+
+        newsSize();
+
+
+});
+   
+
+});
+
+newsSize();
 
 }
 
-    if(location.pathname.substring(47)=="about.html"){
+    if(location.pathname.search("about.html")>-1){
+        
+var aboutAccordionHeading=[
+    "dental clinic",
+    "x-ray",
+    "cardiology",
+    "neurology",
+    "pregnancy",
+    "microbiology",
+    "family medicine",
+    "surgary"
+];
+
+var aboutAccordionIcons=[
+    "img/dent-ab.png",
+    "img/serc-ab.png",
+    "img/hear-ab.png",
+    "img/brai-ab.png",
+    "img/pre-ab.png",
+    "img/micro-ab.png",
+    "img/tab-ab.png",
+    "img/surg-ab.png"
+];
+
+var aboutAccordionPics=[
+    "img/accordian2.jpg",
+    "img/accordian2.jpg",
+    "img/accordian2.jpg",
+    "img/accordian2.jpg",
+    "img/accordian2.jpg",
+    "img/accordian2.jpg",
+    "img/accordian2.jpg",
+    "img/accordian2.jpg"
+];
+
+var aboutAccordionText=[
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries"
+];
+
+aboutAcHeadingLength=aboutAccordionHeading.length;
+
     for(var i=0;i<aboutAccordionHeading.length;i++){
         accordion=document.createElement("li");
         if(i<4)
@@ -555,7 +663,8 @@ if(location.pathname.substring(47)=="index.html"){
 }
 
 
-    if(location.pathname.substring(47)=="blog.html"){
+    if(location.pathname.search("blog.html")>-1){
+        
         for(var i=0;i<blogFeaturedHeading.length;i++){
            var li=document.createElement("li");
             document.getElementsByClassName("featuredBox")[0].getElementsByTagName("ul")[0].appendChild(li);
@@ -661,21 +770,31 @@ if(location.pathname.substring(47)=="index.html"){
 
         }
 
-        for(var i=0;i<blogNewsHeading.length/3;i++){
-            var li=document.createElement("li");
-            document.getElementsByClassName("pagerSection")[0].getElementsByTagName("ul")[0].appendChild(li);
+        for(var i=0;i<blogNewsHeading.length/3+2;i++){
 
             var page=document.createElement("a");
-            page.innerHTML=i+1;
+            if(i>0 && i<blogNewsHeading.length/3+1){
+            page.innerHTML=i;
             page.onclick=pageClick
-            li.appendChild(page);
+            }
+            else{
+                if(i==0){
+                    page.setAttribute("class","pLeft");
+                }
+
+                else{
+                    page.setAttribute("class","pRight");
+                }
+            }
+
+            document.getElementsByClassName("pagerSection")[0].appendChild(page);
                 
         }
 
         
     }
 
-    if(location.pathname.substring(47)=="blog-detail.html"){
+    if(location.pathname.search("blog-detail.html")>-1){
 
         var blogDetailText=[
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
@@ -876,7 +995,7 @@ if(location.pathname.substring(47)=="index.html"){
 
     }
 
-    if(location.pathname.substring(47)=="news.html"){
+    if(location.pathname.search("news.html")>-1){
         var newsHeading=[
             "News Heading: contrary to popular.",
             "News Heading: contrary to popular.",
@@ -913,7 +1032,7 @@ if(location.pathname.substring(47)=="index.html"){
         ];
 
         var select=[
-            "Sort By Popularity",
+            "Select by popularity",
             "USA",
             "Canada",
             "France",
@@ -921,6 +1040,8 @@ if(location.pathname.substring(47)=="index.html"){
             "Bulgaria",
             "Greece"
         ];
+
+
 
         for(var i=0;i<newsHeading.length;i++){
             var newsCovering=document.createElement("div");
@@ -956,60 +1077,11 @@ if(location.pathname.substring(47)=="index.html"){
             newsDetail.appendChild(nText);
         }
 
-        // document.getElementsByClassName("select")[0].onclick=selectDownFunction;
-        // document.getElementsByClassName("sbSelect")[0].innerHTML=select[0];
-        
+        selectt(select);
 
-        // for(var i=0;i<select.length;i++){
-        //     var li=document.createElement("li");
-        //     document.getElementsByClassName("selectOptions")[0].appendChild(li);
-
-        //     var a=document.createElement("a");
-        //     a.innerHTML=select[i];
-        //     a.onclick=selectFunction;
-        //     li.appendChild(a);
-        // }
-
-        // function selectDownFunction(){
-
-        // if(document.getElementsByClassName("selectOptions")[0].classList.contains("close")){
-        //         document.getElementsByClassName("selectOptions")[0].classList.remove("close");
-        //         document.getElementsByClassName("selectOptions")[0].classList.add("open");
-        // }
-        // else if(document.getElementsByClassName("selectOptions")[0].classList.contains("open")){
-        //         document.getElementsByClassName("selectOptions")[0].classList.remove("open");
-        //         document.getElementsByClassName("selectOptions")[0].classList.add("close");
-        // }
-
-
-        // }
-
-        // function selectFunction(){
-        //     for(var i=0;i<select.length;i++){
-        //         if(select[i]==this.innerHTML){
-        //             document.getElementsByClassName("sbSelect")[0].innerHTML=select[i];
-        //             break;
-        //         }
-        //     }
-
-            
-
-        // }
-
-        // window.onclick=function(event){
-
-        //     if(event.target!=document.getElementsByClassName("select")[0]){
-        //         if(document.getElementsByClassName("selectOptions")[0].classList.contains("open")){
-        //         document.getElementsByClassName("selectOptions")[0].classList.remove("open");
-        //         document.getElementsByClassName("selectOptions")[0].classList.add("close");
-        //         }
-        //     }
-
-
-        // }
     }
 
-    if(location.pathname.substring(47)=="appointment.html"){
+    if(location.pathname.search("appointment.html")>-1){
         var select=[
             "Select Department",
             "USA",
@@ -1020,6 +1092,515 @@ if(location.pathname.substring(47)=="index.html"){
         ];
         selectt(select);
     }
+
+    if(location.pathname.search("doctors.html")>-1){
+
+var doctorName = [
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS"
+    
+];
+
+ var doctorWork = [
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology"
+ ];
+ 
+ var doctorPic =[
+     "img/expert1.jpg",
+     "img/expert2.jpg",
+     "img/expert3.jpg",
+     "img/expert4.jpg",
+     "img/expert5.jpg",
+     "img/expert6.jpg",
+     "img/expert7.jpg",
+     "img/expert8.jpg",
+     "img/expert9.jpg",
+     "img/expert10.jpg",
+     "img/expert11.jpg",
+     "img/expert12.jpg"
+ ];
+
+
+ for( var i=0;i<doctorName.length;i++){
+   var doc = document.createElement("div");
+   doc.setAttribute("class","col-sm-3 doc") ;
+   document.getElementsByClassName("doctors")[0].appendChild(doc);
+
+   var doctor =document.createElement("div");
+   doctor.setAttribute("class","doctor");
+   if(i==0){
+       doctor.classList.add("active");
+   }
+   doc.appendChild(doctor);
+
+   var img =document.createElement("img");
+   img.setAttribute("src",doctorPic[i]);
+   doctor.appendChild(img);
+
+   var social =document.createElement("div");
+   social.setAttribute("class","social-net");
+   doctor.appendChild(social);
+   
+
+   var a1 = document.createElement("a");
+   a1.setAttribute("class","face-d");
+   social.appendChild(a1);
+
+    var a2 = document.createElement("a");
+   a2.setAttribute("class","twitt-d");
+   social.appendChild(a2);
+
+    var a3 = document.createElement("a");
+   a3.setAttribute("class","google-d");
+   social.appendChild(a3);
+
+   var h2 = document.createElement("h2");
+   h2.innerHTML=doctorName[i];
+   doctor.appendChild(h2);
+
+   var span =document.createElement("span");
+   span.innerHTML= doctorWork[i];
+   h2.appendChild(span);
+
+ }
+
+ selectt(doctorSelect);
+    }
+
+    if(location.pathname.search("services.html")>-1){
+        var serviceHeading = [
+    "medical service",
+    "24 hours service",
+    "emergency departments",
+    "x-ray",
+    "cardiology",
+    "neurology",
+    "pregrancy",
+    "dental" 
+];
+var servicePicture = [
+    "img/icon-med-var1.png",
+    "img/icon-serv-var1.png",
+    "img/icon-emerg-var1.png",
+    "img/icon-xray-var1.png",
+    "img/icon-card-var1.png",
+    "img/icon-neur-var1.png",
+    "img/icon-preg-var1.png",
+    "img/icon-dent-var1.png"
+];
+
+var sericeText=[
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+];
+
+var clientText =[
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic."
+];
+var clientPics = [
+    "img/client .png",
+    "img/client .png",
+    "img/client .png",
+    "img/client .png"
+];
+var clientAuthor = [
+    "Suchitra Raj",
+    "Romelu Lukaku",
+    "Paul Pogba",
+    "Michael Carrick"
+];
+
+
+var serviceIntervalCounter=1;
+for(var i=0;i<sericeText.length;i++){
+    var service = document.createElement("div");
+    service.setAttribute("class","col-sm-6 service");
+    document.getElementsByClassName("firstSection")[0].getElementsByClassName("container")[0].getElementsByClassName("row")[0].appendChild(service);
+
+    var servicebox=document.createElement("div");
+    servicebox.setAttribute("class","service-box");
+    service.appendChild(servicebox);
+
+    var serviceimage= document.createElement("img");
+    serviceimage.setAttribute("src",servicePicture[i]);
+    servicebox.appendChild(serviceimage);
+
+    var servicelib =document.createElement("div");
+    servicelib.setAttribute("class","lib");
+    servicebox.appendChild(servicelib);
+
+    var sheading = document.createElement("h2");
+    sheading.innerHTML= serviceHeading[i];
+    servicelib.appendChild(sheading);
+
+    var serviceP = document.createElement("p");
+    serviceP.innerHTML =sericeText[i];
+    servicelib.appendChild(serviceP);
+}
+
+for( var i=0; i<clientAuthor.length;i++){
+    var li =document.createElement("li");
+    document.getElementsByClassName("happy")[0].appendChild(li);
+
+    var picdiv = document.createElement("div");
+    picdiv.setAttribute("class","col-sm-2");
+    li.appendChild(picdiv);
+
+    var img =document.createElement("img");
+    img.setAttribute("src",clientPics[i]);
+    picdiv.appendChild(img);
+
+     var small_let=document.createElement("div");
+     small_let.setAttribute("class","col-sm-10 small-let");
+     li.appendChild(small_let);
+
+     var p=document.createElement("p");
+     p.innerHTML=clientText[i];
+     small_let.appendChild(p);
+
+     var h2=document.createElement("h2");
+     h2.innerHTML="by";
+     small_let.appendChild(h2);
+
+     var span= document.createElement("span");
+     span.innerHTML =clientAuthor[i];
+     h2.appendChild(span);
+
+
+     var circle_div= document.createElement("div");
+     circle_div.setAttribute("class","bx-pager-item");
+     circle_div.onclick=moveFunction;
+     document.getElementsByClassName("bx-pager bx-default-pager")[0].appendChild(circle_div);
+
+     var a=document.createElement("a");
+     if(i==0){
+          a.setAttribute("class","bx-pager-link active");
+          
+     }
+   else
+     a.setAttribute("class","bx-pager-link");
+     a.innerHTML=i+1;
+     circle_div.appendChild(a);
+     
+}
+
+function slideSizes(){
+    if(window.innerWidth>=992){
+        document.getElementsByClassName("happyClients")[0].getElementsByClassName("slider-cover")[0].getElementsByClassName("bx-wrapper")[0].getElementsByClassName("bx-viewport")[0].style.height="163px"
+    }
+
+    else if(window.innerWidth<992 && window.innerWidth>767){
+        document.getElementsByClassName("happyClients")[0].getElementsByClassName("slider-cover")[0].getElementsByClassName("bx-wrapper")[0].getElementsByClassName("bx-viewport")[0].style.height="184px"
+    }
+
+    else if(window.innerWidth<=767 && window.innerWidth>=600){
+        document.getElementsByClassName("happyClients")[0].getElementsByClassName("slider-cover")[0].getElementsByClassName("bx-wrapper")[0].getElementsByClassName("bx-viewport")[0].style.height="349px"
+    }
+
+    else if(window.innerWidth<600 && window.innerWidth>=500){
+        document.getElementsByClassName("happyClients")[0].getElementsByClassName("slider-cover")[0].getElementsByClassName("bx-wrapper")[0].getElementsByClassName("bx-viewport")[0].style.height="370px"
+    }
+
+    else if(window.innerWidth<500 && window.innerWidth>=480){
+        document.getElementsByClassName("happyClients")[0].getElementsByClassName("slider-cover")[0].getElementsByClassName("bx-wrapper")[0].getElementsByClassName("bx-viewport")[0].style.height="391px"
+    }
+
+    else if(window.innerWidth<480 && window.innerWidth>=440){
+        document.getElementsByClassName("happyClients")[0].getElementsByClassName("slider-cover")[0].getElementsByClassName("bx-wrapper")[0].getElementsByClassName("bx-viewport")[0].style.height="400px"
+    }
+
+    else if(window.innerWidth<440 && window.innerWidth>=380){
+        document.getElementsByClassName("happyClients")[0].getElementsByClassName("slider-cover")[0].getElementsByClassName("bx-wrapper")[0].getElementsByClassName("bx-viewport")[0].style.height="421px"
+    }
+
+    else if(window.innerWidth<380 && window.innerWidth>=332){
+        document.getElementsByClassName("happyClients")[0].getElementsByClassName("slider-cover")[0].getElementsByClassName("bx-wrapper")[0].getElementsByClassName("bx-viewport")[0].style.height="442px"
+    }
+
+    else if(window.innerWidth<332 && window.innerWidth>319){
+        document.getElementsByClassName("happyClients")[0].getElementsByClassName("slider-cover")[0].getElementsByClassName("bx-wrapper")[0].getElementsByClassName("bx-viewport")[0].style.height="463px"
+    }
+    else if(window.innerWidth<319 && window.innerWidth>=300){
+        document.getElementsByClassName("happyClients")[0].getElementsByClassName("slider-cover")[0].getElementsByClassName("bx-wrapper")[0].getElementsByClassName("bx-viewport")[0].style.height="459px"
+    }
+    else if(window.innerWidth<300){
+        document.getElementsByClassName("happyClients")[0].getElementsByClassName("slider-cover")[0].getElementsByClassName("bx-wrapper")[0].getElementsByClassName("bx-viewport")[0].style.height="480px"
+    }
+
+
+
+    if(window.innerWidth>=1200){
+        for(var i=0;i<clientAuthor.length;i++){
+                document.getElementsByClassName("slider-cover")[0].getElementsByTagName("ul")[0].getElementsByTagName("li")[i].style.width="1170px";
+            }
+    }
+    if(window.innerWidth<1200 && window.innerWidth>992){
+        for(var i=0;i<clientAuthor.length;i++){
+                document.getElementsByClassName("slider-cover")[0].getElementsByTagName("ul")[0].getElementsByTagName("li")[i].style.width="970px";
+            }
+    }
+
+    if(window.innerWidth<=992 && window.innerWidth>=767){
+        for(var i=0;i<clientAuthor.length;i++){
+            document.getElementsByClassName("slider-cover")[0].getElementsByTagName("ul")[0].getElementsByTagName("li")[i].style.width="750px";
+        }
+
+    }
+
+
+    else if(window.innerWidth<767){
+                for(var i=0;i<clientAuthor.length;i++){
+            document.getElementsByClassName("slider-cover")[0].getElementsByTagName("ul")[0].getElementsByTagName("li")[i].style.width=window.innerWidth-17+"px";
+        }
+           
+
+    }
+}
+
+$(document).ready(function(){
+
+    $(window).resize(function(){
+    slideSizes();
+    clearInterval(clientMoveInterval);
+    
+
+});
+   
+
+});
+
+slideSizes();
+
+function moveInterval() {
+     
+     var left=parseInt(document.getElementsByClassName("slider-cover")[0].getElementsByTagName("ul")[0].getElementsByTagName("li")[0].style.width)*serviceIntervalCounter;
+
+     console.log(left);
+
+    for(var i=0;i<clientAuthor.length;i++){
+        if(document.getElementsByClassName("bx-default-pager")[0].getElementsByClassName("bx-pager-item")[i].getElementsByTagName("a")[0].classList.contains("active")){
+            document.getElementsByClassName("bx-default-pager")[0].getElementsByClassName("bx-pager-item")[i].getElementsByTagName("a")[0].classList.remove("active");
+        }
+
+        document.getElementsByClassName("bx-default-pager")[0].getElementsByClassName("bx-pager-item")[serviceIntervalCounter].getElementsByTagName("a")[0].classList.add("active");
+
+        document.getElementsByClassName("happy")[0].getElementsByTagName("li")[i].style.left=-left+"px";
+    }
+
+    serviceIntervalCounter++;
+    if(serviceIntervalCounter>=4){
+        serviceIntervalCounter=0;
+    }
+
+ }
+
+ var clientMoveInterval=setInterval(moveInterval,5000);
+
+
+// function moveInterval(k) {
+     
+//      var left=parseInt(document.getElementsByClassName("slider-cover")[0].getElementsByTagName("ul")[0].getElementsByTagName("li")[0].style.width)*k;
+
+//      console.log(left);
+
+//     for(var i=0;i<clientAuthor.length;i++){
+//         if(document.getElementsByClassName("bx-default-pager")[0].getElementsByClassName("bx-pager-item")[i].getElementsByTagName("a")[0].classList.contains("active")){
+//             document.getElementsByClassName("bx-default-pager")[0].getElementsByClassName("bx-pager-item")[i].getElementsByTagName("a")[0].classList.remove("active");
+//         }
+
+//         document.getElementsByClassName("bx-default-pager")[0].getElementsByClassName("bx-pager-item")[k].getElementsByTagName("a")[0].classList.add("active");
+
+//         document.getElementsByClassName("happy")[0].getElementsByTagName("li")[i].style.left=-left+"px";
+//     }
+
+//     k++;
+//     if(k>=4){
+//         k=0;
+//     }
+
+//     serviceIntervalCounter=k;
+
+//  }
+
+ 
+
+function moveFunction(){
+    clearInterval(clientMoveInterval);
+     var a=this.getElementsByTagName("a")[0].innerHTML-1;
+    serviceIntervalCounter=a;
+     
+     var left=parseInt(document.getElementsByClassName("slider-cover")[0].getElementsByTagName("ul")[0].getElementsByTagName("li")[0].style.width)*a;
+     console.log(left);
+
+    for(var i=0;i<clientAuthor.length;i++){
+        if(this.parentNode.getElementsByClassName("bx-pager-item")[i].getElementsByTagName("a")[0].classList.contains("active")){
+            this.parentNode.getElementsByClassName("bx-pager-item")[i].getElementsByTagName("a")[0].classList.remove("active");
+        }
+
+
+        this.getElementsByTagName("a")[0].classList.add("active");
+
+        document.getElementsByClassName("happy")[0].getElementsByTagName("li")[i].style.left=-left+"px";
+    }
+    
+}
+
+
+
+
+
+
+}
+
+
+if(location.pathname.search("timetable.html")>-1){
+
+    var doctorName = [
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS",
+    "Dr. Vasudevayyar MBBS"
+    
+];
+
+ var doctorWork = [
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology",
+  "cardiology"
+ ];
+ 
+ var doctorPic =[
+     "img/expert1.jpg",
+     "img/expert2.jpg",
+     "img/expert3.jpg",
+     "img/expert4.jpg",
+     "img/expert5.jpg",
+     "img/expert6.jpg",
+     "img/expert7.jpg",
+     "img/expert8.jpg",
+     "img/expert9.jpg",
+     "img/expert10.jpg",
+     "img/expert11.jpg",
+     "img/expert12.jpg"
+ ];
+
+ var doctorWorkDates=[
+    "Monday to Friday : 8 Am - 5 Pm",
+    "Sunday : 8 Am - 5 Pm",
+    "Sunday : 8 Am - 5 Pm",
+    "Sunday : 8 Am - 5 Pm",
+    "Sunday : 8 Am - 5 Pm",
+    "Sunday : 8 Am - 5 Pm",
+    "Sunday : 8 Am - 5 Pm",
+    "Sunday : 8 Am - 5 Pm",
+    "Sunday : 8 Am - 5 Pm",
+    "Sunday : 8 Am - 5 Pm",
+    "Sunday : 8 Am - 5 Pm",
+    "Sunday : 8 Am - 5 Pm"
+];
+
+    for( var i=0;i<doctorName.length;i++){
+   var doc = document.createElement("div");
+   doc.setAttribute("class","col-sm-3 doc") ;
+   document.getElementsByClassName("doctors")[0].appendChild(doc);
+
+   var doctor =document.createElement("div");
+   doctor.setAttribute("class","doctor");
+   if(i==0){
+       doctor.classList.add("active");
+   }
+   doc.appendChild(doctor);
+
+   var img =document.createElement("img");
+   img.setAttribute("src",doctorPic[i]);
+   doctor.appendChild(img);
+
+   var h3 =document.createElement("h3");
+   h3.innerHTML=doctorWorkDates[i];
+   if(i==0){
+       h3.setAttribute("class","h3active");
+   }
+   doctor.appendChild(h3);
+
+   var social =document.createElement("div");
+   social.setAttribute("class","social-net");
+   doctor.appendChild(social);
+   
+
+   var a1 = document.createElement("a");
+   a1.setAttribute("class","face-d");
+   social.appendChild(a1);
+
+    var a2 = document.createElement("a");
+   a2.setAttribute("class","twitt-d");
+   social.appendChild(a2);
+
+    var a3 = document.createElement("a");
+   a3.setAttribute("class","google-d");
+   social.appendChild(a3);
+
+   var h2 = document.createElement("h2");
+   h2.innerHTML=doctorName[i];
+   doctor.appendChild(h2);
+
+   var span =document.createElement("span");
+   span.innerHTML= doctorWork[i];
+   h2.appendChild(span);
+
+ }
+ selectt(doctorSelect);
+}
+
+
+
+
 
 }());
 
@@ -1056,7 +1637,254 @@ function navClick(k){
 // }
 
 
-function sendContact(){
+
+
+function newsLeft(){    //news bölməsində sol buttona basıldıqda işə düşən function
+    var k=parseInt(document.getElementsByClassName("updatesViewport")[0].style.height)
+    newsTop+=k;
+    newsSlideNumber-=1;
+    if(newsSlideNumber<0){
+        newsTop=360-k;
+        newsSlideNumber=1;
+    }
+     for(var i=0;i<6;i++)
+    document.getElementsByClassName("disast")[0].getElementsByTagName("li")[i].style.top=newsTop+"px";
+    console.log(document.getElementsByClassName("disast")[0].getElementsByTagName("li")[0].style.top);
+    
+}
+
+function newsRight() {  //news bölməsində sağ buttona basıldıqda işə düşən function
+    var k=parseInt(document.getElementsByClassName("updatesViewport")[0].style.height)
+    newsTop-=k;
+    newsSlideNumber+=1;
+    if(newsSlideNumber>1){
+        newsTop=360;
+        newsSlideNumber=0;
+    }
+    
+    for(var i=0;i<6;i++){
+    document.getElementsByClassName("disast")[0].getElementsByTagName("li")[i].style.top=newsTop+"px";
+    }
+}
+
+function doctorsSlideRight(){
+    clearInterval(docSlideTimer);
+    doctorsRightFunction();    
+}
+
+function doctorsSlideLeft(){
+    clearInterval(docSlideTimer);
+    doctorsLeftFunction();
+}
+
+function doctorsLeftFunction(){
+    docSlideNumber-=1;
+    docLeft+=750;
+    console.log(document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[0].style.width);
+    
+    if(docSlideNumber<0){
+        docSlideNumber=docNameLength/4-1;
+        docLeft=-750*(docNameLength/4-1);
+    }
+
+    for(var i=0;i<docNameLength/4;i++){
+        document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[i].style.left=docLeft+"px";
+    }
+}
+
+function doctorsRightFunction(){
+    docSlideNumber+=1;
+    docLeft-=750;
+    if(docSlideNumber>docNameLength/4-1){
+        docSlideNumber=0;
+        docLeft=0;
+    }
+
+    for(var i=0;i<docNameLength/4;i++){
+        document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[i].style.left=docLeft+"px";
+    }
+}
+
+
+
+function accordionFunction(){
+    var k=this;
+    l=k.parentNode.getElementsByTagName("div")[0].style;
+
+
+if(k.getAttribute("class")=="minus"){
+    l.height=0;
+    l.paddingTop=0;
+    l.paddingBottom=0;
+    l.borderColor="transparent";
+    k.classList.remove("minus");
+    k.classList.add("plus");
+}
+
+else if(k.getAttribute("class")=="plus"){
+    for(var i=0;i<acHeadingLength;i++){
+        k.parentNode.parentNode.getElementsByTagName("li")[i].getElementsByTagName("div")[0].style.height=0;
+        k.parentNode.parentNode.getElementsByTagName("li")[i].getElementsByTagName("div")[0].style.paddingTop=0;
+        k.parentNode.parentNode.getElementsByTagName("li")[i].getElementsByTagName("div")[0].style.paddingBottom=0;
+        k.parentNode.parentNode.getElementsByTagName("li")[i].getElementsByTagName("div")[0].style.borderColor="transparent";
+
+        if(k.parentNode.parentNode.getElementsByTagName("li")[i].getElementsByTagName("h3")[0].classList.contains("minus")){
+            k.parentNode.parentNode.getElementsByTagName("li")[i].getElementsByTagName("h3")[0].classList.remove("minus");
+            k.parentNode.parentNode.getElementsByTagName("li")[i].getElementsByTagName("h3")[0].classList.add("plus");
+        }
+}   
+
+    l.height="auto";
+
+    l.paddingTop="28px";
+    l.paddingBottom="28px";
+    l.borderColor="#dceaf6";
+    k.classList.remove("plus");
+    k.classList.add("minus");
+}
+
+    
+}
+
+function aboutaccordionFunction(){
+    var k=this;
+    l=k.parentNode.getElementsByTagName("div")[0].style;
+
+    var array=[
+        k.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.getElementsByTagName("ul")[0].getElementsByTagName("li"),
+        k.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.getElementsByTagName("ul")[1].getElementsByTagName("li")
+    ];
+
+    if(k.getAttribute("class")=="minus"){
+    l.height=0;
+    l.paddingTop=0;
+    l.paddingBottom=0;
+    l.borderColor="transparent";
+    k.classList.remove("minus");
+    k.classList.add("plus");
+}
+
+else if(k.getAttribute("class")=="plus"){
+    for(var i=0;i<array.length;i++){
+
+        for(var j=0;j<aboutAcHeadingLength/2;j++){
+            array[i][j].getElementsByTagName("div")[0].style.height=0;
+            array[i][j].getElementsByTagName("div")[0].style.paddingTop=0;
+            array[i][j].getElementsByTagName("div")[0].style.paddingBottom=0;
+            array[i][j].getElementsByTagName("div")[0].style.borderColor="transparent";
+            if(array[i][j].getElementsByTagName("h3")[0].classList.contains("minus")){
+                array[i][j].getElementsByTagName("h3")[0].classList.remove("minus");
+                array[i][j].getElementsByTagName("h3")[0].classList.add("plus");
+            }
+           
+        }
+
+    
+
+}
+
+
+    l.height="auto";
+    l.paddingTop="28px";
+    l.paddingBottom="28px";
+    l.border="1px solid #dceaf6";
+    array[0][aboutAcHeadingLength/2-1].getElementsByTagName("div")[0].style.borderTop="transparent";
+    array[1][aboutAcHeadingLength/2-1].getElementsByTagName("div")[0].style.borderTop="transparent";
+    k.classList.remove("plus");
+    k.classList.add("minus");
+}
+
+
+}
+
+
+function sendNewsLetter() {
+  var emailInput=document.getElementsByClassName("footernewsLetter")[0].getElementsByTagName("form")[0].getElementsByTagName("input")[0];
+  var emailCheck=false;
+
+  if(emailInput.value.length>0){
+    for(var i=0;i<emailInput.value.length;i++){
+        if(emailInput.value[i]=='@'){
+            for(var j=i;j<emailInput.value.length;j++){
+                if(emailInput.value[j]=='.'){
+                    if(emailInput.value.length-j>2){
+                        emailCheck=true;
+                    }
+                }
+            }
+        }
+    }
+
+    if(emailCheck==true){
+      document.getElementsByClassName("newsLetterNotification")[0].getElementsByTagName("p")[0].innerHTML="news letter was sent";
+    }
+
+    else{
+    document.getElementsByClassName("newsLetterNotification")[0].getElementsByTagName("p")[0].innerHTML="Email is an invalid!";
+    }
+  }
+
+  else{
+      document.getElementsByClassName("newsLetterNotification")[0].getElementsByTagName("p")[0].innerHTML="please fill email field";
+  }
+};
+
+
+function selectt(select){
+            document.getElementsByClassName("select")[0].onclick=selectDownFunction;
+        document.getElementsByClassName("sbSelect")[0].innerHTML=select[0];
+        
+
+        for(var i=0;i<select.length;i++){
+            var li=document.createElement("li");
+            document.getElementsByClassName("selectOptions")[0].appendChild(li);
+
+            var a=document.createElement("a");
+            a.innerHTML=select[i];
+            a.onclick=selectFunction;
+            li.appendChild(a);
+        }
+
+        function selectDownFunction(){
+
+        if(document.getElementsByClassName("selectOptions")[0].classList.contains("close")){
+                document.getElementsByClassName("selectOptions")[0].classList.remove("close");
+                document.getElementsByClassName("selectOptions")[0].classList.add("open");
+        }
+        else if(document.getElementsByClassName("selectOptions")[0].classList.contains("open")){
+                document.getElementsByClassName("selectOptions")[0].classList.remove("open");
+                document.getElementsByClassName("selectOptions")[0].classList.add("close");
+        }
+
+
+        }
+
+        function selectFunction(){
+            for(var i=0;i<select.length;i++){
+                if(select[i]==this.innerHTML){
+                    document.getElementsByClassName("sbSelect")[0].innerHTML=select[i];
+                    break;
+                }
+            }
+
+            
+
+        }
+
+        window.onclick=function(event){
+
+            if(event.target!=document.getElementsByClassName("select")[0]){
+                if(document.getElementsByClassName("selectOptions")[0].classList.contains("open")){
+                document.getElementsByClassName("selectOptions")[0].classList.remove("open");
+                document.getElementsByClassName("selectOptions")[0].classList.add("close");
+                }
+            }
+
+
+        }
+}
+
+function sendContact(number){
     var maForm=[]; //Banner hissəsində Make An AppointMent bölməsindəki textarea və inputları özündə birləşdirən massiv 
     var check=false; //Make An Appointment hissəsində inputlarda və textarea'ların boş olub olmamasını yoxlamaq üçün bool tipində dəyişən
     var nameCheck=false;  //Make An Appointment hissəsində name inputunun ad üçün uyğun olub-olmamasını yoxlamaq üçün bool tipində dəyişən
@@ -1064,12 +1892,11 @@ function sendContact(){
     var emailCheck=false; //Make An Appointment hissəsində email inputunun email üçün uyğun olub-olmamasını yoxlamaq üçün bool tipində dəyişən
     var notification=document.getElementsByClassName("maNotification")[0].getElementsByTagName("p")[0]; //Make An Appointment hissəsində "GO" buttonuna click etdikdə nəticə görmək üçün tag'a müraciət dəyişəni
 
-    for(var i=0;i<4;i++)
+    for(var i=0;i<number;i++)
     maForm[i]=document.getElementsByClassName("maInput")[i];
 
     maForm[maForm.length]=document.getElementsByClassName("maTArea")[0];
 
-    // 111-114-cü sətirlərdə maForm massivinə inputlar və textarea mənimsədilir
 
     for(var i=0;i<maForm.length;i++){
         if(maForm[i].value.length==0){
@@ -1077,7 +1904,6 @@ function sendContact(){
         }
     }
 
-// 118-122-ci sətirlərdə inputların  və textarea'nın boş olub olmaması yoxlanılır 
 
     if(check==true){
         notification.innerHTML="please fill all fields" //hər hansı input və ya textarea boş olarsa bu əmr yerinə yetirilir
@@ -1137,10 +1963,10 @@ function sendContact(){
         }
     }
 // 169-182-cü sətirlərdə nəticə ekrana çıxarılır
-}
+};
 
 
-function sendContact(l_name,phone,f_name,email){
+function sendContactt(l_name,phone,f_name,email){
     var maForm=[]; //Banner hissəsində Make An AppointMent bölməsindəki textarea və inputları özündə birləşdirən massiv 
     var check=false; //Make An Appointment hissəsində inputlarda və textarea'ların boş olub olmamasını yoxlamaq üçün bool tipində dəyişən
     var nameCheck=false;  //Make An Appointment hissəsində name inputunun ad üçün uyğun olub-olmamasını yoxlamaq üçün bool tipində dəyişən
@@ -1237,239 +2063,3 @@ function sendContact(l_name,phone,f_name,email){
     }
 // 169-182-cü sətirlərdə nəticə ekrana çıxarılır
 }
-
-function newsLeft(){    //news bölməsində sol buttona basıldıqda işə düşən function
-    newsTop+=360;
-    newsSlideNumber-=1;
-    if(newsSlideNumber<0){
-        newsTop=0;
-        newsSlideNumber=1;
-    }
-     for(var i=0;i<6;i++)
-    document.getElementsByClassName("disast")[0].getElementsByTagName("li")[i].style.top=newsTop+"px";
-    console.log(document.getElementsByClassName("disast")[0].getElementsByTagName("li")[0].style.top);
-    
-}
-
-function newsRight() {  //news bölməsində sağ buttona basıldıqda işə düşən function
-    newsTop-=360;
-    newsSlideNumber+=1;
-    if(newsSlideNumber>1){
-        newsTop=360;
-        newsSlideNumber=0;
-    }
-    
-    for(var i=0;i<6;i++){
-    document.getElementsByClassName("disast")[0].getElementsByTagName("li")[i].style.top=newsTop+"px";
-    }
-}
-
-function doctorsSlideRight(){
-    clearInterval(docSlideTimer);
-    doctorsRightFunction();    
-}
-
-function doctorsSlideLeft(){
-    clearInterval(docSlideTimer);
-    doctorsLeftFunction();
-}
-
-function doctorsLeftFunction(){
-    docSlideNumber-=1;
-    docLeft+=750;
-    if(docSlideNumber<0){
-        docSlideNumber=doctorNames.length/4-1;
-        docLeft=-750*(doctorNames.length/4-1);
-    }
-
-    for(var i=0;i<doctorNames.length/4;i++){
-        document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[i].style.left=docLeft+"px";
-    }
-}
-
-function doctorsRightFunction(){
-    docSlideNumber+=1;
-    docLeft-=750;
-    if(docSlideNumber>doctorNames.length/4-1){
-        docSlideNumber=0;
-        docLeft=0;
-    }
-
-    for(var i=0;i<doctorNames.length/4;i++){
-        document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[i].style.left=docLeft+"px";
-    }
-}
-
-
-
-function accordionFunction(){
-    var k=this;
-    l=k.parentNode.getElementsByTagName("div")[0].style;
-
-
-if(k.getAttribute("class")=="minus"){
-    l.height=0;
-    l.paddingTop=0;
-    l.paddingBottom=0;
-    l.borderColor="transparent";
-    k.classList.remove("minus");
-    k.classList.add("plus");
-}
-
-else if(k.getAttribute("class")=="plus"){
-    for(var i=0;i<accordionHeading.length;i++){
-        k.parentNode.parentNode.getElementsByTagName("li")[i].getElementsByTagName("div")[0].style.height=0;
-        k.parentNode.parentNode.getElementsByTagName("li")[i].getElementsByTagName("div")[0].style.paddingTop=0;
-        k.parentNode.parentNode.getElementsByTagName("li")[i].getElementsByTagName("div")[0].style.paddingBottom=0;
-        k.parentNode.parentNode.getElementsByTagName("li")[i].getElementsByTagName("div")[0].style.borderColor="transparent";
-
-        if(k.parentNode.parentNode.getElementsByTagName("li")[i].getElementsByTagName("h3")[0].classList.contains("minus")){
-            k.parentNode.parentNode.getElementsByTagName("li")[i].getElementsByTagName("h3")[0].classList.remove("minus");
-            k.parentNode.parentNode.getElementsByTagName("li")[i].getElementsByTagName("h3")[0].classList.add("plus");
-        }
-}
-
-    l.height="161px";
-    l.paddingTop="28px";
-    l.paddingBottom="28px";
-    l.borderColor="#dceaf6";
-    k.classList.remove("plus");
-    k.classList.add("minus");
-}
-
-    
-}
-
-function aboutaccordionFunction(){
-    var k=this;
-    l=k.parentNode.getElementsByTagName("div")[0].style;
-
-    var array=[
-        k.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.getElementsByTagName("ul")[0].getElementsByTagName("li"),
-        k.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.getElementsByTagName("ul")[1].getElementsByTagName("li")
-    ];
-
-    if(k.getAttribute("class")=="minus"){
-    l.height=0;
-    l.paddingTop=0;
-    l.paddingBottom=0;
-    l.borderColor="transparent";
-    k.classList.remove("minus");
-    k.classList.add("plus");
-}
-
-else if(k.getAttribute("class")=="plus"){
-    for(var i=0;i<array.length;i++){
-
-        for(var j=0;j<aboutAccordionHeading.length/2;j++){
-            array[i][j].getElementsByTagName("div")[0].style.height=0;
-            array[i][j].getElementsByTagName("div")[0].style.paddingTop=0;
-            array[i][j].getElementsByTagName("div")[0].style.paddingBottom=0;
-            array[i][j].getElementsByTagName("div")[0].style.borderColor="transparent";
-            console.log(array[i][j]);
-            if(array[i][j].getElementsByTagName("h3")[0].classList.contains("minus")){
-                array[i][j].getElementsByTagName("h3")[0].classList.remove("minus");
-                array[i][j].getElementsByTagName("h3")[0].classList.add("plus");
-            }
-        }
-
-}
-
-    l.height="161px";
-    l.paddingTop="28px";
-    l.paddingBottom="28px";
-    l.border="1px solid #dceaf6";
-    k.classList.remove("plus");
-    k.classList.add("minus");
-}
-
-
-}
-
-
-function sendNewsLetter() {
-  var emailInput=document.getElementsByClassName("footernewsLetter")[0].getElementsByTagName("form")[0].getElementsByTagName("input")[0];
-  var emailCheck=false;
-
-  if(emailInput.value.length>0){
-    for(var i=0;i<emailInput.value.length;i++){
-        if(emailInput.value[i]=='@'){
-            for(var j=i;j<emailInput.value.length;j++){
-                if(emailInput.value[j]=='.'){
-                    if(emailInput.value.length-j>2){
-                        emailCheck=true;
-                    }
-                }
-            }
-        }
-    }
-
-    if(emailCheck==true){
-      document.getElementsByClassName("newsLetterNotification")[0].getElementsByTagName("p")[0].innerHTML="news letter was sent";
-    }
-
-    else{
-    document.getElementsByClassName("newsLetterNotification")[0].getElementsByTagName("p")[0].innerHTML="Email is an invalid!";
-    }
-  }
-
-  else{
-      document.getElementsByClassName("newsLetterNotification")[0].getElementsByTagName("p")[0].innerHTML="please fill email field";
-  }
-};
-
-
-function selectt(select){
-            document.getElementsByClassName("select")[0].onclick=selectDownFunction;
-        document.getElementsByClassName("sbSelect")[0].innerHTML=select[0];
-        
-
-        for(var i=0;i<select.length;i++){
-            var li=document.createElement("li");
-            document.getElementsByClassName("selectOptions")[0].appendChild(li);
-
-            var a=document.createElement("a");
-            a.innerHTML=select[i];
-            a.onclick=selectFunction;
-            li.appendChild(a);
-        }
-
-        function selectDownFunction(){
-
-        if(document.getElementsByClassName("selectOptions")[0].classList.contains("close")){
-                document.getElementsByClassName("selectOptions")[0].classList.remove("close");
-                document.getElementsByClassName("selectOptions")[0].classList.add("open");
-        }
-        else if(document.getElementsByClassName("selectOptions")[0].classList.contains("open")){
-                document.getElementsByClassName("selectOptions")[0].classList.remove("open");
-                document.getElementsByClassName("selectOptions")[0].classList.add("close");
-        }
-
-
-        }
-
-        function selectFunction(){
-            for(var i=0;i<select.length;i++){
-                if(select[i]==this.innerHTML){
-                    document.getElementsByClassName("sbSelect")[0].innerHTML=select[i];
-                    break;
-                }
-            }
-
-            
-
-        }
-
-        window.onclick=function(event){
-
-            if(event.target!=document.getElementsByClassName("select")[0]){
-                if(document.getElementsByClassName("selectOptions")[0].classList.contains("open")){
-                document.getElementsByClassName("selectOptions")[0].classList.remove("open");
-                document.getElementsByClassName("selectOptions")[0].classList.add("close");
-                }
-            }
-
-
-        }
-}
-

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resp.css">
     <title>The Best Medical Hospital</title>
 </head>
 <body>
@@ -26,18 +27,15 @@
                 <div class="row">
                     <!--TopPart-->
                     <div class="headerTopPart col-sm-12">
-                        <div class="row">
                             <ul>
                                     <li>Email :<a href="#">info@medicaltheme.com</a></li>
                                     <li>Call :<a href="#"> 8876 7786 999</a></li>
                                 </ul>
-                            </div>
                         </div>
                     <!--/TopPart-->
 
                     <!--BottomPart-->
                     <div class="headerBottomPart">
-                        <div class="row">
                             <!--logo-->
                             <div class="col-sm-3 logo">
                                 <a href="#"><img src="img/logo-var2.png" alt="Medical Themes"></a>
@@ -74,23 +72,23 @@
                                                             <!--/dropdown-->
                                                         </li>
                                                         <li class="menuList"><a href="about.html">About Us</a></li>
-                                                        <li class="menuList"><a href="#">Doctors</a></li>
-                                                        <li class="menuList"><a href="#">Services</a></li>
-                                                        <li class="menuList"><a href="#">News</a></li>
+                                                        <li class="menuList"><a href="doctors.html">Doctors</a></li>
+                                                        <li class="menuList"><a href="services.html">Services</a></li>
+                                                        <li class="menuList"><a href="news.html">News</a></li>
                                                         <li class="menuList dropdown drop" onclick="navClick(this)"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">pages</a>
                                                         <!--dropdown-menu menu daxilində li'lər daxilində olan alt menu-->
                                                             <ul class="dropdown-menu" role="menu">
                                                                 <li class="drop-down-bg"></li>
-                                                                <li><a href="#">Blog</a></li>
-                                                                <li><a href="#">Blog Details</a></li>
-                                                                <li><a href="#">Doctors' Timetable</a></li>
-                                                                <li><a href="#">404 ERROR</a></li>
-                                                                <li><a href="#">Appointment</a></li>
+                                                                <li><a href="blog.html">Blog</a></li>
+                                                                <li><a href="blog-detail.html">Blog Details</a></li>
+                                                                <li><a href="timetable.html">Doctors' Timetable</a></li>
+                                                                <li><a href="error.html">404 ERROR</a></li>
+                                                                <li><a href="appointment.html">Appointment</a></li>
                                                                 </ul>
                                                                 <!--/dropdown-->
                                                         </li>
-                                                        <li class="menuList"><a href="#">Contact Us</a></li>
-                                                        <li class="lst-head"><a href="#">Appointment</a></li>
+                                                        <li class="menuList"><a href="contact.html">Contact Us</a></li>
+                                                        <li class="lst-head"><a href="appointment.html">Appointment</a></li>
                                                     </ul>
                                                     <!--/nav-->
                                                 </div>
@@ -99,7 +97,6 @@
                                     </div>
                                 </div>
                             <!--/navigation-->
-                            </div>
                         </div>
                     <!--/BottomPart-->
                     </div>
@@ -182,7 +179,7 @@
                                                                     <textarea placeholder="Comment*" class="maTArea"></textarea>
                                                                     </form>
                                                                     <!--/form-->
-                                                                    <button type="button" onclick="sendContact()">Go</button>
+                                                                    <button type="button" onclick="sendContact(4)">Go</button>
                                                                 </div>
                                                             <!--/maComment-->
 
@@ -207,8 +204,8 @@
 
                                             <!--Working Time Details-->
                                             <div class="wtDetails">
-                                                <p>Monday-Friday : <br> <span>8 AM-17 pm</span></p>
-                                                <p>Saturday-Sunday : <br> <span>9 AM-15 pm</span></p>
+                                                <p>Monday-Friday : <span>8 AM-17 pm</span></p>
+                                                <p>Saturday-Sunday : <span>9 AM-15 pm</span></p>
                                                 </div>
                                                 <!--/Working Time Details-->
 
@@ -563,8 +560,22 @@
     </div>
 <!--/HomePage-->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
     <script src="js/script.js"></script>
+    <script type="text/javascript">
+	"use strict";
+        $('.form_date').datetimepicker({
+            language:  'fr',
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        });
+    </script>
 </body>
 </html>
