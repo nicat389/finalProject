@@ -441,7 +441,6 @@ acHeadingLength=accordionHeading.length;
     }
 
     function newsSize() {
-        
 
         if(window.innerWidth>=1200){
             document.getElementsByClassName("updatesViewport")[0].style.height="363px";
@@ -449,6 +448,8 @@ acHeadingLength=accordionHeading.length;
 
             for(var j=0;j<doctorNames.length/4;j++){
                 document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[j].style.width="750px";
+                document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[j].style.left=-docSlideNumber*750+"px";
+                
             }
         }
 
@@ -456,8 +457,13 @@ acHeadingLength=accordionHeading.length;
             document.getElementsByClassName("updatesViewport")[0].style.height="420px";
             document.getElementsByClassName("docViewPort")[0].style.height="292px";
             for(var j=0;j<doctorNames.length/4;j++){
-                document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[j].style.width="617px";
-            }
+            document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[j].style.width="617px";
+            document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[j].style.left=-docSlideNumber*617+"px";
+            
+        }
+
+            
+            
         }
 
 
@@ -465,8 +471,8 @@ acHeadingLength=accordionHeading.length;
             document.getElementsByClassName("updatesViewport")[0].style.height="534px";
 
             for(var j=0;j<doctorNames.length/4;j++){
-
                 document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[j].style.width="470px";
+                document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[j].style.left=-docSlideNumber*470+"px";
             }
 
 
@@ -477,6 +483,7 @@ acHeadingLength=accordionHeading.length;
             if(window.innerWidth<800 && window.innerWidth>767){
                 for(var j=0;j<doctorNames.length/4;j++){
                 document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[j].style.width="720px";
+                document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[j].style.left=-docSlideNumber*720+"px";
                 }
             }
 
@@ -529,10 +536,10 @@ acHeadingLength=accordionHeading.length;
          if(window.innerWidth>=266 && window.innerWidth<768){
             for(var j=0;j<doctorNames.length/4;j++){
             document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[j].style.width=window.innerWidth-47+"px";
+            document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[j].style.left=-docSlideNumber*(window.innerWidth-47)+"px";
             }
         }
 
-        aa();
 
     }
 
@@ -544,6 +551,7 @@ acHeadingLength=accordionHeading.length;
 
     $(window).resize(function(){
         clearInterval(docSlideTimer);
+        
         newsSize();
 
 
@@ -1662,7 +1670,6 @@ function doctorsSlideLeft(){
     clearInterval(docSlideTimer);
     doctorsLeftFunction();
 }
-
 
 function doctorsLeftFunction(){
     var k=parseInt(document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[0].style.width);
