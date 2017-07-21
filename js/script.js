@@ -161,32 +161,32 @@ var newsText=[
 
 var doctorNames=[
     "Dr. Anakha Mathew",
-    "Dr. Suzanne Holroyd",
-    "Dr. George Beller",
-    "Dr. John DiMarco",
-    "Dr. Mary Lee Vance",
-    "Dr. Katie Hullfish",
-    "Dr. Richard Pearson",
-    "Dr. Alan Dalkin",
-    "Dr. Mary Jensen",
-    "Dr. Catherine Appleton",
-    "Dr. Paul Diamond",
-    "Dr. Muhammad T. Al-Lozi"
+    "Dr. Anakha Mathew",
+    "Dr. Anakha Mathew",
+    "Dr. Anakha Mathew",
+    "Dr. Anakha Mathew",
+    "Dr. Anakha Mathew",
+    "Dr. Anakha Mathew",
+    "Dr. Anakha Mathew",
+    "Dr. Anakha Mathew",
+    "Dr. Anakha Mathew",
+    "Dr. Anakha Mathew",
+    "Dr. Anakha Mathew"
 ];
 
 var doctorProfessions=[
     "Specializes in Dental",
-    "Geriatric psychiatry",
-    "Cardiology",
-    "Cardiac electrophysiology",
-    "Endocrinology, diabetes and",
-    "Specializes in Obstetrics",
-    "Infectious diseases",
-    "Endocrinology, diabetes and metabolism",
-    "Neuroradiology",
-    "MD - Radiology",
-    "Physical medicine and rehabilitation",
-    "MD - Neurology"
+    "Specializes in Dental",
+    "Specializes in Dental",
+    "Specializes in Dental",
+    "Specializes in Dental",
+    "Specializes in Dental",
+    "Specializes in Dental",
+    "Specializes in Dental",
+    "Specializes in Dental",
+    "Specializes in Dental",
+    "Specializes in Dental",
+    "Specializes in Dental"
 ];
 
 var doctorPictures=[
@@ -329,13 +329,15 @@ acHeadingLength=accordionHeading.length;
             docNameDiv.setAttribute("class","docName");
             whiteBox.appendChild(docNameDiv);
 
-            docName=document.createElement("h2");
-            docProfession=document.createElement("span");
-            docProfession.innerHTML=doctorProfessions[a+j];
-            docName.innerHTML+=doctorNames[a+j]+"<br>";
+            docProfession=document.createElement("h2");
+            docNameDiv.appendChild(docProfession);
+
+            docName=document.createElement("span");
+            docName.innerHTML=doctorNames[a+j];
+            docProfession.appendChild(docName);
+            docProfession.innerHTML+=doctorProfessions[a+j];
             
-            docNameDiv.appendChild(docName);
-            docName.appendChild(docProfession);
+            
 
             docSocialMedia=document.createElement("div");
             docSocialMedia.setAttribute("class","docSocialMedia");
@@ -439,115 +441,99 @@ acHeadingLength=accordionHeading.length;
     }
 
     function newsSize() {
-        nLeft=null;
+        
+
         if(window.innerWidth>=1200){
             document.getElementsByClassName("updatesViewport")[0].style.height="363px";
             document.getElementsByClassName("docViewPort")[0].style.height="352px";
-            for(var i=0; i<newsHeading.length;i++){
-                document.getElementsByClassName("disast")[0].getElementsByTagName("li")[i].style.width="360px";
+
+            for(var j=0;j<doctorNames.length/4;j++){
+                document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[j].style.width="750px";
             }
         }
 
-        else if(window.innerWidth>992 && window.innerWidth<1200){
+        else if(window.innerWidth>=992 && window.innerWidth<1200){
             document.getElementsByClassName("updatesViewport")[0].style.height="420px";
             document.getElementsByClassName("docViewPort")[0].style.height="292px";
-            
-            for(var i=0; i<newsHeading.length;i++){
-                document.getElementsByClassName("disast")[0].getElementsByTagName("li")[i].style.width="293px";
+            for(var j=0;j<doctorNames.length/4;j++){
+                document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[j].style.width="617px";
             }
-
-            for(var i=0;i<docNameLength/4;i++){
-            document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[i].style.width="617px";
-            }
-            
         }
 
-        else if(window.innerWidth>800 && window.innerWidth<=992){
+
+        else if(window.innerWidth>=800 && window.innerWidth<992){
             document.getElementsByClassName("updatesViewport")[0].style.height="534px";
-            document.getElementsByClassName("docViewPort")[0].style.height="246px";
-            
-            for(var i=0; i<newsHeading.length;i++){
-                document.getElementsByClassName("disast")[0].getElementsByTagName("li")[i].style.width="220px";
+
+            for(var j=0;j<doctorNames.length/4;j++){
+
+                document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[j].style.width="470px";
             }
 
-            for(var i=0;i<docNameLength/4;i++){
-            document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[i].style.width="470px";
-            }
+
         }
-
-        else if(window.innerWidth>=619 && window.innerWidth<=800){
+        else if(window.innerWidth>619 && window.innerWidth<800){
             document.getElementsByClassName("updatesViewport")[0].style.height="306px";
-            document.getElementsByClassName("docViewPort")[0].style.height="246px";
-            for(var i=0; i<newsHeading.length;i++){
-                document.getElementsByClassName("disast")[0].getElementsByTagName("li")[i].style.width="574px";
-            }
-
-            if(window.innerWidth>=768 && window.innerWidth<=800){
-                for(var i=0;i<docNameLength/4;i++){
-            document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[i].style.width="720px";
-            }
-
             
-        }
-        
-        else if(window.innerWidth<768){
-                document.getElementsByClassName("docViewPort")[0].style.height="210px";
-                for(var i=0;i<docNameLength/4;i++){
-            document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[i].style.width="720px";
-            }
-            }
-        }
-
-
-       
-
-        else if(window.innerWidth<=619 && window.innerWidth>385){
-            document.getElementsByClassName("updatesViewport")[0].style.height="363px";
-            for(var i=0; i<newsHeading.length;i++){
-                document.getElementsByClassName("disast")[0].getElementsByTagName("li")[i].style.width="572px";
-            }
-        }
-
-        else if(window.innerWidth<=385 && window.innerWidth>319){
-            document.getElementsByClassName("updatesViewport")[0].style.height="420px";
-            
-        }
-        else if(window.innerWidth<=319){
-            document.getElementsByClassName("updatesViewport")[0].style.height="612px";
-        }
-
-        if(window.innerWidth<=738 && window.innerWidth>667){
-            document.getElementsByClassName("docViewPort")[0].style.height="224px";
-        }
-
-        else if(window.innerWidth<=667 && window.innerWidth>640){
-            document.getElementsByClassName("docViewPort")[0].style.height="596px";
-        }
-        else if(window.innerWidth<=640 && window.innerWidth>590){
-            document.getElementsByClassName("docViewPort")[0].style.height="620px";
-        }
-
-        else if(window.innerWidth<590 && window.innerWidth>480){
-            document.getElementsByClassName("docViewPort")[0].style.height="570px";
-        }
-
-        else if(window.innerWidth<=480){
-            document.getElementsByClassName("docViewPort")[0].style.height="580px";
-        }
-        
-
-
-    if(window.innerWidth<768){
-            for(var i=0;i<doctorNames.length/4;i++){
-                for(var j=0;j<4;j++){
-                document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[i].getElementsByClassName("col-sm-6")[j].style.width="50%";
+            if(window.innerWidth<800 && window.innerWidth>767){
+                for(var j=0;j<doctorNames.length/4;j++){
+                document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[j].style.width="720px";
                 }
             }
 
+        }
+        else if(window.innerWidth>385 && window.innerWidth<=619){
+            document.getElementsByClassName("updatesViewport")[0].style.height="363px";
+        }
+        else if(window.innerWidth>=320 && window.innerWidth<=385){
+            document.getElementsByClassName("updatesViewport")[0].style.height="420px";
+        }
+        else if(window.innerWidth>285 && window.innerWidth<320){
+            document.getElementsByClassName("updatesViewport")[0].style.height="612px";
+        }
+        else if(window.innerWidth<=285){
+            document.getElementsByClassName("updatesViewport")[0].style.height="669px";
+        }
+
+
+        if(window.innerWidth>768 && window.innerWidth<992){
+            document.getElementsByClassName("docViewPort")[0].style.height="246px";
 
         }
+
+        else if(window.innerWidth>738 && window.innerWidth<768){
+            document.getElementsByClassName("docViewPort")[0].style.height="210px";
+        }
+
+        else if(window.innerWidth==768 || (window.innerWidth>667 && window.innerWidth<=738)){
+            document.getElementsByClassName("docViewPort")[0].style.height="224px";
+        }
+
+        else if(window.innerWidth>640 && window.innerWidth<=667){
+            document.getElementsByClassName("docViewPort")[0].style.height="604px";
+        }
+
+        else if(window.innerWidth>480 && window.innerWidth<=640){
+            document.getElementsByClassName("docViewPort")[0].style.height="620px";
+        }
+
+        if(window.innerWidth>360 && window.innerWidth<=480){
+            document.getElementsByClassName("docViewPort")[0].style.height="1844px";
+        }
+
+        else if(window.innerWidth<=360){
+            document.getElementsByClassName("docViewPort")[0].style.height=parseInt(window.innerWidth*5.264)+"px";
+        }
+
         
-        
+
+         if(window.innerWidth>=266 && window.innerWidth<768){
+            for(var j=0;j<doctorNames.length/4;j++){
+            document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[j].style.width=window.innerWidth-47+"px";
+            }
+        }
+
+        aa();
+
     }
 
     docSlideTimer=setInterval(function() {
@@ -557,7 +543,7 @@ acHeadingLength=accordionHeading.length;
     $(document).ready(function(){
 
     $(window).resize(function(){
-
+        clearInterval(docSlideTimer);
         newsSize();
 
 
@@ -1677,14 +1663,16 @@ function doctorsSlideLeft(){
     doctorsLeftFunction();
 }
 
+
 function doctorsLeftFunction(){
+    var k=parseInt(document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[0].style.width);
     docSlideNumber-=1;
-    docLeft+=750;
-    console.log(document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[0].style.width);
+    docLeft+=k
+    console.log(docLeft);
     
     if(docSlideNumber<0){
         docSlideNumber=docNameLength/4-1;
-        docLeft=-750*(docNameLength/4-1);
+        docLeft=-k*(docNameLength/4-1);
     }
 
     for(var i=0;i<docNameLength/4;i++){
@@ -1693,8 +1681,9 @@ function doctorsLeftFunction(){
 }
 
 function doctorsRightFunction(){
+    var k=parseInt(document.getElementsByClassName("docSlide")[0].getElementsByTagName("li")[0].style.width);
     docSlideNumber+=1;
-    docLeft-=750;
+    docLeft-=k;
     if(docSlideNumber>docNameLength/4-1){
         docSlideNumber=0;
         docLeft=0;

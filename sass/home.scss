@@ -297,6 +297,7 @@
                                                     .col-sm-6{
                                                         padding-right: 0;
                                                         margin-bottom: 15px;
+                                                        float: left;
                                                         .whiteBox{
                                                             background: white;
                                                             border: 1px solid #dceaf6;
@@ -313,16 +314,18 @@
                                                                     width: 204px;
                                                                     padding: 45px 0px 53px 25px;
                                                                     h2{
-                                                                        color: #383d48;
-                                                                        font-size: 13.48px;
-                                                                        font-weight: 800;
-                                                                        font-family: 'Raleway', sans-serif;
-                                                                        text-transform: none;
-                                                                        display: block;
+                                                                        color: #6e868c;
+                                                                        font-size: 12.99px;
+                                                                        font-family: "Open Sans",sans-serif;
+                                                                        padding-left: 0;
                                                                         span{
-                                                                            color: #6e868c;
-                                                                            font-size: 13px;
-                                                                            line-height: 1.1;
+                                                                            color: #383d48;
+                                                                            font-size: 13.48px;
+                                                                            font-family: 'Raleway', sans-serif;
+                                                                            text-transform: uppercase;
+                                                                            padding-bottom: 3px;
+                                                                            display: block;
+                                                                            font-weight: 800;
                                                                             }
                                                                         }
                                                                     }

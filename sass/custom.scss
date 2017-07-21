@@ -959,15 +959,22 @@ input[type=checkbox] {
         }
     }
 
+      #contact .map .col-lg-5{
+          clear: both; 
+  }
+
 
     #doctors,#timetable{
   .jst-cov{
       float: left;
-      padding-bottom: 15px;
+      padding-bottom: 15px; 
       width: 50%;
   }
 
+
+
   .filter{
+      clear: both;
       button{
                     outline: none;
                     border: none;

@@ -684,25 +684,30 @@ input[type=checkbox] {
 #doctors .doc .active, #timetable .doc .active {
   border-bottom: 2px solid #6acff0 !important; }
 
+#contact .map .col-lg-5 {
+  clear: both; }
+
 #doctors .jst-cov, #timetable .jst-cov {
   float: left;
   padding-bottom: 15px;
   width: 50%; }
-#doctors .filter button, #timetable .filter button {
-  outline: none;
-  border: none;
-  background: #6acff0;
-  color: white;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 13px;
-  font-weight: 700;
-  width: 127px;
-  padding: 10px 0;
-  margin: 0 0 0 12px;
-  float: right; }
-#doctors .filter .select, #timetable .filter .select {
-  width: 67%; }
+#doctors .filter, #timetable .filter {
+  clear: both; }
+  #doctors .filter button, #timetable .filter button {
+    outline: none;
+    border: none;
+    background: #6acff0;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    width: 127px;
+    padding: 10px 0;
+    margin: 0 0 0 12px;
+    float: right; }
+  #doctors .filter .select, #timetable .filter .select {
+    width: 67%; }
 #doctors .doc .doctor, #timetable .doc .doctor {
   border-bottom: 2px solid #ffe073;
   padding-bottom: 16px;
